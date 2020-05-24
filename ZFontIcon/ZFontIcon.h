@@ -1,7 +1,10 @@
 /*
 MIT License
 
-Copyright (c) 2017 Sacha Schutz
+Copyright (c) 2020 Philippe Vianney-Liaud | https://github.com/philvl
+
+ZFontIcon is inspired/based on:
+  QFontIcon by Sacha Schutz | https://github.com/dridk
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -22,62 +25,37 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#ifndef QFONTICON_H
-#define QFONTICON_H
+#ifndef ZFONTICON_H
+#define ZFONTICON_H
 
+// Qt Core
 #include <QObject>
-#include <QPainter>
-#include <QIconEngine>
-#include <QApplication>
-#include <QtCore>
-#include <QPalette>
+// Qt Gui
+#include <QColor>
 
-class QFontIcon;
-class QFontIconEngine;
-#define FIcon(code) QFontIcon::icon(code)
 
-class QFontIconEngine : public QIconEngine
-{
-public:
-    QFontIconEngine();
-    ~QFontIconEngine();
-    virtual void paint(QPainter * painter, const QRect& rect, QIcon::Mode mode, QIcon::State state)Q_DECL_OVERRIDE ;
-    virtual QPixmap pixmap(const QSize &size, QIcon::Mode mode, QIcon::State state)Q_DECL_OVERRIDE;
-    void setFontFamily(const QString& family);
-    // define icon code using QChar or implicit using ushort ...
-    void setLetter(const QChar& letter);
-    // You can set a base color. I don't advice. Keep system color
-    void setBaseColor(const QColor& baseColor);
-    virtual QIconEngine* clone() const;
-
-private:
-    QString mFontFamily;
-    QChar mLetter;
-    QColor mBaseColor;
-};
-
-class QFontIcon : public QObject
-{
+class ZFontIcon : public QObject {
     Q_OBJECT
-
 public:
-    // add Font. By default, the first one is used
-    static bool addFont(const QString& filename);
-    static QFontIcon * instance();
-    // main methods. Return icons from code
-    static QIcon icon(const QChar& code, const QColor& baseColor = QColor(),const QString& family = QString());
-    // return added fonts
-    const QStringList& families() const;
+    static ZFontIcon *instance();
+
+    // Add Font. The first one is used by default
+    static bool addFont(const QString &filename);
+    // Main methods. Return icons from code
+    static QIcon icon(const QString &fontFamily, const QChar &iconCode, const QColor &iconColor= QColor(), const QString &iconStyle= QString());
+    static QIcon icon(const QChar &iconCode, const QColor &iconColor= QColor(), const QString &iconStyle= QString());
+    // Return added families
+    const QStringList &families() const;
 
 protected:
-    void addFamily(const QString& family);
-
+    void addFontFamily(const QString &family);
 
 private:
-    explicit QFontIcon(QObject *parent = 0);
-    ~QFontIcon();
-    static QFontIcon * mInstance;
-    QStringList mfamilies;
+    explicit ZFontIcon(QObject *parent = 0);
+    ~ZFontIcon();
+
+    static ZFontIcon *_instance;
+    QStringList _fontFamilies;
 };
 
-#endif // QFONTICON_H
+#endif // ZFONTICON_H

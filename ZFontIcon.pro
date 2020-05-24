@@ -28,7 +28,8 @@ FORMS   += \
 # Add the following line to your project
 include("ZFontIcon/ZFontIcon.pri")
 DISTFILES += \
-    LICENSE.md
+    LICENSE.md \
+    README.md
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

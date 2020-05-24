@@ -50,3 +50,6 @@ compile_commands.json
 
 # QtCreator local machine specific files for imported projects
 *creator.user*
+
+# Font Awesome Pro Font [Philippe VL add]
+/ZFontIcon/fa_5.13.0/FontAwesome_v5.13.0_Pro*
