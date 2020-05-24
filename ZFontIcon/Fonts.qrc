@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>fa_4.7.0/FontAwesome_v4.7.0_Free.otf</file>
+    </qresource>
+</RCC>

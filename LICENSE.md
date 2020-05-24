@@ -1,6 +1,9 @@
-MIT License
+ZFontIcon is released under the MIT License
 
-Copyright (c) 2020 Philippe VL
+Copyright (c) 2020 Philippe Vianney-Liaud | https://github.com/philvl
+
+ZFontIcon is inspired/based on:
+  QFontIcon by Sacha Schutz | https://github.com/dridk
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
