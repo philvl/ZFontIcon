@@ -37,16 +37,16 @@ static const QString FA5_OTF_FILE_PRO_LIGHT=     QLatin1String("FontAwesome_v5.1
 
 
 // Font Awesome 5.13.0 compatibility
-//- Free version, use "fa" namespace
-//- Pro  version, use "fa5pro" namespace
-//- Free and Pro, use "fa5brands" namespace
-namespace fa5 {
+//- Free version, use "Fa" namespace
+//- Pro  version, use "Fa5pro" namespace
+//- Free and Pro, use "Fa5brands" namespace
+namespace Fa5 {
     static const QString FAMILY=  QLatin1String("Font Awesome 5 Free");
     //--
     static const QString SOLID=   QLatin1String("Solid");
     static const QString REGULAR= QLatin1String("Regular");
 
-    enum icon {
+    enum Icon {
         fa_glass_martini                      = 0xf000,
         fa_music                              = 0xf001,
         fa_search                             = 0xf002,
@@ -1048,14 +1048,14 @@ namespace fa5 {
 
 
 
-namespace fa5pro {
+namespace Fa5pro {
     static const QString FAMILY=  QLatin1String("Font Awesome 5 Pro");
     //--
     static const QString SOLID=   QLatin1String("Solid");
     static const QString REGULAR= QLatin1String("Regular");
     static const QString LIGHT=   QLatin1String("Light");
 
-    enum icon {
+    enum Icon {
         fa_glass_martini                      = 0xf000,
         fa_music                              = 0xf001,
         fa_search                             = 0xf002,
@@ -2912,12 +2912,12 @@ namespace fa5pro {
 
 
 
-namespace fa5brands {
+namespace Fa5brands {
     static const QString FAMILY=  QLatin1String("Font Awesome 5 Brands");
     //--
     static const QString REGULAR= QLatin1String("Regular");
 
-    enum icon {
+    enum Icon {
         fa_twitter_square                     = 0xf081,
         fa_facebook_square                    = 0xf082,
         fa_linkedin                           = 0xf08c,
@@ -3363,7 +3363,5 @@ namespace fa5brands {
         fa_shopify                            = 0xf957,
     };
 }
-
-
 
 #endif // FONTAWESOME_5_13_H

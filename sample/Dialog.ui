@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>480</width>
-    <height>360</height>
+    <width>570</width>
+    <height>384</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -28,6 +28,9 @@
    </property>
    <item>
     <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
@@ -58,7 +61,7 @@
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 5 [FREE]</string>
+          <string>FONT AWESOME 5.x [FREE]</string>
          </property>
         </widget>
        </item>
@@ -74,90 +77,7 @@
        </item>
        <item>
         <layout class="QGridLayout" name="fa5_gridLayout">
-         <item row="1" column="2">
-          <widget class="QToolButton" name="fa5_btn112">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QToolButton" name="fa5_btn102">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="fa5_labelBrands">
-           <property name="text">
-            <string>Brands:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="4">
-          <widget class="QToolButton" name="fa5_btn114">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <widget class="QToolButton" name="fa5_btn113">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="1" colspan="4">
+         <item row="3" column="1" colspan="5">
           <widget class="QLabel" name="fa5_labelNotAvailable">
            <property name="minimumSize">
             <size>
@@ -178,8 +98,11 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="4">
-          <widget class="QToolButton" name="fa5_btn124">
+         <item row="4" column="5">
+          <widget class="QToolButton" name="fa5_btn125">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>56</width>
@@ -197,8 +120,11 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="4">
-          <widget class="QToolButton" name="fa5_btn104">
+         <item row="2" column="5">
+          <widget class="QToolButton" name="fa5_btn115">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>56</width>
@@ -216,7 +142,7 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="1">
+         <item row="4" column="1">
           <widget class="QToolButton" name="fa5_btn121">
            <property name="minimumSize">
             <size>
@@ -233,28 +159,12 @@
              <height>48</height>
             </size>
            </property>
-          </widget>
-         </item>
-         <item row="3" column="2">
-          <widget class="QToolButton" name="fa5_btn122">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
+           <property name="autoRaise">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
-         <item row="0" column="1">
+         <item row="1" column="1">
           <widget class="QToolButton" name="fa5_btn101">
            <property name="minimumSize">
             <size>
@@ -271,16 +181,219 @@
              <height>48</height>
             </size>
            </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
-         <item row="0" column="0">
+         <item row="4" column="4">
+          <widget class="QToolButton" name="fa5_btn124">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QToolButton" name="fa5_btn113">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QToolButton" name="fa5_btn104">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="fa5_labelLight">
+           <property name="text">
+            <string>Light:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QToolButton" name="fa5_btn102">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fa5_labelRegular">
+           <property name="text">
+            <string>Regular:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="4">
+          <widget class="QToolButton" name="fa5_btn114">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QToolButton" name="fa5_btn112">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QToolButton" name="fa5_btn122">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <spacer name="fa5_hSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="1" column="0">
           <widget class="QLabel" name="fa5_labelSolid">
            <property name="text">
             <string>Solid:</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="3">
+         <item row="4" column="0">
+          <widget class="QLabel" name="fa5_labelBrands">
+           <property name="text">
+            <string>Brands:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
           <widget class="QToolButton" name="fa5_btn123">
            <property name="minimumSize">
             <size>
@@ -299,7 +412,51 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="3">
+         <item row="2" column="1">
+          <widget class="QToolButton" name="fa5_btn111">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="5">
+          <widget class="QToolButton" name="fa5_btn105">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
           <widget class="QToolButton" name="fa5_btn103">
            <property name="minimumSize">
             <size>
@@ -318,66 +475,100 @@
            </property>
           </widget>
          </item>
-         <item row="1" column="1">
-          <widget class="QToolButton" name="fa5_btn111">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
+         <item row="0" column="1">
+          <widget class="QLabel" name="fa5_title1">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
            </property>
            <property name="text">
-            <string>...</string>
+            <string>AutoRaise
+</string>
            </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="fa5_labelLight">
+         <item row="0" column="2">
+          <widget class="QLabel" name="fa5_title2">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>Light:</string>
+            <string>AutoRaise
+Checkable</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
-          <spacer name="fa5_vSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
+         <item row="0" column="4">
+          <widget class="QLabel" name="fa5_title4">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>0</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="fa5_labelRegular">
            <property name="text">
-            <string>Regular:</string>
+            <string>Normal
+Checkable</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="fa5_title3">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </item>
          <item row="0" column="5">
-          <spacer name="fa5_hSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
+          <widget class="QLabel" name="fa5_title5">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>0</width>
-             <height>20</height>
-            </size>
+           <property name="text">
+            <string>Normal
+Disabled</string>
            </property>
-          </spacer>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
          </item>
         </layout>
+       </item>
+       <item>
+        <spacer name="fa5_vSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -424,90 +615,7 @@
        </item>
        <item>
         <layout class="QGridLayout" name="fa5pro_gridLayout">
-         <item row="1" column="2">
-          <widget class="QToolButton" name="fa5pro_btn212">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QToolButton" name="fa5pro_btn202">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="3" column="0">
-          <widget class="QLabel" name="fa5pro_labelBrands">
-           <property name="text">
-            <string>Brands:</string>
-           </property>
-          </widget>
-         </item>
          <item row="1" column="4">
-          <widget class="QToolButton" name="fa5pro_btn214">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
-          <widget class="QToolButton" name="fa5pro_btn213">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
           <widget class="QToolButton" name="fa5pro_btn204">
            <property name="minimumSize">
             <size>
@@ -524,10 +632,16 @@
              <height>48</height>
             </size>
            </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
-         <item row="0" column="1">
-          <widget class="QToolButton" name="fa5pro_btn201">
+         <item row="3" column="4">
+          <widget class="QToolButton" name="fa5pro_btn224">
            <property name="minimumSize">
             <size>
              <width>56</width>
@@ -543,35 +657,12 @@
              <height>48</height>
             </size>
            </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="fa5pro_labelSolid">
-           <property name="text">
-            <string>Solid:</string>
+           <property name="checkable">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
-         <item row="0" column="3">
-          <widget class="QToolButton" name="fa5pro_btn203">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
+         <item row="2" column="1">
           <widget class="QToolButton" name="fa5pro_btn211">
            <property name="minimumSize">
             <size>
@@ -588,88 +679,16 @@
              <height>48</height>
             </size>
            </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="fa5pro_labelLight">
-           <property name="text">
-            <string>Light:</string>
+           <property name="autoRaise">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
-         <item row="4" column="0">
-          <spacer name="fa5pro_vSpacer">
-           <property name="orientation">
-            <enum>Qt::Vertical</enum>
+         <item row="1" column="5">
+          <widget class="QToolButton" name="fa5pro_btn205">
+           <property name="enabled">
+            <bool>false</bool>
            </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>0</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="fa5pro_labelRegular">
-           <property name="text">
-            <string>Regular:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="5">
-          <spacer name="fa5pro_hSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>0</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="2" column="1">
-          <widget class="QToolButton" name="fa5pro_btn221">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="2">
-          <widget class="QToolButton" name="fa5pro_btn222">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="3">
-          <widget class="QToolButton" name="fa5pro_btn223">
            <property name="minimumSize">
             <size>
              <width>56</width>
@@ -688,7 +707,7 @@
           </widget>
          </item>
          <item row="2" column="4">
-          <widget class="QToolButton" name="fa5pro_btn224">
+          <widget class="QToolButton" name="fa5pro_btn214">
            <property name="minimumSize">
             <size>
              <width>56</width>
@@ -704,10 +723,20 @@
              <height>48</height>
             </size>
            </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
-         <item row="3" column="1" colspan="4">
-          <widget class="QLabel" name="label">
+         <item row="3" column="0">
+          <widget class="QLabel" name="fa5pro_labelLight">
+           <property name="text">
+            <string>Light:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1" colspan="5">
+          <widget class="QLabel" name="fa5pro_labelNotAvailable">
            <property name="minimumSize">
             <size>
              <width>0</width>
@@ -727,7 +756,357 @@
            </property>
           </widget>
          </item>
+         <item row="1" column="3">
+          <widget class="QToolButton" name="fa5pro_btn203">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QToolButton" name="fa5pro_btn213">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="3">
+          <widget class="QToolButton" name="fa5pro_btn223">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1">
+          <widget class="QToolButton" name="fa5pro_btn221">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="fa5pro_labelSolid">
+           <property name="text">
+            <string>Solid:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="2">
+          <widget class="QToolButton" name="fa5pro_btn222">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <spacer name="fa5pro_hSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="2">
+          <widget class="QToolButton" name="fa5pro_btn212">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="fa5pro_labelRegular">
+           <property name="text">
+            <string>Regular:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="5">
+          <widget class="QToolButton" name="fa5pro_btn225">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QToolButton" name="fa5pro_btn201">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QToolButton" name="fa5pro_btn215">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QToolButton" name="fa5pro_btn202">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
+          <widget class="QLabel" name="fa5pro_labelBrands">
+           <property name="text">
+            <string>Brands:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="fa5pro_title1">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>AutoRaise
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="fa5pro_title2">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>AutoRaise
+Checkable</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="fa5pro_title4">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+Checkable</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLabel" name="fa5pro_title5">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+Disabled</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="fa5pro_title3">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
         </layout>
+       </item>
+       <item>
+        <spacer name="fa5pro_vSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>
@@ -774,186 +1153,7 @@
        </item>
        <item>
         <layout class="QGridLayout" name="fa4_gridLayout">
-         <item row="2" column="2">
-          <widget class="QToolButton" name="fa4_btn122">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
          <item row="2" column="3">
-          <widget class="QToolButton" name="fa4_btn123">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="0">
-          <widget class="QLabel" name="fa4_labelRegular">
-           <property name="text">
-            <string>Regular:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="4">
-          <widget class="QToolButton" name="fa4_btn104">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="2">
-          <widget class="QToolButton" name="fa4_btn112">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="5">
-          <spacer name="fa4_hSpacer">
-           <property name="orientation">
-            <enum>Qt::Horizontal</enum>
-           </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>0</width>
-             <height>20</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-         <item row="0" column="1">
-          <widget class="QToolButton" name="fa4_btn101">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QToolButton" name="fa4_btn111">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="2">
-          <widget class="QToolButton" name="fa4_btn102">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="0" column="0">
-          <widget class="QLabel" name="fa4_labelSolid">
-           <property name="text">
-            <string>Solid:</string>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="4">
-          <widget class="QToolButton" name="fa4_btn114">
-           <property name="minimumSize">
-            <size>
-             <width>56</width>
-             <height>56</height>
-            </size>
-           </property>
-           <property name="text">
-            <string>...</string>
-           </property>
-           <property name="iconSize">
-            <size>
-             <width>48</width>
-             <height>48</height>
-            </size>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="3">
           <widget class="QToolButton" name="fa4_btn113">
            <property name="minimumSize">
             <size>
@@ -972,8 +1172,8 @@
            </property>
           </widget>
          </item>
-         <item row="0" column="3">
-          <widget class="QToolButton" name="fa4_btn103">
+         <item row="2" column="2">
+          <widget class="QToolButton" name="fa4_btn112">
            <property name="minimumSize">
             <size>
              <width>56</width>
@@ -989,9 +1189,22 @@
              <height>48</height>
             </size>
            </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
-         <item row="2" column="4">
+         <item row="1" column="0">
+          <widget class="QLabel" name="fa4_labelSolid">
+           <property name="text">
+            <string>Solid:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="4">
           <widget class="QToolButton" name="fa4_btn124">
            <property name="minimumSize">
             <size>
@@ -1008,10 +1221,16 @@
              <height>48</height>
             </size>
            </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
-         <item row="2" column="1">
-          <widget class="QToolButton" name="fa4_btn121">
+         <item row="1" column="5">
+          <widget class="QToolButton" name="fa4_btn105">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>56</width>
@@ -1030,26 +1249,751 @@
           </widget>
          </item>
          <item row="2" column="0">
+          <widget class="QLabel" name="fa4_labelRegular">
+           <property name="text">
+            <string>Regular:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QToolButton" name="fa4_btn103">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="5">
+          <widget class="QToolButton" name="fa4_btn125">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="4">
+          <widget class="QToolButton" name="fa4_btn114">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="3">
+          <widget class="QToolButton" name="fa4_btn123">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QToolButton" name="fa4_btn111">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QToolButton" name="fa4_btn102">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="1">
+          <widget class="QToolButton" name="fa4_btn121">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QToolButton" name="fa4_btn101">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="1" colspan="5">
+          <widget class="QLabel" name="mdi_labelNotAvailable">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="font">
+            <font>
+             <italic>true</italic>
+            </font>
+           </property>
+           <property name="text">
+            <string>(FA4 has no light style)</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <spacer name="fa4_hSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>0</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="2" column="5">
+          <widget class="QToolButton" name="fa4_btn115">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0">
+          <widget class="QLabel" name="mdi_labelLight">
+           <property name="text">
+            <string>Light:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="2">
+          <widget class="QToolButton" name="fa4_btn122">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QToolButton" name="fa4_btn104">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="4" column="0">
           <widget class="QLabel" name="fa4_labelBrands">
            <property name="text">
             <string>Brands:</string>
            </property>
           </widget>
          </item>
-         <item row="3" column="0">
-          <spacer name="fa4_vSpacer">
+         <item row="0" column="1">
+          <widget class="QLabel" name="fa4_title1">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>AutoRaise
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="fa4_title2">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>AutoRaise
+Checkable</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="fa4_title4">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+Checkable</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLabel" name="fa4_title5">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+Disabled</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="fa4_title3">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer name="fa4_vSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="mdi_tab">
+      <attribute name="title">
+       <string>Material Icons</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="topMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="mdi_labelTitle">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>GOOGLE MATERIAL DESIGN ICONS 2.2.0</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="Line" name="mdi_line">
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QGridLayout" name="mdi_gridLayout">
+         <item row="1" column="0">
+          <widget class="QLabel" name="mdi_labelSolid">
+           <property name="text">
+            <string>Solid:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="3">
+          <widget class="QToolButton" name="mdi_btn113">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="6">
+          <spacer name="mdi_hSpacer_2">
            <property name="orientation">
-            <enum>Qt::Vertical</enum>
+            <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>20</width>
-             <height>0</height>
+             <width>0</width>
+             <height>20</height>
             </size>
            </property>
           </spacer>
          </item>
+         <item row="1" column="5">
+          <widget class="QToolButton" name="mdi_btn105">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QToolButton" name="mdi_btn101">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="mdi_labelRegular">
+           <property name="text">
+            <string>Regular:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="4">
+          <widget class="QToolButton" name="mdi_btn104">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="5">
+          <widget class="QToolButton" name="mdi_btn115">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="3">
+          <widget class="QToolButton" name="mdi_btn103">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="2">
+          <widget class="QToolButton" name="mdi_btn102">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="checked">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="2">
+          <widget class="QToolButton" name="mdi_btn112">
+           <property name="minimumSize">
+            <size>
+             <width>56</width>
+             <height>56</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>...</string>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>48</width>
+             <height>48</height>
+            </size>
+           </property>
+           <property name="checkable">
+            <bool>true</bool>
+           </property>
+           <property name="autoRaise">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLabel" name="mdi_title1">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>AutoRaise
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="2">
+          <widget class="QLabel" name="mdi_title2">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>AutoRaise
+Checkable</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="4">
+          <widget class="QLabel" name="mdi_title4">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+Checkable</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="5">
+          <widget class="QLabel" name="mdi_title5">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+Disabled</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="3">
+          <widget class="QLabel" name="mdi_title3">
+           <property name="font">
+            <font>
+             <pointsize>8</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Normal
+</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
         </layout>
+       </item>
+       <item>
+        <spacer name="mdi_vSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>0</height>
+          </size>
+         </property>
+        </spacer>
        </item>
       </layout>
      </widget>

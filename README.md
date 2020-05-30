@@ -5,6 +5,7 @@ ZFontIcon is released under the MIT License
 ZFontIcon provide a simple way to use any glyph/icon fonts as QIcon in your Qt applications.
 
 Some helpers are included to use the following icon fonts without effort:
+- Google Material Design Icons 2.2.0
 - Font Awesome 5 Free
 - Font Awesome 5 Pro (you need to have a license)
 - Font Awesome 5 Brands
