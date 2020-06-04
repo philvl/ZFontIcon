@@ -30,32 +30,36 @@ SOFTWARE.
 
 // Qt Core
 #include <QObject>
+#include <QString>
+#include <QStringList>
+#include <QMap>
 // Qt Gui
 #include <QColor>
 
 
 class ZFontIcon : public QObject {
     Q_OBJECT
+// METHODS
 public:
-    static ZFontIcon *instance();
-
-    // Add Font. The first one is used by default
+    // Add Font
     static bool addFont(const QString &filename);
-    // Main methods. Return icons from code
-    static QIcon icon(const QString &fontFamily, const QChar &iconCode, const QColor &iconColor= QColor(), const QString &iconStyle= QString());
-    static QIcon icon(const QChar &iconCode, const QColor &iconColor= QColor(), const QString &iconStyle= QString());
-    // Return added families
-    const QStringList &families() const;
 
-protected:
-    void addFontFamily(const QString &family);
+    // Return icons from code
+    //-- This method should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
+    static QIcon icon(const QString &fontFamily, const QChar &iconCode, const QString &iconStyle, const QColor &iconColor= QColor());
+    //-- This method can be used with font families having only one style
+    static QIcon icon(const QString &fontFamily, const QChar &iconCode, const QColor &iconColor= QColor());
+
+    // Return registered font list (family and styles)
+    static QMap<QString, QStringList> registeredFonts();
 
 private:
     explicit ZFontIcon(QObject *parent = 0);
     ~ZFontIcon();
 
-    static ZFontIcon *_instance;
-    QStringList _fontFamilies;
+// VARIABLES
+private:
+    static QMap<QString, QStringList> _registeredFontList;
 };
 
 #endif // ZFONTICON_H
