@@ -37,6 +37,25 @@ SOFTWARE.
 #include <QColor>
 
 
+class ZFontIconOption {
+public:
+    ZFontIconOption();
+
+    QChar iconCode;
+    QChar iconCodeOn;     // Optional: if null, iconCode value will be used
+    //--
+    QColor color;
+    QColor colorOn;       // Optional: if not set, color value will be used
+    QColor colorActive;   // Optional: if not set, color value will be used
+    QColor colorActiveOn; // Optional: if not set, color value will be used
+    QColor colorDisabled;
+    QColor colorSelected;
+    //--
+    float scaleFactor;
+    float scaleFactorOn;  // Optional: if null, scaleFactor value will be used
+};
+
+
 class ZFontIcon : public QObject {
     Q_OBJECT
 // METHODS
@@ -45,7 +64,8 @@ public:
     static bool addFont(const QString &filename);
 
     // Return icons from code
-    //-- This method should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
+    //-- This methods should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
+    static QIcon icon(const QString &fontFamily, const QString &iconStyle, const ZFontIconOption &iconOption);
     static QIcon icon(const QString &fontFamily, const QString &iconStyle, const QChar &iconCode, const QColor &iconColor= QColor());
     //-- This method can be used with font families having only one style
     static QIcon icon(const QString &fontFamily, const QChar &iconCode, const QColor &iconColor= QColor());

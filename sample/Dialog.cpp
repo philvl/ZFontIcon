@@ -89,6 +89,22 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
     ui->fa5_btn125->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_instagram, QColor(0, 0, 0)));
 
 
+    // Advanced use exemple with Font Awesome 5 FREE
+    //----------------------
+    ZFontIconOption iconOpt;
+    iconOpt.iconCode=      Fa5::fa_lock;
+    iconOpt.iconCodeOn=    Fa5::fa_unlock;
+    iconOpt.color=         QColor(195,  65,  65);
+    iconOpt.colorOn=       QColor(102, 163,  52);
+    iconOpt.colorActive=   QColor(234,  78,  78);
+    iconOpt.colorActiveOn= QColor(122, 196,  62);
+    iconOpt.scaleFactor=   0.85;
+    iconOpt.scaleFactorOn= 1.00;
+    ui->fa5_btn131->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID, iconOpt));
+    ui->fa5_btn132->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID, iconOpt));
+    ui->fa5_btn133->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID, iconOpt));
+
+
     // Font Awesome 5 PRO
     //---------------------
     if(USE_PRO_FONT) {
