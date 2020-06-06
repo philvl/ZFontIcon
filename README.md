@@ -33,17 +33,17 @@ First of all, you need load the fonts (typically in the main.cpp):
 Then you can get icon using the helpers:
 
     #include "ZFontIcon/ZFont_fa_5.13.h"
-    ZFontIcon::icon(Fa5::FAMILY,       Fa5::fa_flag,         Fa5::SOLID,      QColor(0, 0, 0));
-    ZFontIcon::icon(Fa5::FAMILY,       Fa5::fa_flag,         Fa5::REGULAR,    QColor(0, 0, 0));
-    ZFontIcon::icon(Fa5pro::FAMILY,    Fa5pro::fa_flag,      Fa5pro::LIGHT,   QColor(0, 0, 0));
-    ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_github,                  QColor(0, 0, 0));
+    ZFontIcon::icon(Fa5::FAMILY,       Fa5::SOLID,    Fa5::fa_flag,         QColor(0, 0, 0));
+    ZFontIcon::icon(Fa5::FAMILY,       Fa5::REGULAR,  Fa5::fa_flag,         QColor(0, 0, 0));
+    ZFontIcon::icon(Fa5pro::FAMILY,    Fa5pro::LIGHT, Fa5pro::fa_flag,      QColor(0, 0, 0));
+    ZFontIcon::icon(Fa5brands::FAMILY,                Fa5brands::fa_github, QColor(0, 0, 0));
 
 Or get icon from unicode (without helpers):
 
-    ZFontIcon::icon(QLatin1String("Font Awesome 5 Free"),   0xf024, QLatin1String("Solid"),   QColor(0, 0, 0));
-    ZFontIcon::icon(QLatin1String("Font Awesome 5 Free"),   0xf024, QLatin1String("Regular"), QColor(0, 0, 0));
-    ZFontIcon::icon(QLatin1String("Font Awesome 5 Pro"),    0xf024, QLatin1String("Light"),   QColor(0, 0, 0));
-    ZFontIcon::icon(QLatin1String("Font Awesome 5 Brands"), 0xf09b,                           QColor(0, 0, 0));
+    ZFontIcon::icon(QLatin1String("Font Awesome 5 Free"),   QLatin1String("Solid"),   0xf024, QColor(0, 0, 0));
+    ZFontIcon::icon(QLatin1String("Font Awesome 5 Free"),   QLatin1String("Regular"), 0xf024, QColor(0, 0, 0));
+    ZFontIcon::icon(QLatin1String("Font Awesome 5 Pro"),    QLatin1String("Light"),   0xf024, QColor(0, 0, 0));
+    ZFontIcon::icon(QLatin1String("Font Awesome 5 Brands"),                           0xf09b, QColor(0, 0, 0));
 
 
 ## Exemple

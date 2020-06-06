@@ -46,7 +46,7 @@ public:
 
     // Return icons from code
     //-- This method should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
-    static QIcon icon(const QString &fontFamily, const QChar &iconCode, const QString &iconStyle, const QColor &iconColor= QColor());
+    static QIcon icon(const QString &fontFamily, const QString &iconStyle, const QChar &iconCode, const QColor &iconColor= QColor());
     //-- This method can be used with font families having only one style
     static QIcon icon(const QString &fontFamily, const QChar &iconCode, const QColor &iconColor= QColor());
 

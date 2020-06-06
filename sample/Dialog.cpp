@@ -65,17 +65,17 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
     // styles share the same family name so specify the family is useless.
     // As different styles from the same font family have been loaded (Solid and Regular),
     // we need to specify which style to use explicitly
-    ui->fa5_btn101->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_flag,    Fa5::SOLID,   QColor(195,  65,  65)));
-    ui->fa5_btn102->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_star,    Fa5::SOLID,   QColor(214, 197,  64)));
-    ui->fa5_btn103->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_user,    Fa5::SOLID,   QColor( 69, 100, 214)));
-    ui->fa5_btn104->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_map,     Fa5::SOLID,   QColor(102, 163,  52)));
-    ui->fa5_btn105->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_comment, Fa5::SOLID,   QColor(  0,   0,   0)));
+    ui->fa5_btn101->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID,   Fa5::fa_flag,    QColor(195,  65,  65)));
+    ui->fa5_btn102->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID,   Fa5::fa_star,    QColor(214, 197,  64)));
+    ui->fa5_btn103->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID,   Fa5::fa_user,    QColor( 69, 100, 214)));
+    ui->fa5_btn104->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID,   Fa5::fa_map,     QColor(102, 163,  52)));
+    ui->fa5_btn105->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID,   Fa5::fa_comment, QColor(  0,   0,   0)));
 
-    ui->fa5_btn111->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_flag,    Fa5::REGULAR, QColor(195,  65,  65)));
-    ui->fa5_btn112->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_star,    Fa5::REGULAR, QColor(214, 197,  64)));
-    ui->fa5_btn113->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_user,    Fa5::REGULAR, QColor( 69, 100, 214)));
-    ui->fa5_btn114->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_map,     Fa5::REGULAR, QColor(102, 163,  52)));
-    ui->fa5_btn115->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::fa_comment, Fa5::REGULAR, QColor(  0,   0,   0)));
+    ui->fa5_btn111->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_flag,    QColor(195,  65,  65)));
+    ui->fa5_btn112->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_star,    QColor(214, 197,  64)));
+    ui->fa5_btn113->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_user,    QColor( 69, 100, 214)));
+    ui->fa5_btn114->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_map,     QColor(102, 163,  52)));
+    ui->fa5_btn115->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_comment, QColor(  0,   0,   0)));
 
 
     // Font Awesome 5 BRANDS
@@ -92,23 +92,23 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
     // Font Awesome 5 PRO
     //---------------------
     if(USE_PRO_FONT) {
-        ui->fa5pro_btn201->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_flag,    Fa5pro::SOLID,   QColor(195,  65,  65)));
-        ui->fa5pro_btn202->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_star,    Fa5pro::SOLID,   QColor(214, 197,  64)));
-        ui->fa5pro_btn203->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_user,    Fa5pro::SOLID,   QColor( 69, 100, 214)));
-        ui->fa5pro_btn204->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_map,     Fa5pro::SOLID,   QColor(102, 163,  52)));
-        ui->fa5pro_btn205->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_comment, Fa5pro::SOLID,   QColor(  0,   0,   0)));
+        ui->fa5pro_btn201->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::SOLID,   Fa5pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa5pro_btn202->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::SOLID,   Fa5pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa5pro_btn203->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::SOLID,   Fa5pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa5pro_btn204->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::SOLID,   Fa5pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa5pro_btn205->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::SOLID,   Fa5pro::fa_comment, QColor(  0,   0,   0)));
 
-        ui->fa5pro_btn211->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_flag,    Fa5pro::REGULAR, QColor(195,  65,  65)));
-        ui->fa5pro_btn212->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_star,    Fa5pro::REGULAR, QColor(214, 197,  64)));
-        ui->fa5pro_btn213->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_user,    Fa5pro::REGULAR, QColor( 69, 100, 214)));
-        ui->fa5pro_btn214->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_map,     Fa5pro::REGULAR, QColor(102, 163,  52)));
-        ui->fa5pro_btn215->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_comment, Fa5pro::REGULAR, QColor(  0,   0,   0)));
+        ui->fa5pro_btn211->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::REGULAR, Fa5pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa5pro_btn212->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::REGULAR, Fa5pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa5pro_btn213->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::REGULAR, Fa5pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa5pro_btn214->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::REGULAR, Fa5pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa5pro_btn215->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::REGULAR, Fa5pro::fa_comment, QColor(  0,   0,   0)));
 
-        ui->fa5pro_btn221->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_flag,    Fa5pro::LIGHT,   QColor(195,  65,  65)));
-        ui->fa5pro_btn222->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_star,    Fa5pro::LIGHT,   QColor(214, 197,  64)));
-        ui->fa5pro_btn223->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_user,    Fa5pro::LIGHT,   QColor( 69, 100, 214)));
-        ui->fa5pro_btn224->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_map,     Fa5pro::LIGHT,   QColor(102, 163,  52)));
-        ui->fa5pro_btn225->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::fa_comment, Fa5pro::LIGHT,   QColor(  0,   0,   0)));
+        ui->fa5pro_btn221->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::LIGHT,   Fa5pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa5pro_btn222->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::LIGHT,   Fa5pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa5pro_btn223->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::LIGHT,   Fa5pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa5pro_btn224->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::LIGHT,   Fa5pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa5pro_btn225->setIcon(ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::LIGHT,   Fa5pro::fa_comment, QColor(  0,   0,   0)));
     }
 
 

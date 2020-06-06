@@ -157,7 +157,7 @@ bool ZFontIcon::addFont(const QString &filename) {
     return true;
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const QChar &iconCode, const QString &iconStyle, const QColor &iconColor) {
+QIcon ZFontIcon::icon(const QString &fontFamily, const QString &iconStyle, const QChar &iconCode,  const QColor &iconColor) {
     if(_registeredFontList.isEmpty()) {
         qWarning() << "ZFontIcon::icon: No font family added";
         return QIcon();
@@ -216,7 +216,7 @@ QIcon ZFontIcon::icon(const QString &fontFamily, const QChar &iconCode, const QS
 }
 
 QIcon ZFontIcon::icon(const QString &fontFamily, const QChar &iconCode, const QColor &iconColor) {
-    return icon(fontFamily, iconCode, QString(), iconColor);
+    return icon(fontFamily, QString(), iconCode, iconColor);
 }
 
 QMap<QString, QStringList> ZFontIcon::registeredFonts() {
