@@ -104,11 +104,10 @@ public:
     }
     void setIconOption(const ZFontIconOption &iconOpt) {
         _iconOption= iconOpt;
-
     }
 
     virtual QIconEngine *clone() const Q_DECL_OVERRIDE {
-        ZFontIconEngine * engine= new ZFontIconEngine;
+        ZFontIconEngine *engine= new ZFontIconEngine;
         engine->setFontFamily(_fontFamily);
         engine->setIconStyle(_iconStyle);
         engine->setIconOption(_iconOption);
@@ -153,39 +152,32 @@ QMap<QString, QStringList> ZFontIcon::_registeredFontList= QMap<QString, QString
 
 
 bool ZFontIcon::addFont(const QString &filename) {
-    // Register the given font file
+    // Makes font specified by filename available to the application
     const int fontId= QFontDatabase::addApplicationFont(filename);
     if(fontId < 0) {
         qWarning() << "ZFontIcon::addFont: Cannot load font file:" << filename;
         return false;
     }
 
-    // Gets the family and styles of the added font
+    // Retrieve the family name of the added font and associated styles
     QFontDatabase fontDb;
-    QString     fontFamilyName=  fontDb.applicationFontFamilies(fontId).first();
-    QStringList familyStyleList= fontDb.styles(fontFamilyName);
+    const QString fontFamilyName= fontDb.applicationFontFamilies(fontId).first();
+    const QStringList fontStyleList= fontDb.styles(fontFamilyName);
 
-    // Retrieve the styles already known from the added font family
+    // Compare familyStyleList with knownStyleList to find new added styles
+    // On success, we register the font and associated styles
     QStringList knownStyleList= _registeredFontList.value(fontFamilyName);
-
-    // Remove already known styles from the style list of the added font
-    for(const QString &knownStyle : knownStyleList) {
-        if(familyStyleList.contains(knownStyle))
-            familyStyleList.removeOne(knownStyle);
+    for(const QString &style : fontStyleList) {
+        if(!knownStyleList.contains(style)) {
+            _registeredFontList.insert(fontFamilyName, fontStyleList);
+            return true;
+        }
     }
 
-    // If the new font style list is empty, the added font has
-    // already been registered, so we need to unregister it
-    if(familyStyleList.isEmpty()) {
-        qWarning() << "ZFontIcon::addFont: Ignore already registered font:" << filename;
-        QFontDatabase::removeApplicationFont(fontId);
-        return false;
-    }
-
-    // Update registered font info
-    knownStyleList.append(familyStyleList);
-    _registeredFontList.insert(fontFamilyName, knownStyleList);
-    return true;
+    // The added font has already been registered, so we need to unload it
+    qWarning() << "ZFontIcon::addFont: Ignore already registered font:" << filename;
+    QFontDatabase::removeApplicationFont(fontId);
+    return false;
 }
 
 QIcon ZFontIcon::icon(const QString &fontFamily, const QString &iconStyle, const ZFontIconOption &iconOption) {
@@ -197,45 +189,36 @@ QIcon ZFontIcon::icon(const QString &fontFamily, const QString &iconStyle, const
 
     // Family matching
     //-- Get all registered families containing the desired font family name
-    QStringList matchFamilies= _registeredFontList.keys().filter(fontFamily, Qt::CaseInsensitive);
+    const QStringList matchFamilies= _registeredFontList.keys().filter(fontFamily, Qt::CaseInsensitive);
     if(matchFamilies.isEmpty()) {
         qWarning() << "ZFontIcon::icon: No font family match with:" << fontFamily;
         return QIcon();
     }
-
     //-- The first family in the match list is used by default
     QString familyToUse= matchFamilies.first();
     //-- Looking for an exact match for the desired font family name
-    if((matchIndex= matchFamilies.indexOf(fontFamily, Qt::CaseInsensitive)) > -1) {
-        //qDebug() << "ZFontIcon::icon: Match with family name";
+    if((matchIndex= matchFamilies.indexOf(fontFamily, Qt::CaseInsensitive)) > -1)
         familyToUse= matchFamilies.at(matchIndex);
-    }
     //-- If the font style is set, try to find a font family name containing the desired style name
-    else if(!iconStyle.isEmpty() && (matchIndex= matchFamilies.indexOf(fontFamily + ' ' + iconStyle, Qt::CaseInsensitive)) > -1) {
-        //qDebug() << "ZFontIcon::icon: Match with family+style name";
+    else if(!iconStyle.isEmpty() && (matchIndex= matchFamilies.indexOf(fontFamily + ' ' + iconStyle, Qt::CaseInsensitive)) > -1)
         familyToUse= matchFamilies.at(matchIndex);
-    }
     //-- If the font style is set, try to find a font family witch embed the desired style
     else if(!iconStyle.isEmpty()) {
-        QStringList familyStyleList;
         for(const QString &family : matchFamilies) {
-            familyStyleList= _registeredFontList.value(family);
-            if(familyStyleList.contains(iconStyle, Qt::CaseInsensitive)) {
-                //qDebug() << "ZFontIcon::icon: Match with family embedded style name";
+            QStringList familyStyleList= _registeredFontList.value(family);
+            if(familyStyleList.contains(iconStyle, Qt::CaseInsensitive))
                 familyToUse= family;
-            }
         }
     }
 
     // Style matching
     //-- Get all registered styles for the family to use
-    QStringList familyStyleList= _registeredFontList.value(familyToUse);
+    const QStringList familyStyleList= _registeredFontList.value(familyToUse);
     //-- The first family style is used by default
-    QString styleToUse = familyStyleList.first();
+    QString styleToUse= familyStyleList.first();
     //-- Looking for an exact match for the desired style name
-    if(!iconStyle.isEmpty() && (matchIndex= familyStyleList.indexOf(iconStyle, Qt::CaseInsensitive)) > -1) {
+    if(!iconStyle.isEmpty() && (matchIndex= familyStyleList.indexOf(iconStyle, Qt::CaseInsensitive)) > -1)
         styleToUse= familyStyleList.at(matchIndex);
-    }
 
     // Generate icon
     ZFontIconEngine *engine= new ZFontIconEngine;
