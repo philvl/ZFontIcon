@@ -91,18 +91,20 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
 
     // Advanced use exemple with Font Awesome 5 FREE
     //----------------------
-    ZFontIconOption iconOpt;
-    iconOpt.iconCode=      Fa5::fa_lock;
-    iconOpt.iconCodeOn=    Fa5::fa_unlock;
-    iconOpt.color=         QColor(195,  65,  65);
-    iconOpt.colorOn=       QColor(102, 163,  52);
-    iconOpt.colorActive=   QColor(234,  78,  78);
-    iconOpt.colorActiveOn= QColor(122, 196,  62);
-    iconOpt.scaleFactor=   0.85;
-    iconOpt.scaleFactorOn= 1.00;
-    ui->fa5_btn131->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID, iconOpt));
-    ui->fa5_btn132->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID, iconOpt));
-    ui->fa5_btn133->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID, iconOpt));
+    ZFontIconOption fIcon;
+    fIcon.fontFamily=    Fa5::FAMILY;
+    fIcon.fontStyle=     Fa5::SOLID;
+    fIcon.glyph=         Fa5::fa_lock;
+    fIcon.glyphOn=       Fa5::fa_unlock;
+    fIcon.color=         QColor(195,  65,  65);
+    fIcon.colorOn=       QColor(102, 163,  52);
+    fIcon.colorActive=   QColor(234,  78,  78);
+    fIcon.colorActiveOn= QColor(122, 196,  62);
+    fIcon.scaleFactor=   0.85;
+    fIcon.scaleFactorOn= 1.00;
+    ui->fa5_btn131->setIcon(ZFontIcon::icon(fIcon));
+    ui->fa5_btn132->setIcon(ZFontIcon::icon(fIcon));
+    ui->fa5_btn133->setIcon(ZFontIcon::icon(fIcon));
 
 
     // Font Awesome 5 PRO

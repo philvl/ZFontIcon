@@ -45,46 +45,46 @@ public:
     ~ZFontIconEngine() {}
 
     virtual void paint(QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state) Q_DECL_OVERRIDE {
-        QChar iconCode= _iconOption.iconCode;
-        if(state == QIcon::On && _iconOption.iconCodeOn > 0)
-            iconCode= _iconOption.iconCodeOn;
+        QChar glyph= _fIcon.glyph;
+        if(state == QIcon::On && _fIcon.glyphOn > 0)
+            glyph= _fIcon.glyphOn;
 
-        QColor penColor= _iconOption.color;
+        QColor penColor= _fIcon.color;
         switch(mode) {
         case QIcon::Normal: // When icon is available and the user is not interacting with the icon
-            if(state == QIcon::On && _iconOption.colorOn.isValid())
-                penColor= _iconOption.colorOn;
+            if(state == QIcon::On && _fIcon.colorOn.isValid())
+                penColor= _fIcon.colorOn;
             break;
         case QIcon::Active: // When icon is available and the user is interacting with the icon (eg. mouse over it or clicking it)
-            if(state == QIcon::Off && _iconOption.colorActive.isValid())
-                penColor= _iconOption.colorActive;
-            else if(state == QIcon::On && _iconOption.colorActiveOn.isValid())
-                penColor= _iconOption.colorActiveOn;
-            else if(state == QIcon::On && _iconOption.colorOn.isValid())
-                penColor= _iconOption.colorOn;
+            if(state == QIcon::Off && _fIcon.colorActive.isValid())
+                penColor= _fIcon.colorActive;
+            else if(state == QIcon::On && _fIcon.colorActiveOn.isValid())
+                penColor= _fIcon.colorActiveOn;
+            else if(state == QIcon::On && _fIcon.colorOn.isValid())
+                penColor= _fIcon.colorOn;
             break;
         case QIcon::Disabled: // When icon is not available
-            penColor= _iconOption.colorDisabled;
+            penColor= _fIcon.colorDisabled;
             break;
         case QIcon::Selected: // When icon is selected
-            penColor= _iconOption.colorSelected;
+            penColor= _fIcon.colorSelected;
             break;
         }
 
-        float scalefactor= _iconOption.scaleFactor;
-        if(state == QIcon::On && _iconOption.scaleFactorOn > 0)
-            scalefactor= _iconOption.scaleFactorOn;
+        float scalefactor= _fIcon.scaleFactor;
+        if(state == QIcon::On && _fIcon.scaleFactorOn > 0)
+            scalefactor= _fIcon.scaleFactorOn;
 
-        QFont font(_fontFamily);
-        if(!_iconStyle.isEmpty())
-            font.setStyleName(_iconStyle);
+        QFont font(_fIcon.fontFamily);
+        if(!_fIcon.fontStyle.isEmpty())
+            font.setStyleName(_fIcon.fontStyle);
         int drawSize= qRound(rect.height() * scalefactor);
         font.setPixelSize(drawSize);
 
         painter->save();
         painter->setPen(penColor);
         painter->setFont(font);
-        painter->drawText(rect, Qt::AlignCenter, iconCode);
+        painter->drawText(rect, Qt::AlignCenter, glyph);
         painter->restore();
     }
     virtual QPixmap pixmap(const QSize &size, QIcon::Mode mode, QIcon::State state) Q_DECL_OVERRIDE {
@@ -96,28 +96,18 @@ public:
         return pix;
     }
 
-    void setFontFamily(const QString &family) {
-        _fontFamily= family;
-    }
-    void setIconStyle(const QString &style) {
-        _iconStyle= style;
-    }
-    void setIconOption(const ZFontIconOption &iconOpt) {
-        _iconOption= iconOpt;
+    void setIconOption(const ZFontIconOption &fIcon) {
+        _fIcon= fIcon;
     }
 
     virtual QIconEngine *clone() const Q_DECL_OVERRIDE {
         ZFontIconEngine *engine= new ZFontIconEngine;
-        engine->setFontFamily(_fontFamily);
-        engine->setIconStyle(_iconStyle);
-        engine->setIconOption(_iconOption);
+        engine->setIconOption(_fIcon);
         return engine;
     }
 
 private:
-    QString _fontFamily;
-    QString _iconStyle;
-    ZFontIconOption _iconOption;
+    ZFontIconOption _fIcon;
 };
 
 
@@ -126,9 +116,12 @@ private:
 //-------------------------------------------------------------------------------------------------
 //=================================================================================================
 ZFontIconOption::ZFontIconOption() {
+    fontFamily=    QString();
+    fontStyle=     QString();
+
     // Default icon character value
-    iconCode=      0;
-    iconCodeOn=    0;
+    glyph=      0;
+    glyphOn=    0;
 
     // Default icon color values
     color=         QApplication::palette().color(QPalette::Normal,   QPalette::ButtonText);
@@ -152,7 +145,7 @@ QMap<QString, QStringList> ZFontIcon::_registeredFontList= QMap<QString, QString
 
 
 bool ZFontIcon::addFont(const QString &filename) {
-    // Makes font specified by filename available to the application
+    // Load font specified by filename and makes it available to the application
     const int fontId= QFontDatabase::addApplicationFont(filename);
     if(fontId < 0) {
         qWarning() << "ZFontIcon::addFont: Cannot load font file:" << filename;
@@ -174,13 +167,13 @@ bool ZFontIcon::addFont(const QString &filename) {
         }
     }
 
-    // The added font has already been registered, so we need to unload it
+    // Otherwise, the added font has already been registered, so we unload it
     qWarning() << "ZFontIcon::addFont: Ignore already registered font:" << filename;
     QFontDatabase::removeApplicationFont(fontId);
     return false;
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const QString &iconStyle, const ZFontIconOption &iconOption) {
+QIcon ZFontIcon::icon(ZFontIconOption fIcon) {
     if(_registeredFontList.isEmpty()) {
         qWarning() << "ZFontIcon::icon: No font family added";
         return QIcon();
@@ -189,27 +182,28 @@ QIcon ZFontIcon::icon(const QString &fontFamily, const QString &iconStyle, const
 
     // Family matching
     //-- Get all registered families containing the desired font family name
-    const QStringList matchFamilies= _registeredFontList.keys().filter(fontFamily, Qt::CaseInsensitive);
+    const QStringList matchFamilies= _registeredFontList.keys().filter(fIcon.fontFamily, Qt::CaseInsensitive);
     if(matchFamilies.isEmpty()) {
-        qWarning() << "ZFontIcon::icon: No font family match with:" << fontFamily;
+        qWarning() << "ZFontIcon::icon: No font family match with:" << fIcon.fontFamily;
         return QIcon();
     }
     //-- The first family in the match list is used by default
     QString familyToUse= matchFamilies.first();
     //-- Looking for an exact match for the desired font family name
-    if((matchIndex= matchFamilies.indexOf(fontFamily, Qt::CaseInsensitive)) > -1)
+    if((matchIndex= matchFamilies.indexOf(fIcon.fontFamily, Qt::CaseInsensitive)) > -1)
         familyToUse= matchFamilies.at(matchIndex);
     //-- If the font style is set, try to find a font family name containing the desired style name
-    else if(!iconStyle.isEmpty() && (matchIndex= matchFamilies.indexOf(fontFamily + ' ' + iconStyle, Qt::CaseInsensitive)) > -1)
+    else if(!fIcon.fontStyle.isEmpty() && (matchIndex= matchFamilies.indexOf(fIcon.fontFamily + ' ' + fIcon.fontStyle, Qt::CaseInsensitive)) > -1)
         familyToUse= matchFamilies.at(matchIndex);
     //-- If the font style is set, try to find a font family witch embed the desired style
-    else if(!iconStyle.isEmpty()) {
+    else if(!fIcon.fontStyle.isEmpty()) {
         for(const QString &family : matchFamilies) {
             QStringList familyStyleList= _registeredFontList.value(family);
-            if(familyStyleList.contains(iconStyle, Qt::CaseInsensitive))
+            if(familyStyleList.contains(fIcon.fontStyle, Qt::CaseInsensitive))
                 familyToUse= family;
         }
     }
+    fIcon.fontFamily= familyToUse;
 
     // Style matching
     //-- Get all registered styles for the family to use
@@ -217,29 +211,31 @@ QIcon ZFontIcon::icon(const QString &fontFamily, const QString &iconStyle, const
     //-- The first family style is used by default
     QString styleToUse= familyStyleList.first();
     //-- Looking for an exact match for the desired style name
-    if(!iconStyle.isEmpty() && (matchIndex= familyStyleList.indexOf(iconStyle, Qt::CaseInsensitive)) > -1)
+    if(!fIcon.fontStyle.isEmpty() && (matchIndex= familyStyleList.indexOf(fIcon.fontStyle, Qt::CaseInsensitive)) > -1)
         styleToUse= familyStyleList.at(matchIndex);
+    fIcon.fontStyle= styleToUse;
 
     // Generate icon
     ZFontIconEngine *engine= new ZFontIconEngine;
-    engine->setFontFamily(familyToUse);
-    engine->setIconStyle(styleToUse);
-    engine->setIconOption(iconOption);
+    engine->setIconOption(fIcon);
     return QIcon(engine);
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const QString &iconStyle, const QChar &iconCode, const QColor &iconColor) {
-    ZFontIconOption iconOption;
-    iconOption.iconCode= iconCode;
-    iconOption.color=    iconColor;
-    return icon(fontFamily, iconStyle, iconOption);
+QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const QChar &glyph, const QColor &color) {
+    ZFontIconOption fIcon;
+    fIcon.fontFamily= fontFamily;
+    fIcon.fontStyle=  fontStyle;
+    fIcon.glyph= glyph;
+    fIcon.color= color;
+    return icon(fIcon);
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const QChar &iconCode, const QColor &iconColor) {
-    ZFontIconOption iconOption;
-    iconOption.iconCode= iconCode;
-    iconOption.color=    iconColor;
-    return icon(fontFamily, QString(), iconOption);
+QIcon ZFontIcon::icon(const QString &fontFamily, const QChar &glyph, const QColor &color) {
+    ZFontIconOption fIcon;
+    fIcon.fontFamily= fontFamily;
+    fIcon.glyph= glyph;
+    fIcon.color= color;
+    return icon(fIcon);
 }
 
 QMap<QString, QStringList> ZFontIcon::registeredFonts() {
