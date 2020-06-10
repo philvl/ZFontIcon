@@ -94,8 +94,9 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
     ZFontIconOption fIcon;
     fIcon.fontFamily=    Fa5::FAMILY;
     fIcon.fontStyle=     Fa5::SOLID;
-    fIcon.glyph=         Fa5::fa_lock;
-    fIcon.glyphOn=       Fa5::fa_unlock;
+    fIcon.fontStyleOn=   Fa5::REGULAR;
+    fIcon.glyph=         Fa5::fa_grin;
+    fIcon.glyphOn=       Fa5::fa_grin_stars;
     fIcon.color=         QColor(195,  65,  65);
     fIcon.colorOn=       QColor(102, 163,  52);
     fIcon.colorActive=   QColor(234,  78,  78);

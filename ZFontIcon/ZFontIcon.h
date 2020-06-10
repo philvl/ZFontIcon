@@ -40,12 +40,15 @@ SOFTWARE.
 class ZFontIconOption {
 public:
     ZFontIconOption();
-
+    //--
     QString fontFamily;
     QString fontStyle;
     //--
-    QChar glyph;
-    QChar glyphOn;        // Optional: if null, glyph value will be used
+    QString fontFamilyOn; // Optional: if null, fontFamily value will be used
+    QString fontStyleOn;  // Optional: if null, fontStyle value will be used
+    //--
+    QChar  glyph;
+    QChar  glyphOn;        // Optional: if null, glyph value will be used
     //--
     QColor color;
     QColor colorOn;       // Optional: if not set, color value will be used
@@ -54,8 +57,8 @@ public:
     QColor colorDisabled;
     QColor colorSelected;
     //--
-    float scaleFactor;
-    float scaleFactorOn;  // Optional: if null, scaleFactor value will be used
+    float  scaleFactor;
+    float  scaleFactorOn;  // Optional: if null, scaleFactor value will be used
 };
 
 
@@ -77,6 +80,9 @@ public:
     static QMap<QString, QStringList> registeredFonts();
 
 private:
+    static QString familyMatching(const QString &fontFamily, const QString &fontStyle);
+    static QString styleMatching(const QString &fontFamily, const QString &fontStyle);
+
     explicit ZFontIcon(QObject *parent = 0);
     ~ZFontIcon();
 
