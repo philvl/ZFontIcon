@@ -48,7 +48,7 @@ public:
     QString fontStyleOn;  // Optional: if null, fontStyle value will be used
     //--
     QChar  glyph;
-    QChar  glyphOn;        // Optional: if null, glyph value will be used
+    QChar  glyphOn;       // Optional: if null, glyph value will be used
     //--
     QColor color;
     QColor colorOn;       // Optional: if not set, color value will be used
@@ -58,7 +58,7 @@ public:
     QColor colorSelected;
     //--
     float  scaleFactor;
-    float  scaleFactorOn;  // Optional: if null, scaleFactor value will be used
+    float  scaleFactorOn; // Optional: if null, scaleFactor value will be used
 };
 
 
@@ -81,7 +81,7 @@ public:
 
 private:
     static QString familyMatching(const QString &fontFamily, const QString &fontStyle);
-    static QString styleMatching(const QString &fontFamily, const QString &fontStyle);
+    static QString styleMatching(const QString &familyToUse, const QString &fontStyle);
 
     explicit ZFontIcon(QObject *parent = 0);
     ~ZFontIcon();

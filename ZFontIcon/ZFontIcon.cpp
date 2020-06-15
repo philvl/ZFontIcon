@@ -163,10 +163,15 @@ bool ZFontIcon::addFont(const QString &filename) {
     QFontDatabase fontDb;
     const QString fontFamily= fontDb.applicationFontFamilies(fontId).first();
     const QStringList fontStyleList= fontDb.styles(fontFamily);
+    if(fontStyleList.isEmpty()) {
+        qWarning() << "ZFontIcon::addFont: Family with no styles is not supported";
+        QFontDatabase::removeApplicationFont(fontId);
+        return false;
+    }
 
     // Compare familyStyleList with knownStyleList to find new added styles
     // On success, we register the font and associated styles
-    QStringList knownStyleList= _registeredFontList.value(fontFamily);
+    const QStringList knownStyleList= _registeredFontList.value(fontFamily);
     for(const QString &style : fontStyleList) {
         if(!knownStyleList.contains(style)) {
             _registeredFontList.insert(fontFamily, fontStyleList);
@@ -190,22 +195,25 @@ QIcon ZFontIcon::icon(ZFontIconOption fIcon) {
         return QIcon();
     }
 
+    if(fIcon.fontFamilyOn.isEmpty() && !fIcon.fontStyleOn.isEmpty())
+        fIcon.fontFamilyOn= fIcon.fontFamily;
+    if(!fIcon.fontFamilyOn.isEmpty()) {
+        const QString familyOnToUse= familyMatching(fIcon.fontFamilyOn, fIcon.fontStyleOn);
+        if(familyOnToUse.isEmpty()) {
+            qWarning() << "ZFontIcon::icon: No font family match with:" << fIcon.fontFamilyOn;
+            return QIcon();
+        }
+        fIcon.fontFamilyOn= familyOnToUse;
+        fIcon.fontStyleOn=  styleMatching(familyOnToUse, fIcon.fontStyleOn);
+    }
+
     const QString familyToUse= familyMatching(fIcon.fontFamily, fIcon.fontStyle);
-    if(fIcon.fontFamily.isEmpty()) {
+    if(familyToUse.isEmpty()) {
         qWarning() << "ZFontIcon::icon: No font family match with:" << fIcon.fontFamily;
         return QIcon();
     }
     fIcon.fontFamily= familyToUse;
     fIcon.fontStyle=  styleMatching(familyToUse, fIcon.fontStyle);
-
-    if(!fIcon.fontStyleOn.isEmpty() && fIcon.fontFamilyOn.isEmpty())
-        fIcon.fontFamilyOn= fIcon.fontFamily;
-    if(!fIcon.fontFamilyOn.isEmpty()) {
-        fIcon.fontFamilyOn= familyMatching(fIcon.fontFamilyOn, fIcon.fontStyleOn);
-        fIcon.fontStyleOn=  styleMatching(fIcon.fontFamilyOn, fIcon.fontStyleOn);
-
-        qDebug() << fIcon.fontFamilyOn << fIcon.fontStyleOn;
-    }
 
     // Generate icon
     ZFontIconEngine *engine= new ZFontIconEngine;
@@ -240,21 +248,20 @@ QMap<QString, QStringList> ZFontIcon::registeredFonts() {
 //- Private methods
 //---
 QString ZFontIcon::familyMatching(const QString &fontFamily, const QString &fontStyle) {
-    // Family matching
     int matchIndex;
-    //-- Get all registered families containing the desired font family name
+    // Get all registered families containing the desired font family name
     const QStringList matchFamilies= _registeredFontList.keys().filter(fontFamily, Qt::CaseInsensitive);
     if(matchFamilies.isEmpty())
         return QString();
-    //-- The first family in the match list is used by default
+    // The first family in the match list is used by default
     QString familyToUse= matchFamilies.first();
-    //-- Looking for an exact match for the desired font family name
+    // Looking for an exact match for the desired font family name
     if((matchIndex= matchFamilies.indexOf(fontFamily, Qt::CaseInsensitive)) > -1)
         familyToUse= matchFamilies.at(matchIndex);
-    //-- If the font style is set, try to find a font family name containing the desired style name
+    // If the font style is set, try to find a font family name containing the desired style name
     else if(!fontStyle.isEmpty() && (matchIndex= matchFamilies.indexOf(fontFamily + ' ' + fontStyle, Qt::CaseInsensitive)) > -1)
         familyToUse= matchFamilies.at(matchIndex);
-    //-- If the font style is set, try to find a font family witch embed the desired style
+    // If the font style is set, try to find a font family witch embed the desired style
     else if(!fontStyle.isEmpty()) {
         for(const QString &family : matchFamilies) {
             QStringList familyStyleList= _registeredFontList.value(family);
@@ -265,16 +272,15 @@ QString ZFontIcon::familyMatching(const QString &fontFamily, const QString &font
     return familyToUse;
 }
 
-QString ZFontIcon::styleMatching(const QString &fontFamily, const QString &fontStyle) {
-    // Style matching
+QString ZFontIcon::styleMatching(const QString &familyToUse, const QString &fontStyle) {
     int matchIndex;
-    //-- Get all registered styles for the family to use
-    const QStringList familyStyleList= _registeredFontList.value(fontFamily);
+    // Get all registered styles for the family to use
+    const QStringList familyStyleList= _registeredFontList.value(familyToUse);
     if(familyStyleList.isEmpty())
         return QString();
-    //-- The first family style is used by default
+    // The first family style is used by default
     QString styleToUse= familyStyleList.first();
-    //-- Looking for an exact match for the desired style name
+    // Looking for an exact match for the desired style name
     if(!fontStyle.isEmpty() && (matchIndex= familyStyleList.indexOf(fontStyle, Qt::CaseInsensitive)) > -1)
         styleToUse= familyStyleList.at(matchIndex);
     return styleToUse;
