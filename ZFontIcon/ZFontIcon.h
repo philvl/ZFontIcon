@@ -57,8 +57,8 @@ public:
     QColor colorDisabled;
     QColor colorSelected;
     //--
-    float  scaleFactor;
-    float  scaleFactorOn; // Optional: if null, scaleFactor value will be used
+    qreal  scaleFactor;
+    qreal  scaleFactorOn; // Optional: if null, scaleFactor value will be used
 };
 
 

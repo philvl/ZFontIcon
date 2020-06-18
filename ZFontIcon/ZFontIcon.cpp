@@ -78,7 +78,7 @@ public:
             break;
         }
 
-        float scalefactor= _fIcon.scaleFactor;
+        qreal scalefactor= _fIcon.scaleFactor;
         if(state == QIcon::On && _fIcon.scaleFactorOn > 0)
             scalefactor= _fIcon.scaleFactorOn;
 
