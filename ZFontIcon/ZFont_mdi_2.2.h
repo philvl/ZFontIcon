@@ -35,7 +35,7 @@ namespace Mdi {
     //--
     static const QString REGULAR= QLatin1String("Regular");
 
-    enum Icon {
+    enum Glyph {
         md_3d_rotation                                 = 0xe84d,
         md_ac_unit                                     = 0xeb3b,
         md_access_alarm                                = 0xe190,

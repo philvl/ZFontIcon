@@ -35,7 +35,7 @@ namespace Fa4 {
     //--
     static const QString REGULAR= QLatin1String("Regular");
 
-    enum Icon {
+    enum Glyph {
         fa_glass                              = 0xf000,
         fa_music                              = 0xf001,
         fa_search                             = 0xf002,

@@ -46,7 +46,7 @@ namespace Fa5 {
     static const QString SOLID=   QLatin1String("Solid");
     static const QString REGULAR= QLatin1String("Regular");
 
-    enum Icon {
+    enum Glyph {
         fa_glass_martini                      = 0xf000,
         fa_music                              = 0xf001,
         fa_search                             = 0xf002,
@@ -1055,7 +1055,7 @@ namespace Fa5pro {
     static const QString REGULAR= QLatin1String("Regular");
     static const QString LIGHT=   QLatin1String("Light");
 
-    enum Icon {
+    enum Glyph {
         fa_glass_martini                      = 0xf000,
         fa_music                              = 0xf001,
         fa_search                             = 0xf002,
@@ -2917,7 +2917,7 @@ namespace Fa5brands {
     //--
     static const QString REGULAR= QLatin1String("Regular");
 
-    enum Icon {
+    enum Glyph {
         fa_twitter_square                     = 0xf081,
         fa_facebook_square                    = 0xf082,
         fa_linkedin                           = 0xf08c,

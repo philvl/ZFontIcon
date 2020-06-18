@@ -5,14 +5,12 @@ ZFontIcon is released under the MIT License
 ZFontIcon provide a simple way to use any glyph/icon fonts as QIcon in your Qt applications.
 
 Some helpers are included to use the following icon fonts without effort:
-- Google Material Design Icons 2.2.0
-- Font Awesome 5 Free
-- Font Awesome 5 Pro (you need to have a license)
-- Font Awesome 5 Brands
+- Font Awesome 5.13.0 Free & Pro (you need to have a license)
+- Font Awesome 5.13.0 Brands
 - Font Awesome 4.7.0
+- Google Material Design Icons 2.2.0
 
-You can use any other icon fonts using Unicode character codes.
-For convenience, you can also create your own font helper: Simply create an enumeration listing all the unicode characters of the font icons. Take a look at the code, it's very easy.
+You can use any other icon fonts using Unicode character codes. For convenience, I suggest you create your own font helper: simply create an enumeration listing all the Unicode characters of the font icons. Take a look at the code, it's very easy!
 
 
 ## Installation
@@ -20,37 +18,90 @@ The easiest way to include ZFontIcon in your project is to copy the ZFontIcon fo
 
     include(ZFontIcon/ZFontIcon.pri)
 
-Now, you are ready !
-
+Now, you are ready!
 
 ## Usage
-First of all, you need load the fonts (typically in the main.cpp):
 
-    ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_FREE_SOLID);
-    ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_FREE_REGULAR);
-    ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_BRANDS);
+### Basic usage
 
-Then you can get icon using the helpers:
+First of all, you need to load the icon fonts you want to use (typically in the main.cpp):
 
-    #include "ZFontIcon/ZFont_fa_5.13.h"
-    ZFontIcon::icon(Fa5::FAMILY,       Fa5::SOLID,    Fa5::fa_flag,         QColor(0, 0, 0));
-    ZFontIcon::icon(Fa5::FAMILY,       Fa5::REGULAR,  Fa5::fa_flag,         QColor(0, 0, 0));
-    ZFontIcon::icon(Fa5pro::FAMILY,    Fa5pro::LIGHT, Fa5pro::fa_flag,      QColor(0, 0, 0));
-    ZFontIcon::icon(Fa5brands::FAMILY,                Fa5brands::fa_github, QColor(0, 0, 0));
+```c++
+#include "ZFontIcon/ZFontIcon.h"
+#include "ZFontIcon/ZFont_fa_5.13.h" // FA5 helpers
 
-Or get icon from unicode (without helpers):
+// FA5 Free
+ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_FREE_SOLID);
+ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_FREE_REGULAR);
+// FA5 Pro (if you have a license)
+ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_SOLID);
+ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_REGULAR);
+ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_LIGHT);
+// FA5 Brands
+ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_BRANDS);
+```
 
-    ZFontIcon::icon(QLatin1String("Font Awesome 5 Free"),   QLatin1String("Solid"),   0xf024, QColor(0, 0, 0));
-    ZFontIcon::icon(QLatin1String("Font Awesome 5 Free"),   QLatin1String("Regular"), 0xf024, QColor(0, 0, 0));
-    ZFontIcon::icon(QLatin1String("Font Awesome 5 Pro"),    QLatin1String("Light"),   0xf024, QColor(0, 0, 0));
-    ZFontIcon::icon(QLatin1String("Font Awesome 5 Brands"),                           0xf09b, QColor(0, 0, 0));
+Then you can get your favorite icons:
+
+```c++
+#include "ZFontIcon/ZFontIcon.h"
+#include "ZFontIcon/ZFont_fa_5.13.h"
+
+// FA5 Free (FA5 Free include about 150 regular icon)
+ZFontIcon::icon(Fa5::FAMILY,    Fa5::SOLID,      Fa5::fa_flag,    QColor(128, 0, 0));
+ZFontIcon::icon(Fa5::FAMILY,    Fa5::REGULAR,    Fa5::fa_flag,    QColor(0, 128, 0));
+// FA5 Pro (only if you have a license)
+ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::SOLID,   Fa5pro::fa_flag, QColor(128, 0, 0));
+ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::REGULAR, Fa5pro::fa_flag, QColor(0, 128, 0));
+ZFontIcon::icon(Fa5pro::FAMILY, Fa5pro::LIGHT,   Fa5pro::fa_flag, QColor(0, 0, 128));
+// FA5 Brands (note that FA5 Brands has no font style)
+ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_github, QColor(128, 0, 0));
+```
+
+
+### Advanced usage
+More customization is needed ? You can set every aspect of your icon:
+
+- On icon state change [On/Off] you can use a different:
+  - font style (eg. switch from Solid to Regular font style);
+  - glyph (eg. change glyph from lock to unlock);
+  - color;
+  - scale factor  (eg. make On state glyph bigger than Off state glyph),
+- On mouse hover, you can:
+  - set a hover color for Off state;
+  - set a hover color for On state,
+- For icon mode Selected and Disabled, you can change the default color.
+
+```c++
+ZFontIconOption fIcon;
+
+// Required arguments
+fIcon.fontFamily=    Fa5::FAMILY;           // Set font icon family
+fIcon.fontStyle=     Fa5::SOLID;            // Set family style (Required if font families have multiple registered styles)
+fIcon.glyph=         Fa5::fa_grin;          // Set default glyph
+fIcon.color=         QColor(195,  65,  65); // Set default color
+
+// Optional arguments
+fIcon.fontStyleOn=   Fa5::REGULAR;          // Font style when icon state is On
+fIcon.glyphOn=       Fa5::fa_grin_stars;    // Glyph when icon state is On
+
+fIcon.colorOn=       QColor(102, 163,  52); // Color when icon state is On
+fIcon.colorActive=   QColor(234,  78,  78); // Color when icon is hovered
+fIcon.colorActiveOn= QColor(122, 196,  62); // Color when icon is hovered and state is on
+fIcon.colorDisabled= QColor(122, 196,  62); // Color when icon is disabled
+fIcon.colorSelected= QColor(122, 196,  62); // Color when icon is selected
+
+fIcon.scaleFactor=   0.85;                  // Default icon scale factor
+fIcon.scaleFactorOn= 1.00;                  // Scale factor when icon state is On
+
+ZFontIcon::icon(fIcon);
+```
 
 
 ## Exemple
-The following repository contains a commented example based on Font Awesome 5.
-Open ZFontIcon.pro in QtCreator and run it or read sources for more information.
+The following repository contains a commented example based on Font Awesome.
+Open ZFontIconSample.pro in QtCreator and run it or read sources for more information.
 
 
 ## Credits
-ZFontIcon is inspired/based on:
-- QFontIcon by Sacha Schutz - sacha@labsquare.org | https://github.com/dridk
+ZFontIcon is inspired/based on: QFontIcon by Sacha Schutz - sacha@labsquare.org | https://github.com/dridk

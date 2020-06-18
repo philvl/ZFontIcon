@@ -37,6 +37,31 @@ SOFTWARE.
 #include <QColor>
 
 
+class ZFontIconOption {
+public:
+    ZFontIconOption();
+    //--
+    QString fontFamily;
+    QString fontStyle;
+    //--
+    QString fontFamilyOn; // Optional: if null, fontFamily value will be used
+    QString fontStyleOn;  // Optional: if null, fontStyle value will be used
+    //--
+    QChar  glyph;
+    QChar  glyphOn;       // Optional: if null, glyph value will be used
+    //--
+    QColor color;
+    QColor colorOn;       // Optional: if not set, color value will be used
+    QColor colorActive;   // Optional: if not set, color value will be used
+    QColor colorActiveOn; // Optional: if not set, color value will be used
+    QColor colorDisabled;
+    QColor colorSelected;
+    //--
+    qreal  scaleFactor;
+    qreal  scaleFactorOn; // Optional: if null, scaleFactor value will be used
+};
+
+
 class ZFontIcon : public QObject {
     Q_OBJECT
 // METHODS
@@ -45,15 +70,19 @@ public:
     static bool addFont(const QString &filename);
 
     // Return icons from code
-    //-- This method should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
-    static QIcon icon(const QString &fontFamily, const QString &iconStyle, const QChar &iconCode, const QColor &iconColor= QColor());
+    //-- This methods should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
+    static QIcon icon(ZFontIconOption fIcon);
+    static QIcon icon(const QString &fontFamily, const QString &fontStyle, const QChar &glyph, const QColor &color= QColor());
     //-- This method can be used with font families having only one style
-    static QIcon icon(const QString &fontFamily, const QChar &iconCode, const QColor &iconColor= QColor());
+    static QIcon icon(const QString &fontFamily, const QChar &glyph, const QColor &color= QColor());
 
     // Return registered font list (family and styles)
     static QMap<QString, QStringList> registeredFonts();
 
 private:
+    static QString familyMatching(const QString &fontFamily, const QString &fontStyle);
+    static QString styleMatching(const QString &familyToUse, const QString &fontStyle);
+
     explicit ZFontIcon(QObject *parent = 0);
     ~ZFontIcon();
 
