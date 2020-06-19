@@ -65,16 +65,20 @@ public:
 class ZFontIcon : public QObject {
     Q_OBJECT
 // METHODS
+private:
+    explicit ZFontIcon(QObject *parent = 0) : QObject(parent) {}
+    ~ZFontIcon() {}
+
 public:
     // Add Font
     static bool addFont(const QString &filename);
 
-    // Return icons from code
+    // Return icon
     //-- This methods should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
     static QIcon icon(ZFontIconOption fIcon);
-    static QIcon icon(const QString &fontFamily, const QString &fontStyle, const QChar &glyph, const QColor &color= QColor());
+    static QIcon icon(const QString &fontFamily, const QString &fontStyle, const QChar &glyph, const QColor &color= QColor(), const qreal scalefactor= 0);
     //-- This method can be used with font families having only one style
-    static QIcon icon(const QString &fontFamily, const QChar &glyph, const QColor &color= QColor());
+    static QIcon icon(const QString &fontFamily, const QChar &glyph, const QColor &color= QColor(), const qreal scalefactor= 0);
 
     // Return registered font list (family and styles)
     static QMap<QString, QStringList> registeredFonts();
@@ -82,9 +86,6 @@ public:
 private:
     static QString familyMatching(const QString &fontFamily, const QString &fontStyle);
     static QString styleMatching(const QString &familyToUse, const QString &fontStyle);
-
-    explicit ZFontIcon(QObject *parent = 0);
-    ~ZFontIcon();
 
 // VARIABLES
 private:

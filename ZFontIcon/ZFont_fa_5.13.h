@@ -37,6 +37,7 @@ static const QString FA5_OTF_FILE_PRO_LIGHT=     QLatin1String("FontAwesome_v5.1
 
 
 // Font Awesome 5.13.0 compatibility
+//- https://fontawesome.com/cheatsheet
 //- Free version, use "Fa" namespace
 //- Pro  version, use "Fa5pro" namespace
 //- Free and Pro, use "Fa5brands" namespace
