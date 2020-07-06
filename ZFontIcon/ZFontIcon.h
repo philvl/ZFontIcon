@@ -38,9 +38,53 @@ SOFTWARE.
 
 
 class ZFontIconOption {
+// METHODS
 public:
     ZFontIconOption();
-    //--
+    void clear();
+
+    // GETTERS
+    QString getFontFamily()    const { return fontFamily; }
+    QString getFontStyle()     const { return fontStyle;  }
+
+    QString getFontFamilyOn()  const { return !fontFamilyOn.isEmpty() ? fontFamilyOn  : fontFamily;  }
+    QString getFontStyleOn()   const { return !fontStyleOn.isEmpty()  ? fontStyleOn   : fontStyle;   }
+
+    QChar   getGlyph()         const { return glyph; }
+    QChar   getGlyphOn()       const { return !glyphOn.isNull()       ? glyphOn       : glyph;       }
+                               const
+    QColor  getColor()         const { return color; }
+    QColor  getColorOn()       const { return colorOn.isValid()       ? colorOn       : color;       }
+    QColor  getColorActive()   const { return colorActive.isValid()   ? colorActive   : color;       }
+    QColor  getColorActiveOn() const { return colorActiveOn.isValid() ? colorActiveOn : getColorOn(); }
+    QColor  getColorDisabled() const { return colorDisabled; }
+    QColor  getColorSelected() const { return colorSelected; }
+
+    qreal   getScaleFactor()   const { return scaleFactor;   }
+    qreal   getScaleFactorOn() const { return scaleFactorOn > 0       ? scaleFactorOn : scaleFactor; }
+
+    // SETTERS (Not use yet)
+    void setFontFamily(   const QString &fontFamily)   { this->fontFamily= fontFamily; }
+    void setFontStyle(    const QString &fontStyle)    { this->fontStyle=  fontStyle;  }
+
+    void setFontFamilyOn( const QString &fontFamilyOn) { this->fontFamilyOn= fontFamilyOn; }
+    void setFontStyleOn(  const QString &fontStyleOn)  { this->fontStyleOn=  fontStyleOn;  }
+
+    void setGlyph(        const QChar &glyph)          { this->glyph=   glyph;   }
+    void setGlyphOn(      const QChar &glyphOn)        { this->glyphOn= glyphOn; }
+
+    void setColor(        const QColor &color)         { this->color=         color;         }
+    void setColorOn(      const QColor &colorOn)       { this->colorOn=       colorOn;       }
+    void setColorActive(  const QColor &colorActive)   { this->colorActive=   colorActive;   }
+    void setColorActiveOn(const QColor &colorActiveOn) { this->colorActiveOn= colorActiveOn; }
+    void setColorDisabled(const QColor &colorDisabled) { this->colorDisabled= colorDisabled; }
+    void setColorSelected(const QColor &colorSelected) { this->colorSelected= colorSelected; }
+
+    void setScaleFactor(  const qreal scaleFactor)     { this->scaleFactor= scaleFactor;     }
+    void setScaleFactorOn(const qreal scaleFactorOn)   { this->scaleFactorOn= scaleFactorOn; }
+
+// VARIABLES
+public:
     QString fontFamily;
     QString fontStyle;
     //--

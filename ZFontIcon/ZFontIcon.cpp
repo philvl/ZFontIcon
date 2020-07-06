@@ -45,40 +45,24 @@ public:
     ~ZFontIconEngine() {}
 
     virtual void paint(QPainter *painter, const QRect &rect, QIcon::Mode mode, QIcon::State state) Q_DECL_OVERRIDE {
-        QString fontFamily= _fIcon.fontFamily;
-        QString fontStyle=  _fIcon.fontStyle;
-        if(state == QIcon::On && !_fIcon.fontFamilyOn.isEmpty()) {
-            fontFamily= _fIcon.fontFamilyOn;
-            fontStyle=  _fIcon.fontStyleOn;
-        }
+        QString fontFamily=  (state == QIcon::On) ? _fIcon.getFontFamilyOn()  : _fIcon.getFontFamily();
+        QString fontStyle=   (state == QIcon::On) ? _fIcon.getFontStyleOn()   : _fIcon.getFontStyle();
+        QChar   glyph=       (state == QIcon::On) ? _fIcon.getGlyphOn()       : _fIcon.getGlyph();
+        qreal   scalefactor= (state == QIcon::On) ? _fIcon.getScaleFactorOn() : _fIcon.getScaleFactor();
 
-        QChar glyph= _fIcon.glyph;
-        if(state == QIcon::On && _fIcon.glyphOn > 0)
-            glyph= _fIcon.glyphOn;
-
-        qreal scalefactor= _fIcon.scaleFactor;
-        if(state == QIcon::On && _fIcon.scaleFactorOn > 0)
-            scalefactor= _fIcon.scaleFactorOn;
-
-        QColor penColor= _fIcon.color;
+        QColor penColor;
         switch(mode) {
         case QIcon::Normal: // When icon is available and the user is not interacting with the icon
-            if(state == QIcon::On && _fIcon.colorOn.isValid())
-                penColor= _fIcon.colorOn;
+            penColor= (state == QIcon::On) ? _fIcon.getColorOn() : _fIcon.getColor();
             break;
         case QIcon::Active: // When icon is available and the user is interacting with the icon (eg. mouse over it or clicking it)
-            if(state == QIcon::Off && _fIcon.colorActive.isValid())
-                penColor= _fIcon.colorActive;
-            else if(state == QIcon::On && _fIcon.colorActiveOn.isValid())
-                penColor= _fIcon.colorActiveOn;
-            else if(state == QIcon::On && _fIcon.colorOn.isValid())
-                penColor= _fIcon.colorOn;
+            penColor= (state == QIcon::On) ? _fIcon.getColorActiveOn() : _fIcon.getColorActive();
             break;
         case QIcon::Disabled: // When icon is not available
-            penColor= _fIcon.colorDisabled;
+            penColor= _fIcon.getColorDisabled();
             break;
         case QIcon::Selected: // When icon is selected
-            penColor= _fIcon.colorSelected;
+            penColor= _fIcon.getColorSelected();
             break;
         }
 
@@ -118,6 +102,10 @@ private:
 //-------------------------------------------------------------------------------------------------
 //=================================================================================================
 ZFontIconOption::ZFontIconOption() {
+    clear();
+}
+
+void ZFontIconOption::clear() {
     fontFamily=   fontStyle=   QString();
     fontFamilyOn= fontStyleOn= QString();
 
@@ -136,7 +124,6 @@ ZFontIconOption::ZFontIconOption() {
     scaleFactor=   0.85;
     scaleFactorOn= 0;
 }
-
 
 
 //=================================================================================================
