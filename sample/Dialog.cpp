@@ -82,11 +82,11 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
     //------------------------
     // FA5 Brands is not the first added font, so we must specify the family explicitly
     // FA5 Brands font has only one style so we don't need to specify it
-    ui->fa5_btn121->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_github,    QColor(0, 0, 0)));
-    ui->fa5_btn122->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_gitlab,    QColor(0, 0, 0)));
-    ui->fa5_btn123->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_facebook,  QColor(0, 0, 0)));
-    ui->fa5_btn124->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_twitter,   QColor(0, 0, 0)));
-    ui->fa5_btn125->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_instagram, QColor(0, 0, 0)));
+    ui->fa5_btn121->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_github    ));
+    ui->fa5_btn122->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_gitlab    ));
+    ui->fa5_btn123->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_facebook  ));
+    ui->fa5_btn124->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_twitter   ));
+    ui->fa5_btn125->setIcon(ZFontIcon::icon(Fa5brands::FAMILY, Fa5brands::fa_instagram ));
 
 
     // Advanced use exemple with Font Awesome 5 FREE

@@ -218,7 +218,8 @@ QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const
     fIcon.fontFamily= fontFamily;
     fIcon.fontStyle=  fontStyle;
     fIcon.glyph= glyph;
-    fIcon.color= color;
+    if(color.isValid())
+        fIcon.color= color;
     if(scalefactor > 0)
         fIcon.scaleFactor= scalefactor;
     return icon(fIcon);
