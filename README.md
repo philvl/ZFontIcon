@@ -2,13 +2,13 @@
 ZFontIcon is released under the MIT License
 
 ## Description
-ZFontIcon provide a simple way to use any glyph/icon fonts as QIcon in your Qt applications.
+ZFontIcon provide a simple way to use any glyph/icon fonts as QIcon in your Qt5/6 applications.
 
 Some helpers are included to use the following icon fonts without effort:
-- Font Awesome 5.13.0 Free & Pro (you need to have a license)
-- Font Awesome 5.13.0 Brands
+- Font Awesome 5.15.1 Free & Pro (you need to have a license)
+- Font Awesome 5.15.1 Brands
 - Font Awesome 4.7.0
-- Google Material Design Icons 2.2.0
+- Google Material Design Icons 4.x
 
 You can use any other icon fonts using Unicode character codes. For convenience, I suggest you create your own font helper: simply create an enumeration listing all the Unicode characters of the font icons. Take a look at the code, it's very easy!
 
@@ -28,24 +28,24 @@ First of all, you need to load the icon fonts you want to use (typically in the 
 
 ```c++
 #include "ZFontIcon/ZFontIcon.h"
-#include "ZFontIcon/ZFont_fa_5.13.h" // FA5 helpers
+#include "ZFontIcon/ZFont_fa5.h" // FA5 helpers
 
 // FA5 Free
-ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_FREE_SOLID);
-ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_FREE_REGULAR);
+ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_FREE_SOLID);
+ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_FREE_REGULAR);
 // FA5 Pro (if you have a license)
-ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_SOLID);
-ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_REGULAR);
-ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_LIGHT);
+ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_SOLID);
+ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_REGULAR);
+ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_LIGHT);
 // FA5 Brands
-ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_BRANDS);
+ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_BRANDS);
 ```
 
 Then you can get your favorite icons:
 
 ```c++
 #include "ZFontIcon/ZFontIcon.h"
-#include "ZFontIcon/ZFont_fa_5.13.h"
+#include "ZFontIcon/ZFont_fa5.h"
 
 // FA5 Free (FA5 Free include about 150 regular icon)
 ZFontIcon::icon(Fa5::FAMILY,    Fa5::SOLID,      Fa5::fa_flag,    QColor(128, 0, 0));

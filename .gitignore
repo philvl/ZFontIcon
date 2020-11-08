@@ -52,4 +52,9 @@ compile_commands.json
 *creator.user*
 
 # Font Awesome Pro Font [Philippe VL add]
-/ZFontIcon/fa_5.13.0/FontAwesome_v5.13.0_Pro*
+/ZFontIcon/fa*/FontAwesome_v*_Pro*
+
+# Font Awesome Header Helper [Philippe VL add]
+ZFaHeaderHelper.pro
+/ZHeaderHelper/*
+

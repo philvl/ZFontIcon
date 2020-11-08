@@ -5,9 +5,9 @@ SOURCES += \
 
 HEADERS += \
     $$PWD/ZFontIcon.h \
-    $$PWD/ZFont_fa_4.7.h \
-    $$PWD/ZFont_fa_5.13.h \
-    $$PWD/ZFont_mdi_2.2.h
+    $$PWD/ZFont_fa4.h \
+    $$PWD/ZFont_fa5.h \
+    $$PWD/ZFont_gmi4.h
 
 RESOURCES += \
     $$PWD/Fonts.qrc

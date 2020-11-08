@@ -2,9 +2,9 @@
 #include "ui_Dialog.h"
 
 #include "ZFontIcon/ZFontIcon.h"
-#include "ZFontIcon/ZFont_fa_4.7.h"
-#include "ZFontIcon/ZFont_fa_5.13.h"
-#include "ZFontIcon/ZFont_mdi_2.2.h"
+#include "ZFontIcon/ZFont_fa4.h"
+#include "ZFontIcon/ZFont_fa5.h"
+#include "ZFontIcon/ZFont_gmi4.h"
 
 Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
     ui->setupUi(this);
@@ -17,30 +17,32 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
 
 // The following part of the code should be moved to the main.cpp file
     // Fonts Awesome 5
-    //-- FA5 Free   supports  995 Solid icons and 151 Regular icons
-    //-- FA5 Pro    supports 1850 Solid, Regular and Light icons
-    //-- FA5 Brands supports  442 icons
+    //-- FA5 Free   supports 1001 Solid icons and 151 Regular icons
+    //-- FA5 Pro    supports 1852 Solid, Regular and Light icons
+    //-- FA5 Brands supports  458 icons
     //-- Note that: Solid, Regular and Light styles share the same family name,
-    //--            Brands icons have a different family name
+    //--            Brands style have a different family name
     // FA5 Free
-    ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_FREE_SOLID);      // _995 icons
-    ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_FREE_REGULAR);    // _152 icons
+    ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_FREE_SOLID);
+    ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_FREE_REGULAR);
     // FA5 Pro
     if(!USE_PRO_FONT)
         ui->tabWidget->removeTab(1);
     else {
-        ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_SOLID);   // 1850 icons
-        ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_REGULAR); // 1850 icons
-        ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_PRO_LIGHT);   // 1850 icons
+        ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_SOLID);
+        ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_REGULAR);
+        ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_LIGHT);
     }
     // FA5 Brands
-    ZFontIcon::addFont(":/fa_5.13.0/" + FA5_OTF_FILE_BRANDS);          // _442 icons
+    ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_BRANDS);
 
     // Fonts Awesome 4 (legacy)
-    ZFontIcon::addFont(":/fa_4.7.0/"  + FA4_OTF_FILE_FREE_REGULAR);    // _675 icons
+    ZFontIcon::addFont(":/fa4/"  + FA4_OTF_FILE_FREE_REGULAR);
 
     // Google Material Design icons
-    ZFontIcon::addFont(":/gmd_2.2.0/" + GMD_OTF_FILE_REGULAR);         // _932 icons
+    ZFontIcon::addFont(":/gmi4/" + GMD_OTF_FILE_OUTLINED);
+    ZFontIcon::addFont(":/gmi4/" + GMD_OTF_FILE_ROUNDED);
+    ZFontIcon::addFont(":/gmi4/" + GMD_OTF_FILE_SHARP);
 //----
 
 
@@ -152,17 +154,17 @@ Dialog::Dialog(QWidget *parent) : QDialog(parent), ui(new Ui::Dialog) {
     ui->fa4_btn125->setIcon(ZFontIcon::icon(Fa4::FAMILY, Fa4::fa_instagram, QColor(0, 0, 0)));
 
 
-    // Google Material Design Icons 2.2.0
-    //-------------------------------------
-    ui->mdi_btn101->setIcon(ZFontIcon::icon(Mdi::FAMILY, Mdi::md_flag,        QColor(195,  65,  65)));
-    ui->mdi_btn102->setIcon(ZFontIcon::icon(Mdi::FAMILY, Mdi::md_star,        QColor(214, 197,  64)));
-    ui->mdi_btn103->setIcon(ZFontIcon::icon(Mdi::FAMILY, Mdi::md_person,      QColor( 69, 100, 214)));
-    ui->mdi_btn104->setIcon(ZFontIcon::icon(Mdi::FAMILY, Mdi::md_map,         QColor(102, 163,  52)));
-    ui->mdi_btn105->setIcon(ZFontIcon::icon(Mdi::FAMILY, Mdi::md_chat_bubble, QColor(  0,   0,   0)));
+    // Google Material Design Icons 4.x | 96206ad
+    //---------------------------------------------
+    ui->mdi_btn101->setIcon(ZFontIcon::icon(Gmi4::FAMILY_SHARP, Gmi4::gmi_flag,        QColor(195,  65,  65)));
+    ui->mdi_btn102->setIcon(ZFontIcon::icon(Gmi4::FAMILY_SHARP, Gmi4::gmi_star,        QColor(214, 197,  64)));
+    ui->mdi_btn103->setIcon(ZFontIcon::icon(Gmi4::FAMILY_SHARP, Gmi4::gmi_person,      QColor( 69, 100, 214)));
+    ui->mdi_btn104->setIcon(ZFontIcon::icon(Gmi4::FAMILY_SHARP, Gmi4::gmi_map,         QColor(102, 163,  52)));
+    ui->mdi_btn105->setIcon(ZFontIcon::icon(Gmi4::FAMILY_SHARP, Gmi4::gmi_chat_bubble, QColor(  0,   0,   0)));
 
-    ui->mdi_btn112->setIcon(ZFontIcon::icon(Mdi::FAMILY, Mdi::md_star_border,         QColor(214, 197,  64)));
-    ui->mdi_btn113->setIcon(ZFontIcon::icon(Mdi::FAMILY, Mdi::md_person_outline,      QColor( 69, 100, 214)));
-    ui->mdi_btn115->setIcon(ZFontIcon::icon(Mdi::FAMILY, Mdi::md_chat_bubble_outline, QColor(  0,   0,   0)));
+    ui->mdi_btn112->setIcon(ZFontIcon::icon(Gmi4::FAMILY_SHARP, Gmi4::gmi_star_border,         QColor(214, 197,  64)));
+    ui->mdi_btn113->setIcon(ZFontIcon::icon(Gmi4::FAMILY_SHARP, Gmi4::gmi_person_outline,      QColor( 69, 100, 214)));
+    ui->mdi_btn115->setIcon(ZFontIcon::icon(Gmi4::FAMILY_SHARP, Gmi4::gmi_chat_bubble_outline, QColor(  0,   0,   0)));
 }
 
 Dialog::~Dialog() {
