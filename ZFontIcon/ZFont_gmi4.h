@@ -24,23 +24,27 @@ SOFTWARE.
 
 #ifndef GOOGLE_MATERIAL_ICON_H
 #define GOOGLE_MATERIAL_ICON_H
-
+#include <QObject>
 #include <QString>
-static const QString GMD_OTF_FILE_OUTLINED = QLatin1String("MaterialIcons_v4_96206ad_Outlined400.otf");
-static const QString GMD_OTF_FILE_ROUNDED  = QLatin1String("MaterialIcons_v4_96206ad_Round400.otf");
-static const QString GMD_OTF_FILE_SHARP    = QLatin1String("MaterialIcons_v4_96206ad_Sharp400.otf");
-//static const QString GMD_OTF_FILE_TWOTONE  = QLatin1String("MaterialIcons_v4_96206ad_TwoTone400.otf");
-
 
 // Google Material Design Icons 4.x compatibility
 // Use version from github master 96206ad - 2020-08-31
 // List only common glyph that exist in all sets
 // Icons sorted by names
+//- https://material.io/resources/icons/
 namespace Gmi4 {
+    Q_NAMESPACE
+
+    // Font files
+    static const QString GMD_OTF_FILE_OUTLINED = QLatin1String("MaterialIcons_v4_96206ad_Outlined400.otf");
+    static const QString GMD_OTF_FILE_ROUNDED  = QLatin1String("MaterialIcons_v4_96206ad_Round400.otf");
+    static const QString GMD_OTF_FILE_SHARP    = QLatin1String("MaterialIcons_v4_96206ad_Sharp400.otf");
+    //static const QString GMD_OTF_FILE_TWOTONE  = QLatin1String("MaterialIcons_v4_96206ad_TwoTone400.otf");
+    // Families
     static const QString FAMILY_OUTLINED = QLatin1String("Material Icons Outlined");
     static const QString FAMILY_ROUND    = QLatin1String("Material Icons Round");
     static const QString FAMILY_SHARP    = QLatin1String("Material Icons Sharp");
-    //--
+    // Styles
     static const QString REGULAR = QLatin1String("Regular"); // Outlined, Rounded and Sharp has Regular style
 
     enum Glyph {
@@ -1429,6 +1433,7 @@ namespace Gmi4 {
         gmi_zoom_out                                    = 0xE900,
         gmi_zoom_out_map                                = 0xE56B,
     };
+    Q_ENUM_NS(Glyph);
 }
 
 #endif // GOOGLE_MATERIAL_ICON_H

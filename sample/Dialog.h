@@ -10,10 +10,12 @@ QT_END_NAMESPACE
 class Dialog : public QDialog {
     Q_OBJECT
 
+// METHODS
 public:
     Dialog(QWidget *parent = nullptr);
     ~Dialog();
 
+// VARIABLES
 private:
     Ui::Dialog *ui;
 };

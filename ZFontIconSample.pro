@@ -12,22 +12,28 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 # You can also make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
-# You can also select to disable deprecated APIs only up to a certain version of Qt.
-DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+lessThan(QT_MAJOR_VERSION, 6): DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000
 
 SOURCES += \
+    sample/WidgetCheatSheet.cpp \
     sample/main.cpp \
-    sample/Dialog.cpp \
+    sample/MainWindow.cpp \
+    sample/WidgetSample.cpp
 
 HEADERS += \
-    sample/Dialog.h \
+    sample/MainWindow.h \
+    sample/WidgetCheatSheet.h \
+    sample/WidgetSample.h
 
 FORMS   += \
-    sample/Dialog.ui
+    sample/MainWindow.ui \
+    sample/WidgetCheatSheet.ui \
+    sample/WidgetSample.ui
 
 # Add the following line to your project
 include("ZFontIcon/ZFontIcon.pri")
 DISTFILES += \
+    CHANGELOG.md \
     LICENSE.md \
     README.md
 

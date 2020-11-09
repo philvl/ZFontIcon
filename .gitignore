@@ -54,6 +54,9 @@ compile_commands.json
 # Font Awesome Pro Font [Philippe VL add]
 /ZFontIcon/fa*/FontAwesome_v*_Pro*
 
+# Font Awesome 6.0.0 alpha+beta Font [Philippe VL add]
+/ZFontIcon/fa6
+
 # Font Awesome Header Helper [Philippe VL add]
 ZFaHeaderHelper.pro
 /ZHeaderHelper/*

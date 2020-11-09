@@ -133,7 +133,7 @@ ZFontIconOption::ZFontIconOption() {
     colorSelected= QApplication::palette().color(QPalette::Active,   QPalette::ButtonText);
 
     // Default icon scale factor values
-    scaleFactor=   0.85;
+    scaleFactor=   0.80;
     scaleFactorOn= 0;
 }
 
@@ -231,6 +231,14 @@ QIcon ZFontIcon::icon(const QString &fontFamily, const QChar &glyph, const QColo
 
 QMap<QString, QStringList> ZFontIcon::registeredFonts() {
     return _registeredFontList;
+}
+
+bool ZFontIcon::isRegistered(const QString &fontFamily) {
+    // Get all registered families containing the desired font family name
+    const QStringList families= _registeredFontList.keys().filter(fontFamily, Qt::CaseInsensitive);
+    if(families.isEmpty())
+        return false;
+    return true;
 }
 
 

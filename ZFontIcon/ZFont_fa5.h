@@ -24,18 +24,8 @@ SOFTWARE.
 
 #ifndef FONTAWESOME_5_H
 #define FONTAWESOME_5_H
-
+#include <QObject>
 #include <QString>
-static const QString FA5_OTF_FILE_BRANDS       = QLatin1String("FontAwesome_v5.15.1_Brands_Regular400.otf");
-//-
-static const QString FA5_OTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v5.15.1_Free_Solid900.otf");
-static const QString FA5_OTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v5.15.1_Free_Regular400.otf");
-//-
-static const QString FA5_OTF_FILE_PRO_SOLID    = QLatin1String("FontAwesome_v5.15.1_Pro_Solid900.otf");
-static const QString FA5_OTF_FILE_PRO_REGULAR  = QLatin1String("FontAwesome_v5.15.1_Pro_Regular400.otf");
-static const QString FA5_OTF_FILE_PRO_LIGHT    = QLatin1String("FontAwesome_v5.15.1_Pro_Light300.otf");
-//static const QString FA5_OTF_FILE_PRO_DUOTONE= QLatin1String("FontAwesome_v5.15.1_Pro_Solid900_Duotone.otf");
-
 
 // Font Awesome 5.15.1 compatibility
 // Icons sorted by names and grouped by FA versions
@@ -44,14 +34,19 @@ static const QString FA5_OTF_FILE_PRO_LIGHT    = QLatin1String("FontAwesome_v5.1
 // | Unique icons | 1001 | 1852 | 458    |
 // ---------------------------------------
 //- https://fontawesome.com/cheatsheet
-//- Free version, use "Fa" namespace
+//- Free version, use "Fa5" and "Fa5brands" namespaces
 //- Pro  version, use "Fa5pro" namespace
-//- Free and Pro, use "Fa5brands" namespace
 namespace Fa5 {
-    static const QString FAMILY=  QLatin1String("Font Awesome 5 Free");
-    //--
-    static const QString SOLID=   QLatin1String("Solid");
-    static const QString REGULAR= QLatin1String("Regular");
+    Q_NAMESPACE
+
+    // Font files
+    static const QString FA5_OTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v5.15.1_Free_Solid900.otf");
+    static const QString FA5_OTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v5.15.1_Free_Regular400.otf");
+    // Families
+    static const QString FAMILY  = QLatin1String("Font Awesome 5 Free");
+    // Styles
+    static const QString SOLID   = QLatin1String("Solid");
+    static const QString REGULAR = QLatin1String("Regular");
 
     enum Glyph {
     //--------------------------------------------------------------------------
@@ -1116,16 +1111,25 @@ namespace Fa5 {
         fa_vest                                = 0xE085,
         fa_vest_patches                        = 0xE086,
     };
+    Q_ENUM_NS(Glyph);
 }
 
 
 
 namespace Fa5pro {
-    static const QString FAMILY=  QLatin1String("Font Awesome 5 Pro");
-    //--
-    static const QString SOLID=   QLatin1String("Solid");
-    static const QString REGULAR= QLatin1String("Regular");
-    static const QString LIGHT=   QLatin1String("Light");
+    Q_NAMESPACE
+
+    // Font files
+    static const QString FA5_OTF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v5.15.1_Pro_Solid900.otf");
+    static const QString FA5_OTF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v5.15.1_Pro_Regular400.otf");
+    static const QString FA5_OTF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v5.15.1_Pro_Light300.otf");
+    //static const QString FA5_OTF_FILE_PRO_DUOTONE= QLatin1String("FontAwesome_v5.15.1_Pro_Solid900_Duotone.otf");
+    // Families
+    static const QString FAMILY  =  QLatin1String("Font Awesome 5 Pro");
+    // Styles
+    static const QString SOLID   = QLatin1String("Solid");
+    static const QString REGULAR = QLatin1String("Regular");
+    static const QString LIGHT   = QLatin1String("Light");
 
     enum Glyph {
     //--------------------------------------------------------------------------
@@ -3047,14 +3051,20 @@ namespace Fa5pro {
         fa_vest                                = 0xE085,
         fa_vest_patches                        = 0xE086,
     };
+    Q_ENUM_NS(Glyph)
 }
 
 
 
 namespace Fa5brands {
-    static const QString FAMILY=  QLatin1String("Font Awesome 5 Brands");
-    //--
-    static const QString REGULAR= QLatin1String("Regular");
+    Q_NAMESPACE
+
+    // Font files
+    static const QString FA5_OTF_FILE_BRANDS = QLatin1String("FontAwesome_v5.15.1_Brands_Regular400.otf");
+    // Families
+    static const QString FAMILY  = QLatin1String("Font Awesome 5 Brands");
+    // Styles
+    static const QString REGULAR = QLatin1String("Regular");
 
     enum Glyph {
     //--------------------------------------------------------------------------
@@ -3588,6 +3598,7 @@ namespace Fa5brands {
         fa_watchman_monitoring                 = 0xE087,
         fa_wodu                                = 0xE088,
     };
+    Q_ENUM_NS(Glyph)
 }
 
 #endif // FONTAWESOME_5_H

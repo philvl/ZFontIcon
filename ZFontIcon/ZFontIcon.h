@@ -83,6 +83,9 @@ public:
     // Return registered font list (family and styles)
     static QMap<QString, QStringList> registeredFonts();
 
+    // Return bool if given font family is registered
+    static bool isRegistered(const QString &fontFamily);
+
 private:
     static QString familyMatching(const QString &fontFamily, const QString &fontStyle);
     static QString styleMatching(const QString &familyToUse, const QString &fontStyle);

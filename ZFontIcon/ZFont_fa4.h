@@ -24,18 +24,21 @@ SOFTWARE.
 
 #ifndef FONTAWESOME_4_H
 #define FONTAWESOME_4_H
-
+#include <QObject>
 #include <QString>
-static const QString FA4_OTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v4.7.0_Free.otf");
-
 
 // Font Awesome 4.7.0 (Free) compatibility - 675 unique icons
 // Icons sorted by Unicode values and ordered by FA versions
 // - https://fontawesome.com/v4.7.0/cheatsheet/
 namespace Fa4 {
-    static const QString FAMILY=  QLatin1String("FontAwesome");
-    //--
-    static const QString REGULAR= QLatin1String("Regular");
+    Q_NAMESPACE
+
+    // Font files
+    static const QString FA4_OTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v4.7.0_Free.otf");
+    // Families
+    static const QString FAMILY  =  QLatin1String("FontAwesome");
+    // Styles
+    static const QString REGULAR = QLatin1String("Regular");
 
     enum Glyph {
     //--------------------------------------------------------------------------
@@ -852,6 +855,7 @@ namespace Fa4 {
         fa_wpexplorer                          = 0xf2de,
         fa_meetup                              = 0xf2e0,
     };
+    Q_ENUM_NS(Glyph);
 }
 
 #endif // FONTAWESOME_4_H

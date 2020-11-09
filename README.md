@@ -1,16 +1,28 @@
 # ZFontIcon - Icon fonts support for Qt applications
 ZFontIcon is released under the MIT License
 
+
 ## Description
-ZFontIcon provide a simple way to use any glyph/icon fonts as QIcon in your Qt5/6 applications.
+ZFontIcon provide a simple way to use any glyph/icon fonts as QIcon in your Qt5/Qt6 applications.
 
 Some helpers are included to use the following icon fonts without effort:
-- Font Awesome 5.15.1 Free & Pro (you need to have a license)
+- Font Awesome 6.0.0-alpha1 Brands, Free, and Pro (requires a FA pro licence to get alpha fonts)
 - Font Awesome 5.15.1 Brands
+- Font Awesome 5.15.1 Free
+- Font Awesome 5.15.1 Pro (requires a FA pro licence)
 - Font Awesome 4.7.0
-- Google Material Design Icons 4.x
+- Google Material Design Icons 4.x - from github master 96206ad - 2020-08-31
 
 You can use any other icon fonts using Unicode character codes. For convenience, I suggest you create your own font helper: simply create an enumeration listing all the Unicode characters of the font icons. Take a look at the code, it's very easy!
+
+
+## Qt Compatibility
+ZFontIcon requires at least Qt 5.8.
+ZFontIcon is tested under Windows, Linux and MacOs with:
+- Qt 5.9.9       / c++11
+- Qt 5.12.9      / c++11
+- Qt 5.15.1      / c++11, c++14, c++17
+- Qt 6.0.0-beta3 / c++11, c++14, c++17
 
 
 ## Installation
@@ -20,8 +32,8 @@ The easiest way to include ZFontIcon in your project is to copy the ZFontIcon fo
 
 Now, you are ready!
 
-## Usage
 
+## Usage
 ### Basic usage
 
 First of all, you need to load the icon fonts you want to use (typically in the main.cpp):
@@ -31,14 +43,14 @@ First of all, you need to load the icon fonts you want to use (typically in the 
 #include "ZFontIcon/ZFont_fa5.h" // FA5 helpers
 
 // FA5 Free
-ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_FREE_SOLID);
-ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_FREE_REGULAR);
+ZFontIcon::addFont(":/fa5/" + Fa5::FA5_OTF_FILE_FREE_SOLID);
+ZFontIcon::addFont(":/fa5/" + Fa5::FA5_OTF_FILE_FREE_REGULAR);
 // FA5 Pro (if you have a license)
-ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_SOLID);
-ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_REGULAR);
-ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_PRO_LIGHT);
+ZFontIcon::addFont(":/fa5/" + Fa5pro::FA5_OTF_FILE_PRO_SOLID);
+ZFontIcon::addFont(":/fa5/" + Fa5pro::FA5_OTF_FILE_PRO_REGULAR);
+ZFontIcon::addFont(":/fa5/" + Fa5pro::FA5_OTF_FILE_PRO_LIGHT);
 // FA5 Brands
-ZFontIcon::addFont(":/fa5/" + FA5_OTF_FILE_BRANDS);
+ZFontIcon::addFont(":/fa5/" + Fa5brands::FA5_OTF_FILE_BRANDS);
 ```
 
 Then you can get your favorite icons:
@@ -91,16 +103,30 @@ fIcon.colorActiveOn= QColor(122, 196,  62); // Color when icon is hovered and st
 fIcon.colorDisabled= QColor(122, 196,  62); // Color when icon is disabled
 fIcon.colorSelected= QColor(122, 196,  62); // Color when icon is selected
 
-fIcon.scaleFactor=   0.85;                  // Default icon scale factor
+fIcon.scaleFactor=   0.80;                  // Default icon scale factor
 fIcon.scaleFactorOn= 1.00;                  // Scale factor when icon state is On
 
 ZFontIcon::icon(fIcon);
 ```
 
 
+## Tips
+With meta-object support for fonts helpers namespaces, you can iterate over the namespace:
+
+```c++
+QMetaEnum metaEnum= QMetaEnum::fromType<Fa5::Glyph>();
+for(int i= 0; i < metaEnum.keyCount(); ++i) {
+    qDebug() << metaEnum.key(i);   // Name of the given index
+    qDebug() << metaEnum.value(i); // Value with the given index
+}
+```
+
+
 ## Exemple
+
 The following repository contains a commented example based on Font Awesome.
 Open ZFontIconSample.pro in QtCreator and run it or read sources for more information.
+Look comments at the beginning of main.cpp to enable FA5 Pro or FA6 preview.
 
 
 ## Credits
