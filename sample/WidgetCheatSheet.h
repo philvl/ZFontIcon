@@ -22,8 +22,8 @@ private slots:
 
 // VARIABLES
     void on_comboBoxIconSize_currentIndexChanged(int index);
-
     void on_spinBoxScaleFactor_valueChanged(double value);
+    void on_lineEditSearch_textChanged(const QString &newSearch);
 
 private:
     Ui::WidgetCheatSheet *ui;

@@ -70,13 +70,22 @@ void WidgetCheatSheet::on_spinBoxScaleFactor_valueChanged(double value) {
     updateCheatSheet();
 }
 
+void WidgetCheatSheet::on_lineEditSearch_textChanged(const QString &newSearch) {
+    Q_UNUSED(newSearch)
+    static QString prevSearch;
+    if(newSearch.trimmed().size() >= 3 || prevSearch.size() >= 3)
+        updateCheatSheet();
+    prevSearch= newSearch.trimmed();
+}
+
 void WidgetCheatSheet::updateCheatSheet() {
     if(!ui->listWidgetFontFamilies->currentItem())
         return;
-    QString fontFamily=  ui->listWidgetFontFamilies->currentItem()->text();
-    QString fontStyle=   ui->comboBoxFontStyles->currentText();
-    int     iconSize=    ui->comboBoxIconSize->currentData().toInt();
-    double  scaleFactor= ui->spinBoxScaleFactor->value();
+    QString fontFamily=    ui->listWidgetFontFamilies->currentItem()->text();
+    QString fontStyle=     ui->comboBoxFontStyles->currentText();
+    int     iconSize=      ui->comboBoxIconSize->currentData().toInt();
+    double  scaleFactor=   ui->spinBoxScaleFactor->value();
+    QString currentSearch= ui->lineEditSearch->text();
     if(fontFamily.isEmpty() || fontStyle.isEmpty() || !iconSize || !scaleFactor)
         return;
 
@@ -90,14 +99,10 @@ void WidgetCheatSheet::updateCheatSheet() {
 
     // Create a gridLayout
     QGridLayout *gLayout= new QGridLayout();
+    gLayout->setSizeConstraint(QLayout::SetFixedSize);
     gLayout->setContentsMargins(32, 32, 32, 32);
     gLayout->setSpacing(iconSize/2);
     scrollWidget->setLayout(gLayout);
-
-
-    const int MAX_COLUMN= 8;
-    int row=     0;
-    int column=  0;
 
     QMetaEnum metaEnum;
     // Font Awesome 6
@@ -123,11 +128,18 @@ void WidgetCheatSheet::updateCheatSheet() {
     else
         return;
 
+    const int MAX_COLUMN= 8;
+    int row=     0;
+    int column=  0;
 
     // Generate SheetCheat
     for(int i= 0; i < metaEnum.keyCount(); ++i) {
         QString glyphName=    metaEnum.key(i);
         ushort  glyphUnicode= metaEnum.value(i);
+
+        // Filter only if search field contains at least 3 characters
+        if(currentSearch.trimmed().size() >= 3 && !glyphName.contains(currentSearch))
+            continue;
 
         // Create QIcon
         QIcon   icon= ZFontIcon::icon(fontFamily, fontStyle, glyphUnicode, QColor(), scaleFactor);
@@ -136,7 +148,7 @@ void WidgetCheatSheet::updateCheatSheet() {
         QLabel *label= new QLabel(scrollWidget);
         label->setAlignment(Qt::AlignCenter);
         label->setPixmap(pixmap);
-        label->setToolTip(glyphName);
+        label->setToolTip("0x" + QString::number(glyphUnicode, 16).toUpper() + '\n' + glyphName);
         // Add QLabel inside gridLayout
         if(column >= MAX_COLUMN) {
             row++;
@@ -144,8 +156,4 @@ void WidgetCheatSheet::updateCheatSheet() {
         }
         gLayout->addWidget(label, row, column++);
     }
-
-    // Add spacers
-    gLayout->addItem(new QSpacerItem(0, 10, QSizePolicy::MinimumExpanding, QSizePolicy::Fixed), 0, MAX_COLUMN); // horizontalSpacer
-    gLayout->addItem(new QSpacerItem(10, 0, QSizePolicy::Fixed, QSizePolicy::MinimumExpanding), ++row, 0); // verticalSpacer
 }

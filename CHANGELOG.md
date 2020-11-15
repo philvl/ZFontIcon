@@ -1,3 +1,9 @@
+### Release v2.0.5 - 2020-11-15
+- Sample:
+  - CheatSheet: add icon search engine
+  - CheatSheet: show unicode value in tooltip
+  - BugFix: executable recognizes as shared library under Ubuntu Linux likes
+
 ### Release v2.0.4 - 2020-11-09
 - ZFontIcon
   - Add function isRegistered();

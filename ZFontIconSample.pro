@@ -37,6 +37,13 @@ DISTFILES += \
     LICENSE.md \
     README.md
 
+linux {
+    # For Ubuntu - Prevent from executable recognizes as shared library
+    # The behavior is occurring because newer ubuntu distros set GCC default link flag -pie, which marks
+    # e_type as ET_DYN on the binary file. Consequently, the Operating System recognizes as Shared Library.
+    QMAKE_LFLAGS += -no-pie
+}
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin

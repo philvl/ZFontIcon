@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Sample</string>
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <property name="leftMargin">
@@ -73,7 +73,7 @@
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 6.x [FREE] PREVIEW</string>
+          <string>FONT AWESOME 6.0-alpha1 [FREE] PREVIEW</string>
          </property>
         </widget>
        </item>
@@ -358,7 +358,7 @@ Checkable</string>
             </font>
            </property>
            <property name="text">
-            <string>FONT AWESOME 6.x [BRANDS] PREVIEW</string>
+            <string>FONT AWESOME 6.0-alpha1 [BRANDS] PREVIEW</string>
            </property>
           </widget>
          </item>
@@ -849,7 +849,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 6.x [PRO] PREVIEW</string>
+          <string>FONT AWESOME 6.0-alpha1 [PRO] PREVIEW</string>
          </property>
         </widget>
        </item>
@@ -1548,7 +1548,7 @@ Disabled</string>
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 5.x [FREE]</string>
+          <string>FONT AWESOME 5.15.1 [FREE]</string>
          </property>
         </widget>
        </item>
@@ -1895,7 +1895,7 @@ Checkable</string>
             </font>
            </property>
            <property name="text">
-            <string>FONT AWESOME 5.x [BRANDS]</string>
+            <string>FONT AWESOME 5.15.1 [BRANDS]</string>
            </property>
           </widget>
          </item>
@@ -2284,7 +2284,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 5.x [PRO]</string>
+          <string>FONT AWESOME 5.15.1 [PRO]</string>
          </property>
         </widget>
        </item>

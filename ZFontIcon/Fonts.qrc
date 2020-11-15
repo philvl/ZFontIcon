@@ -15,9 +15,11 @@
         -->
 
     <!-- FontAwesome 5.15.1 FREE -->
+        <!-- -->
         <file>fa5/FontAwesome_v5.15.1_Free_Solid900.otf</file>
         <file>fa5/FontAwesome_v5.15.1_Free_Regular400.otf</file>
         <file>fa5/FontAwesome_v5.15.1_Brands_Regular400.otf</file>
+        <!-- -->
     <!-- FontAwesome 5.15.1 PRO -->
         <!--
         <file>fa5/FontAwesome_v5.15.1_Pro_Solid900.otf</file>
@@ -26,11 +28,15 @@
         -->
 
     <!-- FontAwesome_v4.7 (Legacy) -->
+        <!-- -->
         <file>fa4/FontAwesome_v4.7.0_Free.otf</file>
+        <!-- -->
 
     <!-- MaterialIcons_v4.x -->
+        <!-- -->
         <file>gmi4/MaterialIcons_v4_96206ad_Outlined400.otf</file>
         <file>gmi4/MaterialIcons_v4_96206ad_Round400.otf</file>
         <file>gmi4/MaterialIcons_v4_96206ad_Sharp400.otf</file>
+        <!-- -->
     </qresource>
 </RCC>
