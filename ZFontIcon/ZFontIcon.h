@@ -47,8 +47,8 @@ public:
     QString fontFamilyOn; // Optional: if null, fontFamily value will be used
     QString fontStyleOn;  // Optional: if null, fontStyle value will be used
     //--
-    QChar  glyph;
-    QChar  glyphOn;       // Optional: if null, glyph value will be used
+    ushort glyph;
+    ushort glyphOn;       // Optional: if null, glyph value will be used
     //--
     QColor color;
     QColor colorOn;       // Optional: if not set, color value will be used
@@ -76,9 +76,9 @@ public:
     // Return icon
     //-- This methods should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
     static QIcon icon(ZFontIconOption fIcon);
-    static QIcon icon(const QString &fontFamily, const QString &fontStyle, const QChar &glyph, const QColor &color= QColor(), const qreal scalefactor= 0);
+    static QIcon icon(const QString &fontFamily, const QString &fontStyle, const ushort glyph, const QColor &color= QColor(), const qreal scalefactor= 0);
     //-- This method can be used with font families having only one style
-    static QIcon icon(const QString &fontFamily, const QChar &glyph, const QColor &color= QColor(), const qreal scalefactor= 0);
+    static QIcon icon(const QString &fontFamily, const ushort glyph, const QColor &color= QColor(), const qreal scalefactor= 0);
 
     // Return registered font list (family and styles)
     static QMap<QString, QStringList> registeredFonts();

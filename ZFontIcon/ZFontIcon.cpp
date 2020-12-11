@@ -154,9 +154,15 @@ bool ZFontIcon::addFont(const QString &filename) {
     }
 
     // Retrieve the family name of the added font and associated styles
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    const QString fontFamily= QFontDatabase::applicationFontFamilies(fontId).first();
+    const QStringList fontStyleList= QFontDatabase::styles(fontFamily);
+#else
     QFontDatabase fontDb;
     const QString fontFamily= fontDb.applicationFontFamilies(fontId).first();
     const QStringList fontStyleList= fontDb.styles(fontFamily);
+#endif
+
     if(fontStyleList.isEmpty()) {
         qWarning() << "ZFontIcon::addFont: Family with no styles is not supported";
         QFontDatabase::removeApplicationFont(fontId);
@@ -213,7 +219,7 @@ QIcon ZFontIcon::icon(ZFontIconOption fIcon) {
     return QIcon(new ZFontIconEngine(fIcon));
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const QChar &glyph, const QColor &color, const qreal scalefactor) {
+QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const ushort glyph, const QColor &color, const qreal scalefactor) {
     ZFontIconOption fIcon;
     fIcon.fontFamily= fontFamily;
     fIcon.fontStyle=  fontStyle;
@@ -225,7 +231,7 @@ QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const
     return icon(fIcon);
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const QChar &glyph, const QColor &color, const qreal scalefactor) {
+QIcon ZFontIcon::icon(const QString &fontFamily, const ushort glyph, const QColor &color, const qreal scalefactor) {
     return icon(fontFamily, QString(), glyph, color, scalefactor);
 }
 

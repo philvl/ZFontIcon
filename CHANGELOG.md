@@ -1,3 +1,8 @@
+### Release v2.0.6 - 2020-12-11
+- BugFix: Qt 6.0.0 compatibility
+  - Use QFontDatabase static functions
+  - Resolve ambiguous glyph type: use ushort instead of QChar
+
 ### Release v2.0.5 - 2020-11-15
 - Sample:
   - CheatSheet: add icon search engine
