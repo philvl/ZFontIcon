@@ -2,16 +2,16 @@
     <qresource prefix="/">
     <!-- FontAwesome 6.x (Preview) FREE -->
         <!--
-        <file>fa6/FontAwesome_v6.0.0-a1_Free_Solid900.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a1_Free_Regular400.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a1_Brands_Regular400.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-a2_Free_Solid900.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-a2_Free_Regular400.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-a2_Brands_Regular400.otf</file>
         -->
     <!-- FontAwesome 6.x (Preview) PRO -->
         <!--
-        <file>fa6/FontAwesome_v6.0.0-a1_Pro_Solid900.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a1_Pro_Regular400.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a1_Pro_Light300.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a1_Pro_Thin100.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-a2_Pro_Solid900.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-a2_Pro_Regular400.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-a2_Pro_Light300.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-a2_Pro_Thin100.otf</file>
         -->
 
     <!-- FontAwesome 5.15.1 FREE -->

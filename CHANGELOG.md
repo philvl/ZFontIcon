@@ -1,3 +1,6 @@
+### Release v2.0.7 - 2020-12-25
+- Update helper for Font Awesome 6.0.0-alpha2 (requires a FA pro licence to get alpha fonts)
+
 ### Release v2.0.6 - 2020-12-11
 - BugFix: Qt 6.0.0 compatibility
   - Use QFontDatabase static functions
