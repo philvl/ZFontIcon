@@ -58,6 +58,6 @@ compile_commands.json
 /ZFontIcon/fa6
 
 # Font Awesome Header Helper [Philippe VL add]
-ZFaHeaderHelper.pro
+ZHeaderHelper.pro
 /ZHeaderHelper/*
 
