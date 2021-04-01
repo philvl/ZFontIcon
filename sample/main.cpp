@@ -43,7 +43,7 @@ void registerFA6_fonts() {
 
 
 //-----------------------
-// Fonts Awesome 5.15.1 -
+// Fonts Awesome 5.15.3 -
 //-----------------------
 void registerFa5_fonts() {
     // Note that:

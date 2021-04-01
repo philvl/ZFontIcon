@@ -1,18 +1,18 @@
-QT      += core gui
+QT     += core widgets gui
+CONFIG += c++17 # c++11, c++14 or c++17
 
-greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
+# TARGET = Examples
+TEMPLATE = app
 
-CONFIG  += c++11
+# You can make your code fail to compile if it uses deprecated APIs.
+# In order to do so, uncomment the following line.
+#DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 # The following define makes your compiler emit warnings if you use
 # any Qt feature that has been marked deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
 # deprecated API in order to know how to port your code away from it.
-DEFINES += QT_DEPRECATED_WARNINGS
-
-# You can also make your code fail to compile if it uses deprecated APIs.
-# In order to do so, uncomment the following line.
-lessThan(QT_MAJOR_VERSION, 6): DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000
+#DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
     sample/WidgetCheatSheet.cpp \
@@ -32,6 +32,11 @@ FORMS   += \
 
 # Add the following line to your project
 include("ZFontIcon/ZFontIcon.pri")
+
+
+###
+# PVL preferences
+###
 DISTFILES += \
     CHANGELOG.md \
     LICENSE.md \
@@ -44,7 +49,10 @@ linux {
     QMAKE_LFLAGS += -no-pie
 }
 
+
+###
 # Default rules for deployment.
+###
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target

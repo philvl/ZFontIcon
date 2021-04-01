@@ -1,3 +1,10 @@
+### Release v2.0.9 - 2021-04-01
+- Update helper for Font Awesome 6.0.0-alpha3 (requires a FA pro licence to get alpha fonts)
+- Update helper for Font Awesome 5.15.3
+
+### Release v2.0.8 - 2021-01-08
+- Update helper for Font Awesome 5.15.2
+
 ### Release v2.0.7 - 2020-12-25
 - Update helper for Font Awesome 6.0.0-alpha2 (requires a FA pro licence to get alpha fonts)
 

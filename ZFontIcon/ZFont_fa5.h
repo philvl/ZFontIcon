@@ -40,8 +40,8 @@ namespace Fa5 {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA5_OTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v5.15.2_Free_Solid900.otf");
-    static const QString FA5_OTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v5.15.2_Free_Regular400.otf");
+    static const QString FA5_OTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v5.15.3_Free_Solid900.otf");
+    static const QString FA5_OTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v5.15.3_Free_Regular400.otf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 5 Free");
     // Styles
@@ -1120,10 +1120,10 @@ namespace Fa5pro {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA5_OTF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v5.15.2_Pro_Solid900.otf");
-    static const QString FA5_OTF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v5.15.2_Pro_Regular400.otf");
-    static const QString FA5_OTF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v5.15.2_Pro_Light300.otf");
-    //static const QString FA5_OTF_FILE_PRO_DUOTONE= QLatin1String("FontAwesome_v5.15.2_Pro_Solid900_Duotone.otf");
+    static const QString FA5_OTF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v5.15.3_Pro_Solid900.otf");
+    static const QString FA5_OTF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v5.15.3_Pro_Regular400.otf");
+    static const QString FA5_OTF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v5.15.3_Pro_Light300.otf");
+    //static const QString FA5_OTF_FILE_PRO_DUOTONE= QLatin1String("FontAwesome_v5.15.3_Pro_Solid900_Duotone.otf");
     // Families
     static const QString FAMILY  =  QLatin1String("Font Awesome 5 Pro");
     // Styles
@@ -3060,7 +3060,7 @@ namespace Fa5brands {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA5_OTF_FILE_BRANDS = QLatin1String("FontAwesome_v5.15.2_Brands_Regular400.otf");
+    static const QString FA5_OTF_FILE_BRANDS = QLatin1String("FontAwesome_v5.15.3_Brands_Regular400.otf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 5 Brands");
     // Styles

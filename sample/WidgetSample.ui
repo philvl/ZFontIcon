@@ -73,7 +73,7 @@
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 6.0-alpha2 [FREE] PREVIEW</string>
+          <string>FONT AWESOME 6.0-alpha3 [FREE] PREVIEW</string>
          </property>
         </widget>
        </item>
@@ -358,7 +358,7 @@ Checkable</string>
             </font>
            </property>
            <property name="text">
-            <string>FONT AWESOME 6.0-alpha2 [BRANDS] PREVIEW</string>
+            <string>FONT AWESOME 6.0-alpha3 [BRANDS] PREVIEW</string>
            </property>
           </widget>
          </item>
@@ -849,7 +849,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 6.0-alpha2 [PRO] PREVIEW</string>
+          <string>FONT AWESOME 6.0-alpha3 [PRO] PREVIEW</string>
          </property>
         </widget>
        </item>
@@ -1548,7 +1548,7 @@ Disabled</string>
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 5.15.2 [FREE]</string>
+          <string>FONT AWESOME 5.15.3 [FREE]</string>
          </property>
         </widget>
        </item>
@@ -1895,7 +1895,7 @@ Checkable</string>
             </font>
            </property>
            <property name="text">
-            <string>FONT AWESOME 5.15.2 [BRANDS]</string>
+            <string>FONT AWESOME 5.15.3 [BRANDS]</string>
            </property>
           </widget>
          </item>
@@ -2284,7 +2284,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 5.15.2 [PRO]</string>
+          <string>FONT AWESOME 5.15.3 [PRO]</string>
          </property>
         </widget>
        </item>
