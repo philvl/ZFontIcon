@@ -52,9 +52,9 @@ public:
             fontStyle=  _fIcon.fontStyleOn;
         }
 
-        QChar glyph= _fIcon.glyph;
+        QString glyph= QString::fromUcs4(&_fIcon.glyph, 1);
         if(state == QIcon::On && _fIcon.glyphOn > 0)
-            glyph= _fIcon.glyphOn;
+            glyph= QString::fromUcs4(&_fIcon.glyphOn, 1);
 
         qreal scalefactor= _fIcon.scaleFactor;
         if(state == QIcon::On && _fIcon.scaleFactorOn > 0)
@@ -219,7 +219,7 @@ QIcon ZFontIcon::icon(ZFontIconOption fIcon) {
     return QIcon(new ZFontIconEngine(fIcon));
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const ushort glyph, const QColor &color, const qreal scalefactor) {
+QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const char32_t glyph, const QColor &color, const qreal scalefactor) {
     ZFontIconOption fIcon;
     fIcon.fontFamily= fontFamily;
     fIcon.fontStyle=  fontStyle;
@@ -231,7 +231,7 @@ QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const
     return icon(fIcon);
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const ushort glyph, const QColor &color, const qreal scalefactor) {
+QIcon ZFontIcon::icon(const QString &fontFamily, const char32_t glyph, const QColor &color, const qreal scalefactor) {
     return icon(fontFamily, QString(), glyph, color, scalefactor);
 }
 

@@ -358,7 +358,7 @@ Checkable</string>
             </font>
            </property>
            <property name="text">
-            <string>FONT AWESOME 6.0-alpha3 [BRANDS] PREVIEW</string>
+            <string>FONT AWESOME 6.0-beta1 [BRANDS] PREVIEW</string>
            </property>
           </widget>
          </item>
@@ -849,7 +849,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>FONT AWESOME 6.0-alpha3 [PRO] PREVIEW</string>
+          <string>FONT AWESOME 6.0-beta1 [PRO] PREVIEW</string>
          </property>
         </widget>
        </item>
@@ -3412,7 +3412,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>GOOGLE MATERIAL ICONS 4.x</string>
+          <string>GOOGLE MATERIAL ICONS 4 - v2021-05-11 [ab12f16]</string>
          </property>
         </widget>
        </item>

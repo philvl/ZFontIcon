@@ -134,21 +134,21 @@ void WidgetCheatSheet::updateCheatSheet() {
 
     // Generate SheetCheat
     for(int i= 0; i < metaEnum.keyCount(); ++i) {
-        QString glyphName=    metaEnum.key(i);
-        ushort  glyphUnicode= metaEnum.value(i);
+        QString  glyphName= metaEnum.key(i);
+        char32_t glyphUcs4= metaEnum.value(i);
 
         // Filter only if search field contains at least 3 characters
         if(currentSearch.trimmed().size() >= 3 && !glyphName.contains(currentSearch))
             continue;
 
         // Create QIcon
-        QIcon   icon= ZFontIcon::icon(fontFamily, fontStyle, glyphUnicode, QColor(), scaleFactor);
+        QIcon   icon= ZFontIcon::icon(fontFamily, fontStyle, glyphUcs4, QColor(), scaleFactor);
         QPixmap pixmap= icon.pixmap(iconSize, iconSize);
         // Show in QLabel
         QLabel *label= new QLabel(scrollWidget);
         label->setAlignment(Qt::AlignCenter);
         label->setPixmap(pixmap);
-        label->setToolTip("0x" + QString::number(glyphUnicode, 16).toUpper() + '\n' + glyphName);
+        label->setToolTip("0x" + QString::number(glyphUcs4, 16).toUpper() + '\n' + glyphName);
         // Add QLabel inside gridLayout
         if(column >= MAX_COLUMN) {
             row++;

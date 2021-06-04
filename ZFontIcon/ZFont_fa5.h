@@ -27,7 +27,7 @@ SOFTWARE.
 #include <QObject>
 #include <QString>
 
-// Font Awesome 5.15.2 compatibility
+// Font Awesome 5.15.3 compatibility
 // Icons sorted by names and grouped by FA versions
 // ---------------------------------------
 // | FA Font      | Free | Pro  | Brands |
@@ -816,7 +816,7 @@ namespace Fa5 {
         fa_weight_hanging                      = 0xF5CD,
         fa_wine_glass_alt                      = 0xF5CE,
     //--------------------------------------------------------------------------
-    // Since Font Awesome UNKNOWN | 0000-00-00 | +27 unique icons              -
+    // Since Font Awesome 5.2.0 | 2018-07-23 | +27 unique icons                -
     //--------------------------------------------------------------------------
         fa_air_freshener                       = 0xF5D0,
         fa_apple_alt                           = 0xF5D1,
@@ -2139,7 +2139,7 @@ namespace Fa5pro {
         fa_weight_hanging                      = 0xF5CD,
         fa_wine_glass_alt                      = 0xF5CE,
     //--------------------------------------------------------------------------
-    // Since Font Awesome UNKNOWN | 0000-00-00 | +106 unique icons             -
+    // Since Font Awesome 5.2.0 | 2018-07-23 | +106 unique icons               -
     //--------------------------------------------------------------------------
         fa_air_freshener                       = 0xF5D0,
         fa_apple_alt                           = 0xF5D1,
@@ -3470,7 +3470,7 @@ namespace Fa5brands {
         fa_weebly                              = 0xF5CC,
         fa_wix                                 = 0xF5CF,
     //--------------------------------------------------------------------------
-    // Since Font Awesome UNKNOWN | 0000-00-00 | +6 unique icons               -
+    // Since Font Awesome 5.2.0 | 2018-07-23 | +6 unique icons                 -
     //--------------------------------------------------------------------------
         fa_ello                                = 0xF5F1,
         fa_hackerrank                          = 0xF5F7,

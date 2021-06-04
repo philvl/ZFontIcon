@@ -4,14 +4,14 @@
         <!--
         <file>fa6/FontAwesome_v6.0.0-a3_Free_Solid900.otf</file>
         <file>fa6/FontAwesome_v6.0.0-a3_Free_Regular400.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a3_Brands_Regular400.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-b1_Brands_Regular400.otf</file>
         -->
     <!-- FontAwesome 6.x (Preview) PRO -->
         <!--
-        <file>fa6/FontAwesome_v6.0.0-a3_Pro_Solid900.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a3_Pro_Regular400.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a3_Pro_Light300.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a3_Pro_Thin100.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-b1_Pro_Solid900.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-b1_Pro_Regular400.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-b1_Pro_Light300.otf</file>
+        <file>fa6/FontAwesome_v6.0.0-b1_Pro_Thin100.otf</file>
         -->
 
     <!-- FontAwesome 5.15.3 FREE -->
@@ -34,9 +34,9 @@
 
     <!-- MaterialIcons_v4.x -->
         <!-- -->
-        <file>gmi4/MaterialIcons_v4_96206ad_Outlined400.otf</file>
-        <file>gmi4/MaterialIcons_v4_96206ad_Round400.otf</file>
-        <file>gmi4/MaterialIcons_v4_96206ad_Sharp400.otf</file>
+        <file>gmi4/MaterialIcons_v4_ab12f16_Outlined400.otf</file>
+        <file>gmi4/MaterialIcons_v4_ab12f16_Round400.otf</file>
+        <file>gmi4/MaterialIcons_v4_ab12f16_Sharp400.otf</file>
         <!-- -->
     </qresource>
 </RCC>

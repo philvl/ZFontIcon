@@ -1,3 +1,8 @@
+### Release v2.0.10 - 2021-06-04
+- Add UCS-4/UTF-32 unicode glyph support (4 bytes unicode character)
+- Update helper for Font Awesome 6.0.0-beta1 (requires a FA pro licence to get alpha fonts)
+- Update helper for Google Material Design Icons 4 (github master ab12f16 - 2021-05-11)
+
 ### Release v2.0.9 - 2021-04-01
 - Update helper for Font Awesome 6.0.0-alpha3 (requires a FA pro licence to get alpha fonts)
 - Update helper for Font Awesome 5.15.3
