@@ -1,3 +1,19 @@
+### Release v2.1.0 - 2022-02-11
+- ZFontIcon
+  - Add new icon options: rotate, flipTopBottom and flipLeftRight
+  - Minor code improvements
+- Helpers
+  - Add helper for Bootstrap Icons 1.8.1
+  - Add helper for Material Design Icons 6.5.95
+  - Add helper for Phosphor Icons 1.4
+  - Update helper for Font Awesome 6.0.0
+  - Update helper for Font Awesome 5.15.4
+  - Update helper for Google Material Icons 4 (github master c1eb628 - 2022-01-07)
+- Sample:
+  - Add tabs for Bootstrap Icons
+  - Add tabs for Material Design Icons
+  - Add tabs for Phosphor Icons
+
 ### Release v2.0.10 - 2021-06-04
 - Add UCS-4/UTF-32 unicode glyph support (4 bytes unicode character)
 - Update helper for Font Awesome 6.0.0-beta1 (requires a FA pro licence to get alpha fonts)

@@ -3,6 +3,7 @@
 
 // Qt Core
 #include <QMetaEnum>
+#include <QDebug>
 
 // Qt Gui
 #include <QIcon>
@@ -16,7 +17,10 @@
 #include "ZFontIcon/ZFont_fa6.h"
 #include "ZFontIcon/ZFont_fa5.h"
 #include "ZFontIcon/ZFont_fa4.h"
+#include "ZFontIcon/ZFont_bi1.h"
 #include "ZFontIcon/ZFont_gmi4.h"
+#include "ZFontIcon/ZFont_mdi6.h"
+#include "ZFontIcon/ZFont_ph1.h"
 
 WidgetCheatSheet::WidgetCheatSheet(QWidget *parent) : QWidget(parent), ui(new Ui::WidgetCheatSheet) {
     ui->setupUi(this);
@@ -32,11 +36,9 @@ WidgetCheatSheet::WidgetCheatSheet(QWidget *parent) : QWidget(parent), ui(new Ui
     ui->comboBoxIconSize->setCurrentIndex(4);
 
     // Set combobox Font families
-    QMapIterator<QString, QStringList> iterator(ZFontIcon::registeredFonts());
-    while(iterator.hasNext()) {
-        iterator.next();
-        ui->listWidgetFontFamilies->addItem(iterator.key());
-    }
+    QStringList familiesList= ZFontIcon::registeredFonts().keys();
+    for(const QString &family : familiesList)
+        ui->listWidgetFontFamilies->addItem(family);
     ui->listWidgetFontFamilies->setCurrentRow(0);
 }
 
@@ -122,11 +124,22 @@ void WidgetCheatSheet::updateCheatSheet() {
     // Font Awesome 4
     else if(fontFamily.startsWith(Fa4::FAMILY))
         metaEnum= QMetaEnum::fromType<Fa4::Glyph>();
+    // Bootstrap Icons
+    else if(fontFamily.startsWith(Bi1::FAMILY))
+        metaEnum= QMetaEnum::fromType<Bi1::Glyph>();
     // Google Material Icons
     else if(fontFamily.startsWith(Gmi4::FAMILY_OUTLINED) || fontFamily.startsWith(Gmi4::FAMILY_ROUND) || fontFamily.startsWith(Gmi4::FAMILY_SHARP))
         metaEnum= QMetaEnum::fromType<Gmi4::Glyph>();
-    else
+    // Material Design Icons
+    else if(fontFamily.startsWith(Mdi6::FAMILY))
+        metaEnum= QMetaEnum::fromType<Mdi6::Glyph>();
+    // Phosphor Icons
+    else if(fontFamily.startsWith(Ph1::FAMILY))
+        metaEnum= QMetaEnum::fromType<Ph1::Glyph>();
+    else {
+        qDebug() << "WidgetCheatSheet::updateCheatSheet() -> Enum not found";
         return;
+    }
 
     const int MAX_COLUMN= 8;
     int row=     0;

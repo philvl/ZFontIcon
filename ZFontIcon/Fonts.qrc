@@ -1,42 +1,61 @@
 <RCC>
     <qresource prefix="/">
-    <!-- FontAwesome 6.x (Preview) FREE -->
-        <!--
-        <file>fa6/FontAwesome_v6.0.0-a3_Free_Solid900.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-a3_Free_Regular400.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-b1_Brands_Regular400.otf</file>
-        -->
-    <!-- FontAwesome 6.x (Preview) PRO -->
-        <!--
-        <file>fa6/FontAwesome_v6.0.0-b1_Pro_Solid900.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-b1_Pro_Regular400.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-b1_Pro_Light300.otf</file>
-        <file>fa6/FontAwesome_v6.0.0-b1_Pro_Thin100.otf</file>
-        -->
-
-    <!-- FontAwesome 5.15.3 FREE -->
+    <!-- FontAwesome 6.x [FREE] -->
         <!-- -->
-        <file>fa5/FontAwesome_v5.15.3_Free_Solid900.otf</file>
-        <file>fa5/FontAwesome_v5.15.3_Free_Regular400.otf</file>
-        <file>fa5/FontAwesome_v5.15.3_Brands_Regular400.otf</file>
+        <file>fa6/FontAwesome_v6.0.0_Free_Solid900.ttf</file>
+        <file>fa6/FontAwesome_v6.0.0_Free_Regular400.ttf</file>
+        <file>fa6/FontAwesome_v6.0.0_Brands_Regular400.ttf</file>
         <!-- -->
-    <!-- FontAwesome 5.15.3 PRO -->
+    <!-- FontAwesome 6.x [PRO] -->
         <!--
-        <file>fa5/FontAwesome_v5.15.3_Pro_Solid900.otf</file>
-        <file>fa5/FontAwesome_v5.15.3_Pro_Regular400.otf</file>
-        <file>fa5/FontAwesome_v5.15.3_Pro_Light300.otf</file>
+        <file>fa6/FontAwesome_v6.0.0_Pro_Solid900.ttf</file>
+        <file>fa6/FontAwesome_v6.0.0_Pro_Regular400.ttf</file>
+        <file>fa6/FontAwesome_v6.0.0_Pro_Light300.ttf</file>
+        <file>fa6/FontAwesome_v6.0.0_Pro_Thin100.ttf</file>
         -->
 
-    <!-- FontAwesome_v4.7 (Legacy) -->
+
+    <!-- FontAwesome 5.15.4 [FREE] - Legacy support -->
         <!-- -->
-        <file>fa4/FontAwesome_v4.7.0_Free.otf</file>
+        <file>fa5/FontAwesome_v5.15.4_Free_Solid900.otf</file>
+        <file>fa5/FontAwesome_v5.15.4_Free_Regular400.otf</file>
+        <file>fa5/FontAwesome_v5.15.4_Brands_Regular400.otf</file>
+        <!-- -->
+    <!-- FontAwesome 5.15.4 [PRO] - Legacy support -->
+        <!--
+        <file>fa5/FontAwesome_v5.15.4_Pro_Solid900.otf</file>
+        <file>fa5/FontAwesome_v5.15.4_Pro_Regular400.otf</file>
+        <file>fa5/FontAwesome_v5.15.4_Pro_Light300.otf</file>
+        -->
+
+
+    <!-- FontAwesome 4.7 - Legacy support -->
+        <!-- -->
+        <file>fa4/FontAwesome_v4.7.0_Free.ttf</file>
         <!-- -->
 
-    <!-- MaterialIcons_v4.x -->
+
+    <!-- Bootstrap Icons 1.7.x -->
         <!-- -->
-        <file>gmi4/MaterialIcons_v4_ab12f16_Outlined400.otf</file>
-        <file>gmi4/MaterialIcons_v4_ab12f16_Round400.otf</file>
-        <file>gmi4/MaterialIcons_v4_ab12f16_Sharp400.otf</file>
+        <file>bi1/BootstrapIcons_v1.8.1.ttf</file>
+        <!-- -->
+
+
+    <!-- Google Material Icons 4.x -->
+        <!-- -->
+        <file>gmi4/MaterialIcons_v4_c1eb628_Outlined400.otf</file>
+        <file>gmi4/MaterialIcons_v4_c1eb628_Round400.otf</file>
+        <file>gmi4/MaterialIcons_v4_c1eb628_Sharp400.otf</file>
+        <!-- -->
+
+    <!-- Material Design Icons 6.x -->
+        <!-- -->
+        <file>mdi6/MaterialDesignIcons_v6.5.95.ttf</file>
+        <!-- -->
+
+    <!-- Phosphor 1.x -->
+        <!-- -->
+        <file>ph1/Phosphor_v1.4.ttf</file>
         <!-- -->
     </qresource>
 </RCC>

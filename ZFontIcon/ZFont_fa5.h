@@ -27,21 +27,24 @@ SOFTWARE.
 #include <QObject>
 #include <QString>
 
-// Font Awesome 5.15.3 compatibility
-// Icons sorted by names and grouped by FA versions
-// ---------------------------------------
-// | FA Font      | Free | Pro  | Brands |
-// | Unique icons | 1001 | 1852 | 458    |
-// ---------------------------------------
-//- https://fontawesome.com/cheatsheet
-//- Free version, use "Fa5" and "Fa5brands" namespaces
-//- Pro  version, use "Fa5pro" namespace
+// Font Awesome 5.15.4 compatibility
+// ----------------------------------------
+// | FA Font       | Free | Pro  | Brands |
+// | Unique glyphs | 1001 | 1852 | 457    |
+// ----------------------------------------
+// Glyph ratio: Width = 1.25 * Height, apply a scale factor
+// of 0.80 to fully display all glyphs in square drawing area
+//--
+// Glyphs sorted by names and grouped by FA versions
+// - Free version, use "Fa5" and "Fa5brands" namespaces
+// - Pro  version, use "Fa5pro" namespace
+// - https://fontawesome.com/download
 namespace Fa5 {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA5_OTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v5.15.3_Free_Solid900.otf");
-    static const QString FA5_OTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v5.15.3_Free_Regular400.otf");
+    static const QString FA5_WOFF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v5.15.4_Free_Solid900.otf");
+    static const QString FA5_WOFF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v5.15.4_Free_Regular400.otf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 5 Free");
     // Styles
@@ -1120,12 +1123,11 @@ namespace Fa5pro {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA5_OTF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v5.15.3_Pro_Solid900.otf");
-    static const QString FA5_OTF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v5.15.3_Pro_Regular400.otf");
-    static const QString FA5_OTF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v5.15.3_Pro_Light300.otf");
-    //static const QString FA5_OTF_FILE_PRO_DUOTONE= QLatin1String("FontAwesome_v5.15.3_Pro_Solid900_Duotone.otf");
+    static const QString FA5_WOFF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v5.15.4_Pro_Solid900.otf");
+    static const QString FA5_WOFF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v5.15.4_Pro_Regular400.otf");
+    static const QString FA5_WOFF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v5.15.4_Pro_Light300.otf");
     // Families
-    static const QString FAMILY  =  QLatin1String("Font Awesome 5 Pro");
+    static const QString FAMILY  = QLatin1String("Font Awesome 5 Pro");
     // Styles
     static const QString SOLID   = QLatin1String("Solid");
     static const QString REGULAR = QLatin1String("Regular");
@@ -3060,7 +3062,7 @@ namespace Fa5brands {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA5_OTF_FILE_BRANDS = QLatin1String("FontAwesome_v5.15.3_Brands_Regular400.otf");
+    static const QString FA5_WOFF_FILE_BRANDS = QLatin1String("FontAwesome_v5.15.4_Brands_Regular400.otf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 5 Brands");
     // Styles
@@ -3068,7 +3070,7 @@ namespace Fa5brands {
 
     enum Glyph {
     //--------------------------------------------------------------------------
-    // Since Font Awesome 5.0.0 | 2017-12-01 | +316 unique icons               -
+    // Since Font Awesome 5.0.0 | 2017-12-01 | +315 unique icons               -
     //--------------------------------------------------------------------------
         fa_500px                               = 0xF26E,
         fa_accessible_icon                     = 0xF368,
@@ -3340,7 +3342,6 @@ namespace Fa5brands {
         fa_tencent_weibo                       = 0xF1D5,
         fa_themeisle                           = 0xF2B2,
         fa_trello                              = 0xF181,
-        fa_tripadvisor                         = 0xF262,
         fa_tumblr                              = 0xF173,
         fa_tumblr_square                       = 0xF174,
         fa_twitch                              = 0xF1E8,

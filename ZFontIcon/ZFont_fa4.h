@@ -27,16 +27,19 @@ SOFTWARE.
 #include <QObject>
 #include <QString>
 
-// Font Awesome 4.7.0 (Free) compatibility - 675 unique icons
-// Icons sorted by Unicode values and ordered by FA versions
-// - https://fontawesome.com/v4.7.0/cheatsheet/
+// Font Awesome 4.7.0 (Free) compatibility - 675 unique glyphs
+// Glyph ratio: Width = 1.3125 * Height, apply a scale factor
+// of 0.75 to fully display all glyphs in square drawing area
+//--
+// Glyphs sorted by Unicode values and ordered by FA versions
+// - https://fontawesome.com/v4/cheatsheet/
 namespace Fa4 {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA4_OTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v4.7.0_Free.otf");
+    static const QString FA4_WOFF_FILE_REGULAR = QLatin1String("FontAwesome_v4.7.0_Free.ttf");
     // Families
-    static const QString FAMILY  =  QLatin1String("FontAwesome");
+    static const QString FAMILY  = QLatin1String("FontAwesome");
     // Styles
     static const QString REGULAR = QLatin1String("Regular");
 

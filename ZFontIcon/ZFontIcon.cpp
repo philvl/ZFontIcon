@@ -56,10 +56,6 @@ public:
         if(state == QIcon::On && _fIcon.glyphOn > 0)
             glyph= QString::fromUcs4(&_fIcon.glyphOn, 1);
 
-        qreal scalefactor= _fIcon.scaleFactor;
-        if(state == QIcon::On && _fIcon.scaleFactorOn > 0)
-            scalefactor= _fIcon.scaleFactorOn;
-
         QColor penColor= _fIcon.color;
         switch(mode) {
         case QIcon::Normal: // When icon is available and the user is not interacting with the icon
@@ -82,16 +78,31 @@ public:
             break;
         }
 
+        qreal scaleFactor= _fIcon.scaleFactor;
+        if(state == QIcon::On && _fIcon.scaleFactorOn > 0)
+            scaleFactor= _fIcon.scaleFactorOn;
+        int fontHeight= qRound(rect.height()*scaleFactor);
+
+
         QFont font(fontFamily);
         if(!fontStyle.isEmpty())
             font.setStyleName(fontStyle);
-        int drawSize= qRound(rect.height() * scalefactor);
-        font.setPixelSize(drawSize);
+        font.setPixelSize(fontHeight);
 
         painter->save();
+        // Apply icon transformations
+        painter->translate(rect.center()+QPoint(1,1));
+        if(_fIcon.rotateAngle)
+            painter->rotate(_fIcon.rotateAngle);
+        if(_fIcon.flipLeftRight)
+            painter->scale(-1.0, 1.0);
+        if(_fIcon.flipTopBottom)
+            painter->scale(1.0, -1.0);
+        painter->translate(-rect.center()-QPoint(1,1));
         painter->setPen(penColor);
         painter->setFont(font);
         painter->drawText(rect, Qt::AlignCenter, glyph);
+
         painter->restore();
     }
 
@@ -134,7 +145,12 @@ ZFontIconOption::ZFontIconOption() {
 
     // Default icon scale factor values
     scaleFactor=   0.80;
-    scaleFactorOn= 0;
+    scaleFactorOn= 0.00;
+
+    // More fun options
+    rotateAngle=   0.00;
+    flipLeftRight= false;
+    flipTopBottom= false;
 }
 
 
@@ -191,7 +207,7 @@ QIcon ZFontIcon::icon(ZFontIconOption fIcon) {
         return QIcon();
     }
     if(fIcon.fontFamily.isEmpty() || fIcon.glyph <= 0) {
-        qWarning() << "ZFontIcon::icon: minimum requirements not met";
+        qWarning() << "ZFontIcon::icon: minimum requirements not set";
         return QIcon();
     }
 
@@ -219,20 +235,20 @@ QIcon ZFontIcon::icon(ZFontIconOption fIcon) {
     return QIcon(new ZFontIconEngine(fIcon));
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const char32_t glyph, const QColor &color, const qreal scalefactor) {
+QIcon ZFontIcon::icon(const QString &fontFamily, const QString &fontStyle, const char32_t glyph, const QColor &color, const qreal scaleFactor) {
     ZFontIconOption fIcon;
     fIcon.fontFamily= fontFamily;
     fIcon.fontStyle=  fontStyle;
     fIcon.glyph= glyph;
     if(color.isValid())
         fIcon.color= color;
-    if(scalefactor > 0)
-        fIcon.scaleFactor= scalefactor;
+    if(scaleFactor > 0)
+        fIcon.scaleFactor= scaleFactor;
     return icon(fIcon);
 }
 
-QIcon ZFontIcon::icon(const QString &fontFamily, const char32_t glyph, const QColor &color, const qreal scalefactor) {
-    return icon(fontFamily, QString(), glyph, color, scalefactor);
+QIcon ZFontIcon::icon(const QString &fontFamily, const char32_t glyph, const QColor &color, const qreal scaleFactor) {
+    return icon(fontFamily, QString(), glyph, color, scaleFactor);
 }
 
 QMap<QString, QStringList> ZFontIcon::registeredFonts() {
@@ -241,8 +257,8 @@ QMap<QString, QStringList> ZFontIcon::registeredFonts() {
 
 bool ZFontIcon::isRegistered(const QString &fontFamily) {
     // Get all registered families containing the desired font family name
-    const QStringList families= _registeredFontList.keys().filter(fontFamily, Qt::CaseInsensitive);
-    if(families.isEmpty())
+    QStringList families= _registeredFontList.keys();
+    if(families.filter(fontFamily, Qt::CaseInsensitive).isEmpty())
         return false;
     return true;
 }
@@ -254,7 +270,8 @@ bool ZFontIcon::isRegistered(const QString &fontFamily) {
 QString ZFontIcon::familyMatching(const QString &fontFamily, const QString &fontStyle) {
     int matchIndex;
     // Get all registered families containing the desired font family name
-    const QStringList matchFamilies= _registeredFontList.keys().filter(fontFamily, Qt::CaseInsensitive);
+    QStringList matchFamilies= _registeredFontList.keys();
+    matchFamilies= matchFamilies.filter(fontFamily, Qt::CaseInsensitive);
     if(matchFamilies.isEmpty())
         return QString();
     // The first family in the match list is used by default
@@ -267,7 +284,7 @@ QString ZFontIcon::familyMatching(const QString &fontFamily, const QString &font
         familyToUse= matchFamilies.at(matchIndex);
     // If the font style is set, try to find a font family witch embed the desired style
     else if(!fontStyle.isEmpty()) {
-        for(const QString &family : matchFamilies) {
+        for(const QString &family : qAsConst(matchFamilies)) {
             QStringList familyStyleList= _registeredFontList.value(family);
             if(familyStyleList.contains(fontStyle, Qt::CaseInsensitive))
                 familyToUse= family;

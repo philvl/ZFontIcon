@@ -48,7 +48,7 @@ public:
     QString fontStyleOn;  // Optional: if null, fontStyle value will be used
     //--
     char32_t glyph;
-    char32_t glyphOn;       // Optional: if null, glyph value will be used
+    char32_t glyphOn;     // Optional: if null, glyph value will be used
     //--
     QColor color;
     QColor colorOn;       // Optional: if not set, color value will be used
@@ -59,6 +59,10 @@ public:
     //--
     qreal  scaleFactor;
     qreal  scaleFactorOn; // Optional: if null, scaleFactor value will be used
+    //--
+    qreal  rotateAngle;
+    bool   flipLeftRight;
+    bool   flipTopBottom;
 };
 
 
@@ -74,11 +78,11 @@ public:
     static bool addFont(const QString &filename);
 
     // Return icon
-    //-- This methods should be used with font families having multiple registered styles (eg, Solid, Regular, Light, etc.)
+    //-- This methods should be used with font families having multiple registered styles (eg, Solid, Regular, Light, Thin, etc.)
     static QIcon icon(ZFontIconOption fIcon);
-    static QIcon icon(const QString &fontFamily, const QString &fontStyle, const char32_t glyph, const QColor &color= QColor(), const qreal scalefactor= 0);
+    static QIcon icon(const QString &fontFamily, const QString &fontStyle, const char32_t glyph, const QColor &color= QColor(), const qreal scaleFactor= 0);
     //-- This method can be used with font families having only one style
-    static QIcon icon(const QString &fontFamily, const char32_t glyph, const QColor &color= QColor(), const qreal scalefactor= 0);
+    static QIcon icon(const QString &fontFamily, const char32_t glyph, const QColor &color= QColor(), const qreal scaleFactor= 0);
 
     // Return registered font list (family and styles)
     static QMap<QString, QStringList> registeredFonts();
