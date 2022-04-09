@@ -1,3 +1,7 @@
+### Release v2.1.1 - 2022-04-09
+- Update helper for Font Awesome 6.1.1
+- Update helper for Google Material Icons 4 (v2022-03-31, github master e55dd24)
+
 ### Release v2.1.0 - 2022-02-11
 - ZFontIcon
   - Add new icon options: rotate, flipTopBottom and flipLeftRight

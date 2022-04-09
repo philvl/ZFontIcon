@@ -76,7 +76,7 @@
               </font>
              </property>
              <property name="text">
-              <string>FONT AWESOME 6.0.0 [FREE]</string>
+              <string>FONT AWESOME 6.1.1 [FREE]</string>
              </property>
             </widget>
            </item>
@@ -360,7 +360,7 @@ Checkable</string>
                 </font>
                </property>
                <property name="text">
-                <string>FONT AWESOME 6.0.0 [BRANDS]</string>
+                <string>FONT AWESOME 6.1.1 [BRANDS]</string>
                </property>
               </widget>
              </item>
@@ -849,7 +849,7 @@ Checkable</string>
               </font>
              </property>
              <property name="text">
-              <string>FONT AWESOME 6.0.0 [PRO]</string>
+              <string>FONT AWESOME 6.1.1 [PRO]</string>
              </property>
             </widget>
            </item>
@@ -3973,7 +3973,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>GOOGLE MATERIAL ICONS 4 - v2022-01-07 [c1eb628]</string>
+          <string>GOOGLE MATERIAL ICONS 4 - v2022-03-31 [e55dd24]</string>
          </property>
         </widget>
        </item>

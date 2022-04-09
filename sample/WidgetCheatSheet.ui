@@ -58,7 +58,6 @@
         <property name="font">
          <font>
           <pointsize>16</pointsize>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -87,7 +86,6 @@
        <widget class="QLabel" name="labelFontFamilyTxt">
         <property name="font">
          <font>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -110,7 +108,6 @@
        <widget class="QLabel" name="labelFontStyleTxt">
         <property name="font">
          <font>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -126,7 +123,6 @@
        <widget class="QLabel" name="labelIconSizeTxt">
         <property name="font">
          <font>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -142,7 +138,6 @@
        <widget class="QLabel" name="labelScaleFactorTxt">
         <property name="font">
          <font>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -187,7 +182,6 @@
        <widget class="QLabel" name="labelSearchTxt">
         <property name="font">
          <font>
-          <weight>75</weight>
           <bold>true</bold>
          </font>
         </property>
@@ -225,7 +219,7 @@
       <item>
        <widget class="QLabel" name="labelInfo">
         <property name="text">
-         <string>*On changes, update cheatsheet&lt;br/&gt; can take a few seconds</string>
+         <string>&lt;span style=&quot; font-style:italic; color:#a40000;&quot;&gt;*On changes, update cheatsheet&lt;br/&gt;can take a few seconds&lt;/span&gt;</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>

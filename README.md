@@ -6,11 +6,11 @@ ZFontIcon is released under the MIT License
 ZFontIcon provides a simple way to use any glyph/icon font as QIcon in your Qt5/Qt6 applications.
 
 Some helpers are included to use the following icon fonts with no effort:
-- Font Awesome 6.0.0  (Free, Brands and Pro)
+- Font Awesome 6.1.1  (Free, Brands and Pro)
 - Font Awesome 5.15.4 (Free, Brands and Pro)
 - Font Awesome 4.7.0
 - Bootstrap Icons 1.8.1
-- Google Material Design Icons 4 (v2022-01-07, github master c1eb628)
+- Google Material Design Icons 4 (v2022-03-31, github master e55dd24)
 - Material Design Icons 6.5.95
 - Phosphor 1.4
 
