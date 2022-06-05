@@ -40,6 +40,16 @@ SOFTWARE.
 class ZFontIconOption {
 public:
     ZFontIconOption();
+
+
+    // Global colors
+    static QColor gColor;
+    static QColor gColorOn;       // Optional: if not set, color value will be used
+    static QColor gColorActive;   // Optional: if not set, color value will be used
+    static QColor gColorActiveOn; // Optional: if not set, color value will be used
+    static QColor gColorDisabled;
+    static QColor gColorSelected;
+
     //--
     QString fontFamily;
     QString fontStyle;

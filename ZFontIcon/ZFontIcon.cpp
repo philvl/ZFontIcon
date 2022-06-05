@@ -56,25 +56,25 @@ public:
         if(state == QIcon::On && _fIcon.glyphOn > 0)
             glyph= QString::fromUcs4(&_fIcon.glyphOn, 1);
 
-        QColor penColor= _fIcon.color;
+        QColor penColor= _fIcon.color.isValid()?_fIcon.color:ZFontIconOption::gColor;
         switch(mode) {
         case QIcon::Normal: // When icon is available and the user is not interacting with the icon
-            if(state == QIcon::On && _fIcon.colorOn.isValid())
-                penColor= _fIcon.colorOn;
+            if(state == QIcon::On && (_fIcon.colorOn.isValid() || ZFontIconOption::gColorOn.isValid()))
+                penColor= _fIcon.colorOn.isValid()?_fIcon.colorOn:ZFontIconOption::gColorOn;
             break;
         case QIcon::Active: // When icon is available and the user is interacting with the icon (eg. mouse over it or clicking it)
-            if(state == QIcon::Off && _fIcon.colorActive.isValid())
-                penColor= _fIcon.colorActive;
-            else if(state == QIcon::On && _fIcon.colorActiveOn.isValid())
-                penColor= _fIcon.colorActiveOn;
-            else if(state == QIcon::On && _fIcon.colorOn.isValid())
-                penColor= _fIcon.colorOn;
+            if(state == QIcon::Off && (_fIcon.colorActive.isValid() || ZFontIconOption::gColorActive.isValid()))
+                penColor= _fIcon.colorActive.isValid()?_fIcon.colorActive:ZFontIconOption::gColorActive;
+            else if(state == QIcon::On && (_fIcon.colorActiveOn.isValid() || ZFontIconOption::gColorActiveOn.isValid()))
+                penColor= _fIcon.colorActiveOn.isValid()?_fIcon.colorActiveOn:ZFontIconOption::gColorActiveOn;
+            else if(state == QIcon::On && (_fIcon.colorOn.isValid() || ZFontIconOption::gColorOn.isValid()))
+                penColor= _fIcon.colorOn.isValid()?_fIcon.colorOn:ZFontIconOption::gColorOn;
             break;
         case QIcon::Disabled: // When icon is not available
-            penColor= _fIcon.colorDisabled;
+            penColor= _fIcon.colorDisabled.isValid()?_fIcon.colorDisabled:ZFontIconOption::gColorDisabled;
             break;
         case QIcon::Selected: // When icon is selected
-            penColor= _fIcon.colorSelected;
+            penColor= _fIcon.colorSelected.isValid()?_fIcon.colorSelected:ZFontIconOption::gColorSelected;
             break;
         }
 
@@ -123,11 +123,17 @@ private:
     ZFontIconOption _fIcon;
 };
 
-
-
 //=================================================================================================
 //-------------------------------------------------------------------------------------------------
 //=================================================================================================
+
+QColor ZFontIconOption::gColor            = QApplication::palette().color(QPalette::Normal,   QPalette::ButtonText);
+QColor ZFontIconOption::gColorOn;       // Optional: if not set, color value will be used
+QColor ZFontIconOption::gColorActive;   // Optional: if not set, color value will be used
+QColor ZFontIconOption::gColorActiveOn; // Optional: if not set, color value will be used
+QColor ZFontIconOption::gColorDisabled    = QApplication::palette().color(QPalette::Disabled, QPalette::ButtonText);
+QColor ZFontIconOption::gColorSelected    = QApplication::palette().color(QPalette::Active,   QPalette::ButtonText);;
+
 ZFontIconOption::ZFontIconOption() {
     fontFamily=   fontStyle=   QString();
     fontFamilyOn= fontStyleOn= QString();
@@ -136,12 +142,12 @@ ZFontIconOption::ZFontIconOption() {
     glyph= glyphOn= 0;
 
     // Default icon color values
-    color=         QApplication::palette().color(QPalette::Normal,   QPalette::ButtonText);
+    color=         QColor();
     colorOn=       QColor();
     colorActive=   QColor();
     colorActiveOn= QColor();
-    colorDisabled= QApplication::palette().color(QPalette::Disabled, QPalette::ButtonText);
-    colorSelected= QApplication::palette().color(QPalette::Active,   QPalette::ButtonText);
+    colorDisabled= QColor();
+    colorSelected= QColor();
 
     // Default icon scale factor values
     scaleFactor=   0.80;
