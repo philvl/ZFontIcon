@@ -112,6 +112,8 @@ void WidgetCheatSheet::updateCheatSheet() {
         metaEnum= QMetaEnum::fromType<Fa6::Glyph>();
     else if(fontFamily.startsWith(Fa6pro::FAMILY))
         metaEnum= QMetaEnum::fromType<Fa6pro::Glyph>();
+    else if(fontFamily.startsWith(Fa6sharp::FAMILY))
+        metaEnum= QMetaEnum::fromType<Fa6pro::Glyph>();
     else if(fontFamily.startsWith(Fa6brands::FAMILY))
         metaEnum= QMetaEnum::fromType<Fa6brands::Glyph>();
     // Font Awesome 5

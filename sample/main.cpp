@@ -1,6 +1,4 @@
 #include "MainWindow.h"
-#include "Dialog.h"
-#include "DialogSheetCheat.h"
 #include <QApplication>
 
 // Font icons
@@ -38,6 +36,7 @@ void registerFa6_fonts() {
         ZFontIcon::addFont(":/fa6/" + Fa6pro::FA6_TTF_FILE_PRO_REGULAR);
         ZFontIcon::addFont(":/fa6/" + Fa6pro::FA6_TTF_FILE_PRO_LIGHT);
         ZFontIcon::addFont(":/fa6/" + Fa6pro::FA6_TTF_FILE_PRO_THIN);
+        ZFontIcon::addFont(":/fa6/" + Fa6sharp::FA6_TTF_FILE_SHARP);
     }
 }
 

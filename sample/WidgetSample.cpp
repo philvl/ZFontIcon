@@ -82,29 +82,35 @@ WidgetSample::WidgetSample(QWidget *parent) : QWidget(parent), ui(new Ui::Widget
     // Font Awesome 6 PRO -
     //---------------------
     if(ZFontIcon::isRegistered(Fa6pro::FAMILY)) {
-        ui->fa6pro_btn201->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::SOLID,   Fa6pro::fa_flag,    QColor(195,  65,  65)));
-        ui->fa6pro_btn202->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::SOLID,   Fa6pro::fa_star,    QColor(214, 197,  64)));
-        ui->fa6pro_btn203->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::SOLID,   Fa6pro::fa_user,    QColor( 69, 100, 214)));
-        ui->fa6pro_btn204->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::SOLID,   Fa6pro::fa_map,     QColor(102, 163,  52)));
-        ui->fa6pro_btn205->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::SOLID,   Fa6pro::fa_comment, QColor(  0,   0,   0)));
+        ui->fa6pro_btn201->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::SOLID,   Fa6pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa6pro_btn202->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::SOLID,   Fa6pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa6pro_btn203->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::SOLID,   Fa6pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa6pro_btn204->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::SOLID,   Fa6pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa6pro_btn205->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::SOLID,   Fa6pro::fa_comment, QColor(  0,   0,   0)));
 
-        ui->fa6pro_btn211->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::REGULAR, Fa6pro::fa_flag,    QColor(195,  65,  65)));
-        ui->fa6pro_btn212->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::REGULAR, Fa6pro::fa_star,    QColor(214, 197,  64)));
-        ui->fa6pro_btn213->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::REGULAR, Fa6pro::fa_user,    QColor( 69, 100, 214)));
-        ui->fa6pro_btn214->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::REGULAR, Fa6pro::fa_map,     QColor(102, 163,  52)));
-        ui->fa6pro_btn215->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::REGULAR, Fa6pro::fa_comment, QColor(  0,   0,   0)));
+        ui->fa6pro_btn211->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::REGULAR, Fa6pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa6pro_btn212->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::REGULAR, Fa6pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa6pro_btn213->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::REGULAR, Fa6pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa6pro_btn214->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::REGULAR, Fa6pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa6pro_btn215->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::REGULAR, Fa6pro::fa_comment, QColor(  0,   0,   0)));
 
-        ui->fa6pro_btn221->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::LIGHT,   Fa6pro::fa_flag,    QColor(195,  65,  65)));
-        ui->fa6pro_btn222->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::LIGHT,   Fa6pro::fa_star,    QColor(214, 197,  64)));
-        ui->fa6pro_btn223->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::LIGHT,   Fa6pro::fa_user,    QColor( 69, 100, 214)));
-        ui->fa6pro_btn224->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::LIGHT,   Fa6pro::fa_map,     QColor(102, 163,  52)));
-        ui->fa6pro_btn225->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::LIGHT,   Fa6pro::fa_comment, QColor(  0,   0,   0)));
+        ui->fa6pro_btn221->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::LIGHT,   Fa6pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa6pro_btn222->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::LIGHT,   Fa6pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa6pro_btn223->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::LIGHT,   Fa6pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa6pro_btn224->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::LIGHT,   Fa6pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa6pro_btn225->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::LIGHT,   Fa6pro::fa_comment, QColor(  0,   0,   0)));
 
-        ui->fa6pro_btn231->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::THIN,    Fa6pro::fa_flag,    QColor(195,  65,  65)));
-        ui->fa6pro_btn232->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::THIN,    Fa6pro::fa_star,    QColor(214, 197,  64)));
-        ui->fa6pro_btn233->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::THIN,    Fa6pro::fa_user,    QColor( 69, 100, 214)));
-        ui->fa6pro_btn234->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::THIN,    Fa6pro::fa_map,     QColor(102, 163,  52)));
-        ui->fa6pro_btn235->setIcon(ZFontIcon::icon(Fa6pro::FAMILY, Fa6pro::THIN,    Fa6pro::fa_comment, QColor(  0,   0,   0)));
+        ui->fa6pro_btn231->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::THIN,    Fa6pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa6pro_btn232->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::THIN,    Fa6pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa6pro_btn233->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::THIN,    Fa6pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa6pro_btn234->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::THIN,    Fa6pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa6pro_btn235->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::THIN,    Fa6pro::fa_comment, QColor(  0,   0,   0)));
+
+        ui->fa6pro_btn241->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa6pro_btn242->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa6pro_btn243->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa6pro_btn244->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa6pro_btn245->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_comment, QColor(  0,   0,   0)));
     }
     else {
         // Remove FA6 Pro tab

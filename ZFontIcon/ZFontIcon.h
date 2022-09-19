@@ -40,26 +40,35 @@ SOFTWARE.
 class ZFontIconOption {
 public:
     ZFontIconOption();
-    //--
+
     QString fontFamily;
     QString fontStyle;
-    //--
+
     QString fontFamilyOn; // Optional: if null, fontFamily value will be used
     QString fontStyleOn;  // Optional: if null, fontStyle value will be used
-    //--
+
     char32_t glyph;
     char32_t glyphOn;     // Optional: if null, glyph value will be used
-    //--
+
+    // Global colors, i.e. the default colors
+    static QColor gColor;
+    static QColor gColorOn;       // Optional: if not set, color value will be used
+    static QColor gColorActive;   // Optional: if not set, color value will be used
+    static QColor gColorActiveOn; // Optional: if not set, color value will be used
+    static QColor gColorDisabled;
+    static QColor gColorSelected;
+
+    // Custom colors, overrides global colors if set
     QColor color;
-    QColor colorOn;       // Optional: if not set, color value will be used
-    QColor colorActive;   // Optional: if not set, color value will be used
-    QColor colorActiveOn; // Optional: if not set, color value will be used
+    QColor colorOn;
+    QColor colorActive;
+    QColor colorActiveOn;
     QColor colorDisabled;
     QColor colorSelected;
-    //--
+
     qreal  scaleFactor;
     qreal  scaleFactorOn; // Optional: if null, scaleFactor value will be used
-    //--
+
     qreal  rotateAngle;
     bool   flipLeftRight;
     bool   flipTopBottom;

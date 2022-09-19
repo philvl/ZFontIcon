@@ -27,8 +27,8 @@ SOFTWARE.
 #include <QObject>
 #include <QString>
 
-// Google Material Design Icons 4.x compatibility - 2158 unique glyphs
-// Use version from github master e55dd24 - 2022-03-31
+// Google Material Design Icons 4.x compatibility - 2196 unique glyphs
+// Use version from github master 1c57576 - 2022-08-01
 // Glyph ratio: Width = Height (1:1)
 //--
 // List only common glyph that exist in all sets
@@ -39,9 +39,9 @@ namespace Gmi4 {
     Q_NAMESPACE
 
     // Font files
-    static const QString GMD_OTF_FILE_OUTLINED = QLatin1String("MaterialIcons_v4_e55dd24_Outlined400.otf");
-    static const QString GMD_OTF_FILE_ROUNDED  = QLatin1String("MaterialIcons_v4_e55dd24_Round400.otf");
-    static const QString GMD_OTF_FILE_SHARP    = QLatin1String("MaterialIcons_v4_e55dd24_Sharp400.otf");
+    static const QString GMD_OTF_FILE_OUTLINED = QLatin1String("MaterialIcons_v4_1c57576_Outlined400.otf");
+    static const QString GMD_OTF_FILE_ROUNDED  = QLatin1String("MaterialIcons_v4_1c57576_Round400.otf");
+    static const QString GMD_OTF_FILE_SHARP    = QLatin1String("MaterialIcons_v4_1c57576_Sharp400.otf");
     // Families
     static const QString FAMILY_OUTLINED = QLatin1String("Material Icons Outlined");
     static const QString FAMILY_ROUND    = QLatin1String("Material Icons Round");
@@ -135,6 +135,8 @@ namespace Gmi4 {
         gmi_add_circle                                    = 0xE147,
         gmi_add_circle_outline                            = 0xE148,
         gmi_add_comment                                   = 0xE266,
+        gmi_add_home                                      = 0xF8EB,
+        gmi_add_home_work                                 = 0xF8ED,
         gmi_add_ic_call                                   = 0xE97C,
         gmi_add_link                                      = 0xE178,
         gmi_add_location                                  = 0xE567,
@@ -224,6 +226,7 @@ namespace Gmi4 {
         gmi_arrow_forward                                 = 0xE5C8,
         gmi_arrow_forward_ios                             = 0xE5E1,
         gmi_arrow_left                                    = 0xE5DE,
+        gmi_arrow_outward                                 = 0xF8CE,
         gmi_arrow_right                                   = 0xE5DF,
         gmi_arrow_right_alt                               = 0xE941,
         gmi_arrow_upward                                  = 0xE5D8,
@@ -237,6 +240,7 @@ namespace Gmi4 {
         gmi_assignment_return                             = 0xE860,
         gmi_assignment_returned                           = 0xE861,
         gmi_assignment_turned_in                          = 0xE862,
+        gmi_assist_walker                                 = 0xF8D5,
         gmi_assistant                                     = 0xE39F,
         gmi_assistant_direction                           = 0xE988,
         gmi_assistant_photo                               = 0xE3A0,
@@ -303,6 +307,7 @@ namespace Gmi4 {
         gmi_bike_scooter                                  = 0xEF45,
         gmi_biotech                                       = 0xEA3A,
         gmi_blender                                       = 0xEFE3,
+        gmi_blind                                         = 0xF8D6,
         gmi_blinds                                        = 0xE286,
         gmi_blinds_closed                                 = 0xEC1F,
         gmi_block                                         = 0xE14B,
@@ -493,6 +498,7 @@ namespace Gmi4 {
         gmi_connected_tv                                  = 0xE998,
         gmi_connecting_airports                           = 0xE7C9,
         gmi_construction                                  = 0xEA3C,
+        gmi_contact_emergency                             = 0xF8D1,
         gmi_contact_mail                                  = 0xE0D0,
         gmi_contact_page                                  = 0xF22E,
         gmi_contact_phone                                 = 0xE0CF,
@@ -562,6 +568,8 @@ namespace Gmi4 {
         gmi_data_saver_on                                 = 0xEFF3,
         gmi_data_thresholding                             = 0xEB9F,
         gmi_data_usage                                    = 0xE1AF,
+        gmi_dataset                                       = 0xF8EE,
+        gmi_dataset_linked                                = 0xF8EF,
         gmi_date_range                                    = 0xE916,
         gmi_deblur                                        = 0xEB77,
         gmi_deck                                          = 0xEA42,
@@ -624,6 +632,9 @@ namespace Gmi4 {
         gmi_discord                                       = 0xEA6C,
         gmi_discount                                      = 0xEBC9,
         gmi_display_settings                              = 0xEB97,
+        gmi_diversity_1                                   = 0xF8D7,
+        gmi_diversity_2                                   = 0xF8D8,
+        gmi_diversity_3                                   = 0xF8D9,
         gmi_dnd_forwardslash                              = 0xE611,
         gmi_dns                                           = 0xE875,
         gmi_do_disturb                                    = 0xF08C,
@@ -753,6 +764,11 @@ namespace Gmi4 {
         gmi_extension                                     = 0xE87B,
         gmi_extension_off                                 = 0xE4F5,
         gmi_face                                          = 0xE87C,
+        gmi_face_2                                        = 0xF8DA,
+        gmi_face_3                                        = 0xF8DB,
+        gmi_face_4                                        = 0xF8DC,
+        gmi_face_5                                        = 0xF8DD,
+        gmi_face_6                                        = 0xF8DE,
         gmi_face_retouching_natural                       = 0xEF4E,
         gmi_face_retouching_off                           = 0xF007,
         gmi_face_unlock                                   = 0xF008,
@@ -813,6 +829,8 @@ namespace Gmi4 {
         gmi_find_replace                                  = 0xE881,
         gmi_fingerprint                                   = 0xE90D,
         gmi_fire_extinguisher                             = 0xF1D8,
+        gmi_fire_hydrant_alt                              = 0xF8F1,
+        gmi_fire_truck                                    = 0xF8F2,
         gmi_fireplace                                     = 0xEA43,
         gmi_first_page                                    = 0xE5DC,
         gmi_fit_screen                                    = 0xEA10,
@@ -839,6 +857,7 @@ namespace Gmi4 {
         gmi_flip_to_front                                 = 0xE883,
         gmi_flood                                         = 0xEBE6,
         gmi_flourescent                                   = 0xF00D,
+        gmi_fluorescent                                   = 0xF00D,
         gmi_flutter_dash                                  = 0xE00B,
         gmi_fmd_bad                                       = 0xF00E,
         gmi_fmd_good                                      = 0xF00F,
@@ -936,6 +955,8 @@ namespace Gmi4 {
         gmi_group_remove                                  = 0xE7AD,
         gmi_group_work                                    = 0xE886,
         gmi_groups                                        = 0xF233,
+        gmi_groups_2                                      = 0xF8DF,
+        gmi_groups_3                                      = 0xF8E0,
         gmi_h_mobiledata                                  = 0xF018,
         gmi_h_plus_mobiledata                             = 0xF019,
         gmi_hail                                          = 0xE9B1,
@@ -1188,11 +1209,15 @@ namespace Gmi4 {
         gmi_luggage                                       = 0xF235,
         gmi_lunch_dining                                  = 0xEA61,
         gmi_lyrics                                        = 0xEC0B,
+        gmi_macro_off                                     = 0xF8D2,
         gmi_mail                                          = 0xE158,
         gmi_mail_lock                                     = 0xEC0A,
         gmi_mail_outline                                  = 0xE0E1,
         gmi_male                                          = 0xE58E,
         gmi_man                                           = 0xE4EB,
+        gmi_man_2                                         = 0xF8E1,
+        gmi_man_3                                         = 0xF8E2,
+        gmi_man_4                                         = 0xF8E3,
         gmi_manage_accounts                               = 0xF02E,
         gmi_manage_history                                = 0xEBE7,
         gmi_manage_search                                 = 0xF02F,
@@ -1438,6 +1463,9 @@ namespace Gmi4 {
         gmi_perm_phone_msg                                = 0xE8A8,
         gmi_perm_scan_wifi                                = 0xE8A9,
         gmi_person                                        = 0xE7FD,
+        gmi_person_2                                      = 0xF8E4,
+        gmi_person_3                                      = 0xF8E5,
+        gmi_person_4                                      = 0xF8E6,
         gmi_person_add                                    = 0xE7FE,
         gmi_person_add_alt                                = 0xEA4D,
         gmi_person_add_alt_1                              = 0xEF65,
@@ -1545,6 +1573,7 @@ namespace Gmi4 {
         gmi_propane                                       = 0xEC14,
         gmi_propane_tank                                  = 0xEC13,
         gmi_psychology                                    = 0xEA4A,
+        gmi_psychology_alt                                = 0xF8EA,
         gmi_public                                        = 0xE80B,
         gmi_public_off                                    = 0xF1CA,
         gmi_publish                                       = 0xE255,
@@ -1605,6 +1634,7 @@ namespace Gmi4 {
         gmi_remove_road                                   = 0xEBFC,
         gmi_remove_shopping_cart                          = 0xE928,
         gmi_reorder                                       = 0xE8FE,
+        gmi_repartition                                   = 0xF8E8,
         gmi_repeat                                        = 0xE040,
         gmi_repeat_on                                     = 0xE9D6,
         gmi_repeat_one                                    = 0xE041,
@@ -1742,6 +1772,7 @@ namespace Gmi4 {
         gmi_settings_system_daydream                      = 0xE1C3,
         gmi_settings_voice                                = 0xE8C8,
         gmi_severe_cold                                   = 0xEBD3,
+        gmi_shape_line                                    = 0xF8D3,
         gmi_share                                         = 0xE80D,
         gmi_share_arrival_time                            = 0xE524,
         gmi_share_location                                = 0xF05F,
@@ -2022,6 +2053,7 @@ namespace Gmi4 {
         gmi_traffic                                       = 0xE565,
         gmi_train                                         = 0xE570,
         gmi_tram                                          = 0xE571,
+        gmi_transcribe                                    = 0xF8EC,
         gmi_transfer_within_a_station                     = 0xE572,
         gmi_transform                                     = 0xE428,
         gmi_transgender                                   = 0xE58D,
@@ -2050,13 +2082,16 @@ namespace Gmi4 {
         gmi_tv                                            = 0xE333,
         gmi_tv_off                                        = 0xE647,
         gmi_two_wheeler                                   = 0xE9F9,
+        gmi_type_specimen                                 = 0xF8F0,
         gmi_u_turn_left                                   = 0xEBA1,
         gmi_u_turn_right                                  = 0xEBA2,
         gmi_umbrella                                      = 0xF1AD,
         gmi_unarchive                                     = 0xE169,
         gmi_undo                                          = 0xE166,
         gmi_unfold_less                                   = 0xE5D6,
+        gmi_unfold_less_double                            = 0xF8CF,
         gmi_unfold_more                                   = 0xE5D7,
+        gmi_unfold_more_double                            = 0xF8D0,
         gmi_unpublished                                   = 0xF236,
         gmi_unsubscribe                                   = 0xE0EB,
         gmi_upcoming                                      = 0xF07E,
@@ -2083,6 +2118,7 @@ namespace Gmi4 {
         gmi_video_call                                    = 0xE070,
         gmi_video_camera_back                             = 0xF07F,
         gmi_video_camera_front                            = 0xF080,
+        gmi_video_chat                                    = 0xF8A0,
         gmi_video_collection                              = 0xE04A,
         gmi_video_file                                    = 0xEB87,
         gmi_video_label                                   = 0xE071,
@@ -2160,6 +2196,7 @@ namespace Gmi4 {
         gmi_web                                           = 0xE051,
         gmi_web_asset                                     = 0xE069,
         gmi_web_asset_off                                 = 0xE4F7,
+        gmi_web_stories                                   = 0xE595,
         gmi_webhook                                       = 0xEB92,
         gmi_wechat                                        = 0xEA81,
         gmi_weekend                                       = 0xE16B,
@@ -2191,6 +2228,7 @@ namespace Gmi4 {
         gmi_window                                        = 0xF088,
         gmi_wine_bar                                      = 0xF1E8,
         gmi_woman                                         = 0xE13E,
+        gmi_woman_2                                       = 0xF8E7,
         gmi_woo_commerce                                  = 0xEA6D,
         gmi_wordpress                                     = 0xEA9F,
         gmi_work                                          = 0xE8F9,
