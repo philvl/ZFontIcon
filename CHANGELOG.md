@@ -1,3 +1,10 @@
+### Release v2.2.1 - 2023-02-17
+- Helpers
+  - Update helper for Bootstrap Icons 1.10.3
+  - Update helper for Font Awesome 6.3.0
+  - Update helper for Google Material Icons 4 (github master 511eea5 - 2023-01-07)
+  - Update helper for Material Design Icons 7.1.96
+
 ### Release v2.2.0 - 2022-09-20
 - ZFontIcon
   - Added global colors to easily set them for the whole project (Ti-R contrib. | https://github.com/Ti-R)

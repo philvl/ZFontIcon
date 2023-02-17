@@ -8,11 +8,11 @@
 #include "ZFontIcon/ZFont_fa4.h"
 #include "ZFontIcon/ZFont_bi1.h"
 #include "ZFontIcon/ZFont_gmi4.h"
-#include "ZFontIcon/ZFont_mdi6.h"
+#include "ZFontIcon/ZFont_mdi7.h"
 #include "ZFontIcon/ZFont_ph1.h"
 
 // Enable Font Awesome 6 Pro and Font Awesome 5 Pro
-bool USE_FA6_PRO_FONT= false; // Note: Edit resource file in plain text Editor to add FA6 Pro fonts
+bool USE_FA6_PRO_FONT= true; // Note: Edit resource file in plain text Editor to add FA6 Pro fonts
 bool USE_FA5_PRO_FONT= false; // Note: Edit resource file in plain text Editor to add FA5 Pro fonts
 
 
@@ -36,7 +36,9 @@ void registerFa6_fonts() {
         ZFontIcon::addFont(":/fa6/" + Fa6pro::FA6_TTF_FILE_PRO_REGULAR);
         ZFontIcon::addFont(":/fa6/" + Fa6pro::FA6_TTF_FILE_PRO_LIGHT);
         ZFontIcon::addFont(":/fa6/" + Fa6pro::FA6_TTF_FILE_PRO_THIN);
-        ZFontIcon::addFont(":/fa6/" + Fa6sharp::FA6_TTF_FILE_SHARP);
+        // Sharp
+        ZFontIcon::addFont(":/fa6/" + Fa6sharp::FA6_TTF_FILE_SHARP_SOLID);
+        ZFontIcon::addFont(":/fa6/" + Fa6sharp::FA6_TTF_FILE_SHARP_REGULAR);
     }
 }
 
@@ -91,10 +93,10 @@ void registerGmi4_fonts() {
 
 
 //----------------------------
-// Material Design Icons 6.x -
+// Material Design Icons 7.x -
 //----------------------------
-void registerMdi6_fonts() {
-    ZFontIcon::addFont(":/mdi6/" + Mdi6::MDI6_WOFF_FILE_REGULAR);
+void registerMdi7_fonts() {
+    ZFontIcon::addFont(":/mdi7/" + Mdi6::MDI6_WOFF_FILE_REGULAR);
 }
 
 
@@ -118,7 +120,7 @@ int main(int argc, char *argv[]) {
     registerFa4_fonts();
     registerBi1_fonts();
     registerGmi4_fonts();
-    registerMdi6_fonts();
+    registerMdi7_fonts();
     registerPh1_fonts();
 
     MainWindow mainWindow;

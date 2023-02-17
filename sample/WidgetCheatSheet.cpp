@@ -19,7 +19,7 @@
 #include "ZFontIcon/ZFont_fa4.h"
 #include "ZFontIcon/ZFont_bi1.h"
 #include "ZFontIcon/ZFont_gmi4.h"
-#include "ZFontIcon/ZFont_mdi6.h"
+#include "ZFontIcon/ZFont_mdi7.h"
 #include "ZFontIcon/ZFont_ph1.h"
 
 WidgetCheatSheet::WidgetCheatSheet(QWidget *parent) : QWidget(parent), ui(new Ui::WidgetCheatSheet) {

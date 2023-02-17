@@ -14,7 +14,7 @@ HEADERS += \
     $$PWD/ZFont_fa5.h \
     $$PWD/ZFont_fa6.h \
     $$PWD/ZFont_gmi4.h \
-    $$PWD/ZFont_mdi6.h \
+    $$PWD/ZFont_mdi7.h \
     $$PWD/ZFont_ph1.h
 
 RESOURCES += \

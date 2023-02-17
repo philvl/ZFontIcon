@@ -27,8 +27,8 @@ SOFTWARE.
 #include <QObject>
 #include <QString>
 
-// Google Material Design Icons 4.x compatibility - 2196 unique glyphs
-// Use version from github master 1c57576 - 2022-08-01
+// Google Material Design Icons 4.x compatibility - 2195 unique glyphs
+// Use version from github master 511eea5 - 2023-01-07
 // Glyph ratio: Width = Height (1:1)
 //--
 // List only common glyph that exist in all sets
@@ -39,9 +39,9 @@ namespace Gmi4 {
     Q_NAMESPACE
 
     // Font files
-    static const QString GMD_OTF_FILE_OUTLINED = QLatin1String("MaterialIcons_v4_1c57576_Outlined400.otf");
-    static const QString GMD_OTF_FILE_ROUNDED  = QLatin1String("MaterialIcons_v4_1c57576_Round400.otf");
-    static const QString GMD_OTF_FILE_SHARP    = QLatin1String("MaterialIcons_v4_1c57576_Sharp400.otf");
+    static const QString GMD_OTF_FILE_OUTLINED = QLatin1String("MaterialIcons_v4_511eea5_Outlined400.otf");
+    static const QString GMD_OTF_FILE_ROUNDED  = QLatin1String("MaterialIcons_v4_511eea5_Round400.otf");
+    static const QString GMD_OTF_FILE_SHARP    = QLatin1String("MaterialIcons_v4_511eea5_Sharp400.otf");
     // Families
     static const QString FAMILY_OUTLINED = QLatin1String("Material Icons Outlined");
     static const QString FAMILY_ROUND    = QLatin1String("Material Icons Round");
@@ -2201,7 +2201,6 @@ namespace Gmi4 {
         gmi_wechat                                        = 0xEA81,
         gmi_weekend                                       = 0xE16B,
         gmi_west                                          = 0xF1E6,
-        gmi_whatsapp                                      = 0xEA9C,
         gmi_whatshot                                      = 0xE80E,
         gmi_wheelchair_pickup                             = 0xF1AB,
         gmi_where_to_vote                                 = 0xE177,

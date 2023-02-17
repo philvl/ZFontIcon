@@ -8,7 +8,7 @@
 #include "ZFontIcon/ZFont_fa4.h"
 #include "ZFontIcon/ZFont_bi1.h"
 #include "ZFontIcon/ZFont_gmi4.h"
-#include "ZFontIcon/ZFont_mdi6.h"
+#include "ZFontIcon/ZFont_mdi7.h"
 #include "ZFontIcon/ZFont_ph1.h"
 
 WidgetSample::WidgetSample(QWidget *parent) : QWidget(parent), ui(new Ui::WidgetSample) {
@@ -106,11 +106,18 @@ WidgetSample::WidgetSample(QWidget *parent) : QWidget(parent), ui(new Ui::Widget
         ui->fa6pro_btn234->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::THIN,    Fa6pro::fa_map,     QColor(102, 163,  52)));
         ui->fa6pro_btn235->setIcon(ZFontIcon::icon(Fa6pro::FAMILY,   Fa6pro::THIN,    Fa6pro::fa_comment, QColor(  0,   0,   0)));
 
-        ui->fa6pro_btn241->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_flag,    QColor(195,  65,  65)));
-        ui->fa6pro_btn242->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_star,    QColor(214, 197,  64)));
-        ui->fa6pro_btn243->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_user,    QColor( 69, 100, 214)));
-        ui->fa6pro_btn244->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_map,     QColor(102, 163,  52)));
-        ui->fa6pro_btn245->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID, Fa6pro::fa_comment, QColor(  0,   0,   0)));
+        // SHARP
+        ui->fa6pro_btn241->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID,   Fa6pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa6pro_btn242->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID,   Fa6pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa6pro_btn243->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID,   Fa6pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa6pro_btn244->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID,   Fa6pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa6pro_btn245->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::SOLID,   Fa6pro::fa_comment, QColor(  0,   0,   0)));
+
+        ui->fa6pro_btn251->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::REGULAR, Fa6pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa6pro_btn252->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::REGULAR, Fa6pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa6pro_btn253->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::REGULAR, Fa6pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa6pro_btn254->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::REGULAR, Fa6pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa6pro_btn255->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::REGULAR, Fa6pro::fa_comment, QColor(  0,   0,   0)));
     }
     else {
         // Remove FA6 Pro tab

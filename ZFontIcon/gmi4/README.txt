@@ -1,4 +1,4 @@
-Google material design icons from gitHub repo | 1c57576 | 2022-08-01
+Google material design icons from gitHub repo | 511eea5 | 2023-01-07
 
 ---
 
