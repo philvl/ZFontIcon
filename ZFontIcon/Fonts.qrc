@@ -2,25 +2,24 @@
     <qresource prefix="/">
     <!-- FontAwesome 6.x [FREE] -->
         <!-- -->
-        <file>fa6/FontAwesome_v6.3.0_Free_Solid900.ttf</file>
-        <file>fa6/FontAwesome_v6.3.0_Free_Regular400.ttf</file>
-        <file>fa6/FontAwesome_v6.3.0_Brands_Regular400.ttf</file>
+        <file>fa6/FontAwesome_v6.4.0_Free_Solid900.ttf</file>
+        <file>fa6/FontAwesome_v6.4.0_Brands_Regular400.ttf</file>
         <!-- -->
     <!-- FontAwesome 6.x [PRO] -->
-        <!-- -->
-        <file>fa6/FontAwesome_v6.3.0_Pro_Solid900.ttf</file>
-        <file>fa6/FontAwesome_v6.3.0_Pro_Regular400.ttf</file>
-        <file>fa6/FontAwesome_v6.3.0_Pro_Light300.ttf</file>
-        <file>fa6/FontAwesome_v6.3.0_Pro_Thin100.ttf</file>
-        <file>fa6/FontAwesome_v6.3.0_Sharp_Regular400.ttf</file>
-        <file>fa6/FontAwesome_v6.3.0_Sharp_Solid900.ttf</file>
-        <!-- -->
+        <!--
+        <file>fa6/FontAwesome_v6.4.0_Pro_Solid900.ttf</file>
+        <file>fa6/FontAwesome_v6.4.0_Pro_Regular400.ttf</file>
+        <file>fa6/FontAwesome_v6.4.0_Pro_Light300.ttf</file>
+        <file>fa6/FontAwesome_v6.4.0_Pro_Thin100.ttf</file>
+        <file>fa6/FontAwesome_v6.4.0_Sharp_Solid900.ttf</file>
+        <file>fa6/FontAwesome_v6.4.0_Sharp_Regular400.ttf</file>
+        <file>fa6/FontAwesome_v6.4.0_Sharp_Light300.ttf</file>
+        -->
 
 
     <!-- FontAwesome 5.15.4 [FREE] - Legacy support -->
         <!-- -->
         <file>fa5/FontAwesome_v5.15.4_Free_Solid900.otf</file>
-        <file>fa5/FontAwesome_v5.15.4_Free_Regular400.otf</file>
         <file>fa5/FontAwesome_v5.15.4_Brands_Regular400.otf</file>
         <!-- -->
     <!-- FontAwesome 5.15.4 [PRO] - Legacy support -->
@@ -39,7 +38,7 @@
 
     <!-- Bootstrap Icons 1.x.x -->
         <!-- -->
-        <file>bi1/BootstrapIcons_v1.10.3.ttf</file>
+        <file>bi1/BootstrapIcons_v1.10.5.ttf</file>
         <!-- -->
 
 
@@ -50,14 +49,26 @@
         <file>gmi4/MaterialIcons_v4_511eea5_Sharp400.otf</file>
         <!-- -->
 
+
     <!-- Material Design Icons 7.x -->
         <!-- -->
-        <file>mdi7/MaterialDesignIcons_v7.1.96.ttf</file>
+        <file>mdi7/MaterialDesignIcons_v7.2.96.ttf</file>
         <!-- -->
 
-    <!-- Phosphor 1.x -->
+
+    <!-- Phosphor 2.x -->
         <!-- -->
+        <file>ph2/Phosphor_2.0_Bold.ttf</file>
+        <file>ph2/Phosphor_2.0_Fill.ttf</file>
+        <file>ph2/Phosphor_2.0_Regular.ttf</file>
+        <file>ph2/Phosphor_2.0_Light.ttf</file>
+        <file>ph2/Phosphor_2.0_Thin.ttf</file>
+        <!-- -->
+
+
+    <!-- Phosphor 1.4 -->
+        <!--
         <file>ph1/Phosphor_v1.4.ttf</file>
-        <!-- -->
+        -->
     </qresource>
 </RCC>

@@ -1,7 +1,7 @@
 INCLUDEPATH += $$PWD
 
-equals(QT_MAJOR_VERSION, 5):lessThan(QT_MINOR_VERSION, 8) {
-   error(ZFontIcon requires at least Qt 5.8 or newer but Qt $$[QT_VERSION] was detected.)
+equals(QT_MAJOR_VERSION, 5):lessThan(QT_MINOR_VERSION, 15) {
+   error(ZFontIcon requires at least Qt 5.15 or newer but Qt $$[QT_VERSION] was detected.)
 }
 
 SOURCES += \
@@ -15,7 +15,8 @@ HEADERS += \
     $$PWD/ZFont_fa6.h \
     $$PWD/ZFont_gmi4.h \
     $$PWD/ZFont_mdi7.h \
-    $$PWD/ZFont_ph1.h
+    $$PWD/ZFont_ph1.h \
+    $$PWD/ZFont_ph2.h
 
 RESOURCES += \
     $$PWD/Fonts.qrc

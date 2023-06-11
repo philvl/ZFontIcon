@@ -1,7 +1,18 @@
+### Release v2.2.2 - 2023-06-11
+- Helpers
+  - Add helper for Phosphor Icons 2.0 TODO FINALIZE TO SUPPORT OLD AND NEW VERSIONS
+  - Update helper for Bootstrap Icons 1.10.5
+  - Update helper for Font Awesome 6.4.0 (Add Sharp Light)
+  - Update helper for Material Design Icons 7.2.96
+- ZFontIcon Sample Application
+  - Phosphor v1.4 is not compatible with Phosphor v2.0, consequently in the demo application the integration
+    of Phosphor has been updated to v2.0. (Phopsphor 1.4 fonts and helpers files has been keeped)
+  - Add Website and GitHub link for each fonts
+
 ### Release v2.2.1 - 2023-02-17
 - Helpers
   - Update helper for Bootstrap Icons 1.10.3
-  - Update helper for Font Awesome 6.3.0
+  - Update helper for Font Awesome 6.3.0 (Add Sharp Regular)
   - Update helper for Google Material Icons 4 (github master 511eea5 - 2023-01-07)
   - Update helper for Material Design Icons 7.1.96
 
@@ -10,7 +21,7 @@
   - Added global colors to easily set them for the whole project (Ti-R contrib. | https://github.com/Ti-R)
 - Helpers
   - Update helper for Bootstrap Icons 1.9.1
-  - Update helper for Font Awesome 6.2.0 + add support for Font Awesome Sharp
+  - Update helper for Font Awesome 6.2.0 (Add Sharp Solid)
   - Update helper for Google Material Icons 4 (v2022-08-01, github master 1c57576)
   - Update helper for Material Design Icons 6.9.96
 

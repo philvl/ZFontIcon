@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1024</width>
-    <height>600</height>
+    <height>668</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,7 +76,7 @@
               </font>
              </property>
              <property name="text">
-              <string>FONT AWESOME 6.3.0 [FREE]</string>
+              <string>FONT AWESOME 6.4.0 [FREE]</string>
              </property>
             </widget>
            </item>
@@ -263,31 +263,6 @@ Checkable</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="2">
-              <widget class="QToolButton" name="fa6_btn112">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
              <item row="1" column="5">
               <widget class="QToolButton" name="fa6_btn105">
                <property name="enabled">
@@ -352,7 +327,7 @@ Checkable</string>
               </spacer>
              </item>
              <item row="9" column="0" colspan="6">
-              <widget class="QLabel" name="fa6_labelTitle_2">
+              <widget class="QLabel" name="fa6_labelTitleBrands">
                <property name="font">
                 <font>
                  <pointsize>11</pointsize>
@@ -360,7 +335,7 @@ Checkable</string>
                 </font>
                </property>
                <property name="text">
-                <string>FONT AWESOME 6.3.0 [BRANDS]</string>
+                <string>FONT AWESOME 6.4.0 [BRANDS]</string>
                </property>
               </widget>
              </item>
@@ -385,7 +360,7 @@ Checkable</string>
                 </size>
                </property>
                <property name="text">
-                <string>&lt;b&gt;Regular&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Regular&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
@@ -483,28 +458,6 @@ Disabled</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
-              <widget class="QToolButton" name="fa6_btn111">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
              <item row="11" column="5">
               <widget class="QToolButton" name="fa6_btn135">
                <property name="enabled">
@@ -524,28 +477,6 @@ Disabled</string>
                  <width>48</width>
                  <height>48</height>
                 </size>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="4">
-              <widget class="QToolButton" name="fa6_btn114">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
                </property>
               </widget>
              </item>
@@ -612,28 +543,6 @@ Checkable</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="5">
-              <widget class="QToolButton" name="fa6_btn115">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
              <item row="1" column="2">
               <widget class="QToolButton" name="fa6_btn102">
                <property name="minimumSize">
@@ -687,25 +596,6 @@ Checkable</string>
                </property>
                <property name="autoRaise">
                 <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="3">
-              <widget class="QToolButton" name="fa6_btn113">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
                </property>
               </widget>
              </item>
@@ -806,6 +696,21 @@ Checkable</string>
                </property>
               </spacer>
              </item>
+             <item row="2" column="1" colspan="5">
+              <widget class="QLabel" name="fa6_labelRegularNotAvailable">
+               <property name="font">
+                <font>
+                 <italic>true</italic>
+                </font>
+               </property>
+               <property name="text">
+                <string>(Regular font style is a part of FA6_Pro)</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
@@ -820,6 +725,16 @@ Checkable</string>
               </size>
              </property>
             </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="fa6_labelWebsite">
+             <property name="text">
+              <string>&lt;p&gt;Website: &lt;a href=&quot;https://fontawesome.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://fontawesome.com&lt;/span&gt;&lt;/a&gt; | Github: &lt;a href=&quot;https://github.com/FortAwesome/Font-Awesome&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/FortAwesome/Font-Awesome&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -841,7 +756,7 @@ Checkable</string>
             <number>6</number>
            </property>
            <item>
-            <widget class="QLabel" name="fa6pro_labelTitle">
+            <widget class="QLabel" name="fa6pro_labelTitlePro">
              <property name="font">
               <font>
                <pointsize>11</pointsize>
@@ -849,7 +764,7 @@ Checkable</string>
               </font>
              </property>
              <property name="text">
-              <string>FONT AWESOME 6.3.0 [PRO]</string>
+              <string>FONT AWESOME 6.4.0 [PRO]</string>
              </property>
             </widget>
            </item>
@@ -865,98 +780,82 @@ Checkable</string>
            </item>
            <item>
             <layout class="QGridLayout" name="fa6pro_gridLayout">
-             <item row="8" column="2">
-              <widget class="QToolButton" name="fa6pro_btn242">
+             <item row="3" column="0">
+              <widget class="QLabel" name="fa6pro_labelLight">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="minimumSize">
                 <size>
-                 <width>56</width>
-                 <height>56</height>
+                 <width>60</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>16777215</height>
                 </size>
                </property>
                <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
+                <string>&lt;b&gt;Light&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
                </property>
               </widget>
              </item>
-             <item row="7" column="0" colspan="6">
-              <widget class="Line" name="fa6pro_line_2">
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
+             <item row="0" column="6">
+              <spacer name="fa6pro_hSpacer">
                <property name="orientation">
                 <enum>Qt::Horizontal</enum>
                </property>
-              </widget>
-             </item>
-             <item row="2" column="3">
-              <widget class="QToolButton" name="fa6pro_btn213">
-               <property name="minimumSize">
+               <property name="sizeHint" stdset="0">
                 <size>
-                 <width>56</width>
-                 <height>56</height>
+                 <width>0</width>
+                 <height>10</height>
                 </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="0" column="5">
+              <widget class="QLabel" name="fa6pro_title5">
+               <property name="font">
+                <font>
+                 <pointsize>8</pointsize>
+                </font>
                </property>
                <property name="text">
-                <string>...</string>
+                <string>Normal
+Disabled</string>
                </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="4">
-              <widget class="QToolButton" name="fa6pro_btn244">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
                </property>
               </widget>
              </item>
-             <item row="1" column="3">
-              <widget class="QToolButton" name="fa6pro_btn203">
+             <item row="1" column="0">
+              <widget class="QLabel" name="fa6pro_labelSolid">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="minimumSize">
                 <size>
-                 <width>56</width>
-                 <height>56</height>
+                 <width>60</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>16777215</height>
                 </size>
                </property>
                <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
+                <string>&lt;b&gt;Solid&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
                </property>
               </widget>
              </item>
@@ -985,209 +884,8 @@ Checkable</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="0">
-              <widget class="QLabel" name="fa6pro_labelThin">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>60</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>50</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>&lt;b&gt;Thin&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="4">
-              <widget class="QToolButton" name="fa6pro_btn204">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2">
-              <widget class="QToolButton" name="fa6pro_btn202">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
              <item row="1" column="1">
               <widget class="QToolButton" name="fa6pro_btn201">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="4">
-              <widget class="QToolButton" name="fa6pro_btn214">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="5">
-              <widget class="QToolButton" name="fa6pro_btn205">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="4">
-              <widget class="QLabel" name="fa6pro_title4">
-               <property name="font">
-                <font>
-                 <pointsize>8</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Normal
-Checkable</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="5">
-              <widget class="QLabel" name="fa6pro_title5">
-               <property name="font">
-                <font>
-                 <pointsize>8</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Normal
-Disabled</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="2">
-              <widget class="QToolButton" name="fa6pro_btn222">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="1">
-              <widget class="QToolButton" name="fa6pro_btn241">
                <property name="minimumSize">
                 <size>
                  <width>56</width>
@@ -1230,393 +928,8 @@ Disabled</string>
                </property>
               </widget>
              </item>
-             <item row="4" column="1">
-              <widget class="QToolButton" name="fa6pro_btn231">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="1">
-              <widget class="QLabel" name="fa6pro_title1">
-               <property name="font">
-                <font>
-                 <pointsize>8</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>AutoRaise
-</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="4">
-              <widget class="QToolButton" name="fa6pro_btn234">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
              <item row="4" column="5">
               <widget class="QToolButton" name="fa6pro_btn235">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="6" column="0" colspan="6">
-              <widget class="QLabel" name="fa6pro_labelTitle_2">
-               <property name="font">
-                <font>
-                 <pointsize>11</pointsize>
-                 <bold>true</bold>
-                </font>
-               </property>
-               <property name="text">
-                <string>FONT AWESOME 6.3.0 [SHARP]</string>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QLabel" name="fa6pro_title2">
-               <property name="font">
-                <font>
-                 <pointsize>8</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>AutoRaise
-Checkable</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="6">
-              <spacer name="fa6pro_hSpacer">
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>0</width>
-                 <height>10</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item row="3" column="4">
-              <widget class="QToolButton" name="fa6pro_btn224">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="1">
-              <widget class="QToolButton" name="fa6pro_btn211">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="3">
-              <widget class="QToolButton" name="fa6pro_btn223">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="5">
-              <widget class="QToolButton" name="fa6pro_btn225">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="0">
-              <widget class="QLabel" name="fa6pro_labelSharpSolid">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>60</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>50</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Solid&lt;/span&gt;&lt;br/&gt;font&lt;br/&gt;style&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="2">
-              <widget class="QToolButton" name="fa6pro_btn212">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="4" column="3">
-              <widget class="QToolButton" name="fa6pro_btn233">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="5" column="0">
-              <spacer name="fa6pro_vSpacer_1">
-               <property name="orientation">
-                <enum>Qt::Vertical</enum>
-               </property>
-               <property name="sizeType">
-                <enum>QSizePolicy::Fixed</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>20</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item row="8" column="3">
-              <widget class="QToolButton" name="fa6pro_btn243">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QLabel" name="fa6pro_labelLight">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>60</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>50</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>&lt;b&gt;Light&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="1">
-              <widget class="QToolButton" name="fa6pro_btn221">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QLabel" name="fa6pro_labelSolid">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>60</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>50</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>&lt;b&gt;Solid&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
-               </property>
-              </widget>
-             </item>
-             <item row="8" column="5">
-              <widget class="QToolButton" name="fa6pro_btn245">
                <property name="enabled">
                 <bool>false</bool>
                </property>
@@ -1662,8 +975,8 @@ Checkable</string>
                </property>
               </widget>
              </item>
-             <item row="0" column="3">
-              <widget class="QLabel" name="fa6pro_title3">
+             <item row="0" column="4">
+              <widget class="QLabel" name="fa6pro_title4">
                <property name="font">
                 <font>
                  <pointsize>8</pointsize>
@@ -1671,6 +984,41 @@ Checkable</string>
                </property>
                <property name="text">
                 <string>Normal
+Checkable</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QToolButton" name="fa6pro_btn203">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="fa6pro_title1">
+               <property name="font">
+                <font>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>AutoRaise
 </string>
                </property>
                <property name="alignment">
@@ -1678,8 +1026,181 @@ Checkable</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="0">
-              <widget class="QLabel" name="fa6pro_labelSharpRegular">
+             <item row="3" column="4">
+              <widget class="QToolButton" name="fa6pro_btn224">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="1">
+              <widget class="QToolButton" name="fa6pro_btn241">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="2">
+              <widget class="QToolButton" name="fa6pro_btn222">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="5">
+              <widget class="QToolButton" name="fa6pro_btn205">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="2">
+              <widget class="QToolButton" name="fa6pro_btn242">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="4">
+              <widget class="QToolButton" name="fa6pro_btn244">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="2">
+              <widget class="QLabel" name="fa6pro_title2">
+               <property name="font">
+                <font>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>AutoRaise
+Checkable</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="3">
+              <widget class="QToolButton" name="fa6pro_btn223">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="0">
+              <widget class="QLabel" name="fa6pro_labelThin">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                  <horstretch>0</horstretch>
@@ -1699,12 +1220,28 @@ Checkable</string>
                 </size>
                </property>
                <property name="text">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Regular&lt;/span&gt;&lt;br/&gt;font&lt;br/&gt;style&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                <string>&lt;b&gt;Thin&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="1">
-              <widget class="QToolButton" name="fa6pro_btn251">
+             <item row="0" column="3">
+              <widget class="QLabel" name="fa6pro_title3">
+               <property name="font">
+                <font>
+                 <pointsize>8</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Normal
+</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QToolButton" name="fa6pro_btn221">
                <property name="minimumSize">
                 <size>
                  <width>56</width>
@@ -1719,6 +1256,98 @@ Checkable</string>
                  <width>48</width>
                  <height>48</height>
                 </size>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="3">
+              <widget class="QToolButton" name="fa6pro_btn253">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="4">
+              <widget class="QToolButton" name="fa6pro_btn214">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="7" column="0" colspan="6">
+              <widget class="Line" name="fa6pro_line_2">
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+              </widget>
+             </item>
+             <item row="5" column="0">
+              <spacer name="fa6pro_vSpacer_1">
+               <property name="orientation">
+                <enum>Qt::Vertical</enum>
+               </property>
+               <property name="sizeType">
+                <enum>QSizePolicy::Fixed</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item row="2" column="2">
+              <widget class="QToolButton" name="fa6pro_btn212">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
                </property>
                <property name="autoRaise">
                 <bool>true</bool>
@@ -1750,25 +1379,6 @@ Checkable</string>
                </property>
               </widget>
              </item>
-             <item row="9" column="3">
-              <widget class="QToolButton" name="fa6pro_btn253">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
              <item row="9" column="4">
               <widget class="QToolButton" name="fa6pro_btn254">
                <property name="minimumSize">
@@ -1791,8 +1401,448 @@ Checkable</string>
                </property>
               </widget>
              </item>
+             <item row="8" column="0">
+              <widget class="QLabel" name="fa6pro_labelSharpSolid">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>60</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Solid&lt;/span&gt;&lt;br/&gt;font&lt;br/&gt;style&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="3">
+              <widget class="QToolButton" name="fa6pro_btn213">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="0">
+              <widget class="QLabel" name="fa6pro_labelSharpRegular">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>60</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Regular&lt;/span&gt;&lt;br/&gt;font&lt;br/&gt;style&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QToolButton" name="fa6pro_btn202">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="3">
+              <widget class="QToolButton" name="fa6pro_btn233">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="3">
+              <widget class="QToolButton" name="fa6pro_btn243">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
              <item row="9" column="5">
               <widget class="QToolButton" name="fa6pro_btn255">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="5">
+              <widget class="QToolButton" name="fa6pro_btn225">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QToolButton" name="fa6pro_btn211">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="4">
+              <widget class="QToolButton" name="fa6pro_btn234">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="9" column="1">
+              <widget class="QToolButton" name="fa6pro_btn251">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="6" column="0" colspan="6">
+              <widget class="QLabel" name="fa6pro_labelTitleSharp">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="text">
+                <string>FONT AWESOME 6.4.0 [SHARP]</string>
+               </property>
+              </widget>
+             </item>
+             <item row="8" column="5">
+              <widget class="QToolButton" name="fa6pro_btn245">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QToolButton" name="fa6pro_btn231">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QToolButton" name="fa6pro_btn204">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="0">
+              <widget class="QLabel" name="fa6pro_labelSharpLight">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>60</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Light&lt;/span&gt;&lt;br/&gt;font&lt;br/&gt;style&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="1">
+              <widget class="QToolButton" name="fa6pro_btn261">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="2">
+              <widget class="QToolButton" name="fa6pro_btn262">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="3">
+              <widget class="QToolButton" name="fa6pro_btn263">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="4">
+              <widget class="QToolButton" name="fa6pro_btn264">
+               <property name="minimumSize">
+                <size>
+                 <width>56</width>
+                 <height>56</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>...</string>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>48</width>
+                 <height>48</height>
+                </size>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="10" column="5">
+              <widget class="QToolButton" name="fa6pro_btn265">
                <property name="enabled">
                 <bool>false</bool>
                </property>
@@ -1827,6 +1877,16 @@ Checkable</string>
               </size>
              </property>
             </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="fa6pro_labelWebsite">
+             <property name="text">
+              <string>&lt;p&gt;Website: &lt;a href=&quot;https://fontawesome.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://fontawesome.com&lt;/span&gt;&lt;/a&gt; | Github: &lt;a href=&quot;https://github.com/FortAwesome/Font-Awesome&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/FortAwesome/Font-Awesome&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -1930,7 +1990,7 @@ Checkable</string>
                 </size>
                </property>
                <property name="text">
-                <string>&lt;b&gt;Regular&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
+                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:700;&quot;&gt;Regular&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                </property>
               </widget>
              </item>
@@ -1997,28 +2057,6 @@ Checkable</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="1">
-              <widget class="QToolButton" name="fa5_btn111">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
              <item row="1" column="0">
               <widget class="QLabel" name="fa5_labelSolid">
                <property name="sizePolicy">
@@ -2041,28 +2079,6 @@ Checkable</string>
                </property>
                <property name="text">
                 <string>&lt;b&gt;Solid&lt;/b&gt;&lt;br/&gt;font&lt;br/&gt;style</string>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="5">
-              <widget class="QToolButton" name="fa5_btn115">
-               <property name="enabled">
-                <bool>false</bool>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
                </property>
               </widget>
              </item>
@@ -2107,25 +2123,6 @@ Checkable</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="3">
-              <widget class="QToolButton" name="fa5_btn113">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-              </widget>
-             </item>
              <item row="10" column="1">
               <widget class="QToolButton" name="fa5_btn131">
                <property name="minimumSize">
@@ -2149,7 +2146,7 @@ Checkable</string>
               </widget>
              </item>
              <item row="8" column="0" colspan="6">
-              <widget class="QLabel" name="fa5_labelTitle_2">
+              <widget class="QLabel" name="fa5_labelTitleBrands">
                <property name="font">
                 <font>
                  <pointsize>11</pointsize>
@@ -2243,31 +2240,6 @@ Checkable</string>
                 </size>
                </property>
               </spacer>
-             </item>
-             <item row="2" column="2">
-              <widget class="QToolButton" name="fa5_btn112">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-               <property name="autoRaise">
-                <bool>true</bool>
-               </property>
-              </widget>
              </item>
              <item row="0" column="5">
               <widget class="QLabel" name="fa5_title5">
@@ -2471,28 +2443,6 @@ Disabled</string>
                </property>
               </widget>
              </item>
-             <item row="2" column="4">
-              <widget class="QToolButton" name="fa5_btn114">
-               <property name="minimumSize">
-                <size>
-                 <width>56</width>
-                 <height>56</height>
-                </size>
-               </property>
-               <property name="text">
-                <string>...</string>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>48</width>
-                 <height>48</height>
-                </size>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
              <item row="1" column="2">
               <widget class="QToolButton" name="fa5_btn102">
                <property name="minimumSize">
@@ -2546,6 +2496,21 @@ Disabled</string>
                </property>
               </widget>
              </item>
+             <item row="2" column="1" colspan="5">
+              <widget class="QLabel" name="fa5_labelRegularNotAvailable">
+               <property name="font">
+                <font>
+                 <italic>true</italic>
+                </font>
+               </property>
+               <property name="text">
+                <string>(Regular font style is a part of FA5_Pro)</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
             </layout>
            </item>
            <item>
@@ -2560,6 +2525,16 @@ Disabled</string>
               </size>
              </property>
             </spacer>
+           </item>
+           <item>
+            <widget class="QLabel" name="fa5_labelWebsite">
+             <property name="text">
+              <string>&lt;p&gt;Website: &lt;a href=&quot;https://fontawesome.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://fontawesome.com&lt;/span&gt;&lt;/a&gt; | Github: &lt;a href=&quot;https://github.com/FortAwesome/Font-Awesome&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/FortAwesome/Font-Awesome&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
            </item>
           </layout>
          </widget>
@@ -3124,6 +3099,16 @@ Checkable</string>
              </property>
             </spacer>
            </item>
+           <item>
+            <widget class="QLabel" name="fa5pro_labelWebsite">
+             <property name="text">
+              <string>&lt;p&gt;Website: &lt;a href=&quot;https://fontawesome.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://fontawesome.com&lt;/span&gt;&lt;/a&gt; | Github: &lt;a href=&quot;https://github.com/FortAwesome/Font-Awesome&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/FortAwesome/Font-Awesome&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
          <widget class="QWidget" name="fa4_tab">
@@ -3687,6 +3672,16 @@ Checkable</string>
              </property>
             </spacer>
            </item>
+           <item>
+            <widget class="QLabel" name="fa4_labelWebsite">
+             <property name="text">
+              <string>&lt;p&gt;Website: &lt;a href=&quot;https://fontawesome.com/v4&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://fontawesome.com/v4&lt;/span&gt;&lt;/a&gt; | Github: &lt;a href=&quot;https://github.com/FortAwesome/Font-Awesome&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/FortAwesome/Font-Awesome&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+             </property>
+             <property name="openExternalLinks">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
           </layout>
          </widget>
         </widget>
@@ -3719,7 +3714,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>BOOTSTRAP ICONS 1.10.3</string>
+          <string>BOOTSTRAP ICONS 1.10.5</string>
          </property>
         </widget>
        </item>
@@ -4253,6 +4248,16 @@ Checkable</string>
           </size>
          </property>
         </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="bi_labelWebsite">
+         <property name="text">
+          <string>&lt;p&gt;Website: &lt;a href=&quot;https://icons.getbootstrap.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://icons.getbootstrap.com/&lt;/span&gt;&lt;/a&gt; | Github: &lt;a href=&quot;https://github.com/twbs/icons&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/twbs/icons&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -4817,6 +4822,16 @@ Checkable</string>
          </property>
         </spacer>
        </item>
+       <item>
+        <widget class="QLabel" name="gmi_labelWebsite">
+         <property name="text">
+          <string>&lt;p&gt;Website: &lt;a href=&quot;https://fonts.google.com/icons&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://fonts.google.com/icons&lt;/span&gt;&lt;/a&gt; | Github: &lt;a href=&quot;https://github.com/google/material-design-icons&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/google/material-design-icons&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="mdi_tab">
@@ -4845,7 +4860,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>MATERIAL DESIGN ICONS 7.1.96</string>
+          <string>MATERIAL DESIGN ICONS 7.2.96</string>
          </property>
         </widget>
        </item>
@@ -5245,6 +5260,16 @@ Checkable</string>
          </property>
         </spacer>
        </item>
+       <item>
+        <widget class="QLabel" name="mdi_labelWebsite">
+         <property name="text">
+          <string>&lt;p&gt;Website: &lt;a href=&quot;https://pictogrammers.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://pictogrammers.com&lt;/span&gt;&lt;/a&gt; | Github: &lt;a href=&quot;https://github.com/Templarian/MaterialDesign-Webfont&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://github.com/Templarian/MaterialDesign-Webfont&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QWidget" name="ph_tab">
@@ -5273,7 +5298,7 @@ Checkable</string>
           </font>
          </property>
          <property name="text">
-          <string>PHOSPHOR ICONS 1.4</string>
+          <string>PHOSPHOR ICONS 2.0</string>
          </property>
         </widget>
        </item>
@@ -6077,6 +6102,16 @@ Checkable</string>
           </size>
          </property>
         </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="ph_labelWebsite">
+         <property name="text">
+          <string>&lt;p&gt;Website: &lt;a href=&quot;https://phosphoricons.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#007af4;&quot;&gt;https://phosphoricons.com&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;</string>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>

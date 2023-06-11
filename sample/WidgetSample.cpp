@@ -9,7 +9,7 @@
 #include "ZFontIcon/ZFont_bi1.h"
 #include "ZFontIcon/ZFont_gmi4.h"
 #include "ZFontIcon/ZFont_mdi7.h"
-#include "ZFontIcon/ZFont_ph1.h"
+#include "ZFontIcon/ZFont_ph2.h"
 
 WidgetSample::WidgetSample(QWidget *parent) : QWidget(parent), ui(new Ui::WidgetSample) {
     ui->setupUi(this);
@@ -31,17 +31,11 @@ WidgetSample::WidgetSample(QWidget *parent) : QWidget(parent), ui(new Ui::Widget
         ui->fa6_btn104->setIcon(ZFontIcon::icon(Fa6::FAMILY, Fa6::SOLID,   Fa6::fa_map,     QColor(102, 163,  52)));
         ui->fa6_btn105->setIcon(ZFontIcon::icon(Fa6::FAMILY, Fa6::SOLID,   Fa6::fa_comment, QColor(  0,   0,   0)));
 
-        ui->fa6_btn111->setIcon(ZFontIcon::icon(Fa6::FAMILY, Fa6::REGULAR, Fa6::fa_flag,    QColor(195,  65,  65)));
-        ui->fa6_btn112->setIcon(ZFontIcon::icon(Fa6::FAMILY, Fa6::REGULAR, Fa6::fa_star,    QColor(214, 197,  64)));
-        ui->fa6_btn113->setIcon(ZFontIcon::icon(Fa6::FAMILY, Fa6::REGULAR, Fa6::fa_user,    QColor( 69, 100, 214)));
-        ui->fa6_btn114->setIcon(ZFontIcon::icon(Fa6::FAMILY, Fa6::REGULAR, Fa6::fa_map,     QColor(102, 163,  52)));
-        ui->fa6_btn115->setIcon(ZFontIcon::icon(Fa6::FAMILY, Fa6::REGULAR, Fa6::fa_comment, QColor(  0,   0,   0)));
-
         // Advanced use exemple with Font Awesome 6 FREE
         ZFontIconOption fIconFa6;
         fIconFa6.fontFamily=    Fa6::FAMILY;
         fIconFa6.fontStyle=     Fa6::SOLID;
-        fIconFa6.fontStyleOn=   Fa6::REGULAR;
+        //fIconFa6.fontStyleOn=   Fa6pro::REGULAR;
         fIconFa6.glyph=         Fa6::fa_face_grin;
         fIconFa6.glyphOn=       Fa6::fa_face_grin_stars;
         fIconFa6.color=         QColor(195,  65,  65);
@@ -118,6 +112,12 @@ WidgetSample::WidgetSample(QWidget *parent) : QWidget(parent), ui(new Ui::Widget
         ui->fa6pro_btn253->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::REGULAR, Fa6pro::fa_user,    QColor( 69, 100, 214)));
         ui->fa6pro_btn254->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::REGULAR, Fa6pro::fa_map,     QColor(102, 163,  52)));
         ui->fa6pro_btn255->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::REGULAR, Fa6pro::fa_comment, QColor(  0,   0,   0)));
+
+        ui->fa6pro_btn261->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::LIGHT,   Fa6pro::fa_flag,    QColor(195,  65,  65)));
+        ui->fa6pro_btn262->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::LIGHT,   Fa6pro::fa_star,    QColor(214, 197,  64)));
+        ui->fa6pro_btn263->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::LIGHT,   Fa6pro::fa_user,    QColor( 69, 100, 214)));
+        ui->fa6pro_btn264->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::LIGHT,   Fa6pro::fa_map,     QColor(102, 163,  52)));
+        ui->fa6pro_btn265->setIcon(ZFontIcon::icon(Fa6sharp::FAMILY, Fa6sharp::LIGHT,   Fa6pro::fa_comment, QColor(  0,   0,   0)));
     }
     else {
         // Remove FA6 Pro tab
@@ -141,17 +141,11 @@ WidgetSample::WidgetSample(QWidget *parent) : QWidget(parent), ui(new Ui::Widget
     ui->fa5_btn104->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID,   Fa5::fa_map,     QColor(102, 163,  52)));
     ui->fa5_btn105->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::SOLID,   Fa5::fa_comment, QColor(  0,   0,   0)));
 
-    ui->fa5_btn111->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_flag,    QColor(195,  65,  65)));
-    ui->fa5_btn112->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_star,    QColor(214, 197,  64)));
-    ui->fa5_btn113->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_user,    QColor( 69, 100, 214)));
-    ui->fa5_btn114->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_map,     QColor(102, 163,  52)));
-    ui->fa5_btn115->setIcon(ZFontIcon::icon(Fa5::FAMILY, Fa5::REGULAR, Fa5::fa_comment, QColor(  0,   0,   0)));
-
     // Advanced use exemple with Font Awesome 5 FREE
     ZFontIconOption fIconFa5;
     fIconFa5.fontFamily=    Fa5::FAMILY;
     fIconFa5.fontStyle=     Fa5::SOLID;
-    fIconFa5.fontStyleOn=   Fa5::REGULAR;
+    fIconFa5.fontStyleOn=   Fa5pro::REGULAR;
     fIconFa5.glyph=         Fa5::fa_grin;
     fIconFa5.glyphOn=       Fa5::fa_grin_stars;
     fIconFa5.color=         QColor(195,  65,  65);
@@ -293,39 +287,38 @@ WidgetSample::WidgetSample(QWidget *parent) : QWidget(parent), ui(new Ui::Widget
     ui->mdi_btn115->setIcon(ZFontIcon::icon(Mdi6::FAMILY, Mdi6::mdi_comment_multiple_outline,    QColor(  0,   0,   0), 0.90));
 
 
-
     //---------------------
-    // Phosphor Icons 1.x -
+    // Phosphor Icons 2.x -
     //---------------------
-    ui->ph_btn101->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_flag_fill,         QColor(195,  65,  65), 0.85));
-    ui->ph_btn102->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_star_fill,         QColor(214, 197,  64), 0.85));
-    ui->ph_btn103->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_person_fill,       QColor( 69, 100, 214), 0.85));
-    ui->ph_btn104->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_map_trifold_fill,  QColor(102, 163,  52), 0.85));
-    ui->ph_btn105->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_chat_fill,         QColor(  0,   0,   0), 0.85));
+    ui->ph_btn101->setIcon(ZFontIcon::icon(Ph2::FAMILY_FILL,    Ph2::ph_flag,        QColor(195,  65,  65), 0.85));
+    ui->ph_btn102->setIcon(ZFontIcon::icon(Ph2::FAMILY_FILL,    Ph2::ph_star,        QColor(214, 197,  64), 0.85));
+    ui->ph_btn103->setIcon(ZFontIcon::icon(Ph2::FAMILY_FILL,    Ph2::ph_person,      QColor( 69, 100, 214), 0.85));
+    ui->ph_btn104->setIcon(ZFontIcon::icon(Ph2::FAMILY_FILL,    Ph2::ph_map_trifold, QColor(102, 163,  52), 0.85)   );
+    ui->ph_btn105->setIcon(ZFontIcon::icon(Ph2::FAMILY_FILL,    Ph2::ph_chat,        QColor(  0,   0,   0), 0.85)   );
 
-    ui->ph_btn111->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_flag_bold,         QColor(195,  65,  65), 0.85));
-    ui->ph_btn112->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_star_bold,         QColor(214, 197,  64), 0.85));
-    ui->ph_btn113->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_person_bold,       QColor( 69, 100, 214), 0.85));
-    ui->ph_btn114->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_map_trifold_bold,  QColor(102, 163,  52), 0.85));
-    ui->ph_btn115->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_chat_bold,         QColor(  0,   0,   0), 0.85));
+    ui->ph_btn111->setIcon(ZFontIcon::icon(Ph2::FAMILY_BOLD,    Ph2::ph_flag,        QColor(195,  65,  65), 0.85));
+    ui->ph_btn112->setIcon(ZFontIcon::icon(Ph2::FAMILY_BOLD,    Ph2::ph_star,        QColor(214, 197,  64), 0.85));
+    ui->ph_btn113->setIcon(ZFontIcon::icon(Ph2::FAMILY_BOLD,    Ph2::ph_person,      QColor( 69, 100, 214), 0.85));
+    ui->ph_btn114->setIcon(ZFontIcon::icon(Ph2::FAMILY_BOLD,    Ph2::ph_map_trifold, QColor(102, 163,  52), 0.85));
+    ui->ph_btn115->setIcon(ZFontIcon::icon(Ph2::FAMILY_BOLD,    Ph2::ph_chat,        QColor(  0,   0,   0), 0.85));
 
-    ui->ph_btn121->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_flag,              QColor(195,  65,  65), 0.85));
-    ui->ph_btn122->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_star,              QColor(214, 197,  64), 0.85));
-    ui->ph_btn123->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_person,            QColor( 69, 100, 214), 0.85));
-    ui->ph_btn124->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_map_trifold,       QColor(102, 163,  52), 0.85));
-    ui->ph_btn125->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_chat,              QColor(  0,   0,   0), 0.85));
+    ui->ph_btn121->setIcon(ZFontIcon::icon(Ph2::FAMILY_REGULAR, Ph2::ph_flag,        QColor(195,  65,  65), 0.85));
+    ui->ph_btn122->setIcon(ZFontIcon::icon(Ph2::FAMILY_REGULAR, Ph2::ph_star,        QColor(214, 197,  64), 0.85));
+    ui->ph_btn123->setIcon(ZFontIcon::icon(Ph2::FAMILY_REGULAR, Ph2::ph_person,      QColor( 69, 100, 214), 0.85));
+    ui->ph_btn124->setIcon(ZFontIcon::icon(Ph2::FAMILY_REGULAR, Ph2::ph_map_trifold, QColor(102, 163,  52), 0.85));
+    ui->ph_btn125->setIcon(ZFontIcon::icon(Ph2::FAMILY_REGULAR, Ph2::ph_chat,        QColor(  0,   0,   0), 0.85));
 
-    ui->ph_btn131->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_flag_light,        QColor(195,  65,  65), 0.85));
-    ui->ph_btn132->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_star_light,        QColor(214, 197,  64), 0.85));
-    ui->ph_btn133->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_person_light,      QColor( 69, 100, 214), 0.85));
-    ui->ph_btn134->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_map_trifold_light, QColor(102, 163,  52), 0.85));
-    ui->ph_btn135->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_chat_light,        QColor(  0,   0,   0), 0.85));
+    ui->ph_btn131->setIcon(ZFontIcon::icon(Ph2::FAMILY_LIGHT,   Ph2::ph_flag,        QColor(195,  65,  65), 0.85));
+    ui->ph_btn132->setIcon(ZFontIcon::icon(Ph2::FAMILY_LIGHT,   Ph2::ph_star,        QColor(214, 197,  64), 0.85));
+    ui->ph_btn133->setIcon(ZFontIcon::icon(Ph2::FAMILY_LIGHT,   Ph2::ph_person,      QColor( 69, 100, 214), 0.85));
+    ui->ph_btn134->setIcon(ZFontIcon::icon(Ph2::FAMILY_LIGHT,   Ph2::ph_map_trifold, QColor(102, 163,  52), 0.85));
+    ui->ph_btn135->setIcon(ZFontIcon::icon(Ph2::FAMILY_LIGHT,   Ph2::ph_chat,        QColor(  0,   0,   0), 0.85));
 
-    ui->ph_btn141->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_flag_thin,         QColor(195,  65,  65), 0.85));
-    ui->ph_btn142->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_star_thin,         QColor(214, 197,  64), 0.85));
-    ui->ph_btn143->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_person_thin,       QColor( 69, 100, 214), 0.85));
-    ui->ph_btn144->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_map_trifold_thin,  QColor(102, 163,  52), 0.85));
-    ui->ph_btn145->setIcon(ZFontIcon::icon(Ph1::FAMILY, Ph1::ph_chat_thin,         QColor(  0,   0,   0), 0.85));
+    ui->ph_btn141->setIcon(ZFontIcon::icon(Ph2::FAMILY_THIN,    Ph2::ph_flag,        QColor(195,  65,  65), 0.85));
+    ui->ph_btn142->setIcon(ZFontIcon::icon(Ph2::FAMILY_THIN,    Ph2::ph_star,        QColor(214, 197,  64), 0.85));
+    ui->ph_btn143->setIcon(ZFontIcon::icon(Ph2::FAMILY_THIN,    Ph2::ph_person,      QColor( 69, 100, 214), 0.85));
+    ui->ph_btn144->setIcon(ZFontIcon::icon(Ph2::FAMILY_THIN,    Ph2::ph_map_trifold, QColor(102, 163,  52), 0.85));
+    ui->ph_btn145->setIcon(ZFontIcon::icon(Ph2::FAMILY_THIN,    Ph2::ph_chat,        QColor(  0,   0,   0), 0.85));
 }
 
 WidgetSample::~WidgetSample() {

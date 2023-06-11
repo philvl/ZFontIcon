@@ -20,7 +20,7 @@
 #include "ZFontIcon/ZFont_bi1.h"
 #include "ZFontIcon/ZFont_gmi4.h"
 #include "ZFontIcon/ZFont_mdi7.h"
-#include "ZFontIcon/ZFont_ph1.h"
+#include "ZFontIcon/ZFont_ph2.h"
 
 WidgetCheatSheet::WidgetCheatSheet(QWidget *parent) : QWidget(parent), ui(new Ui::WidgetCheatSheet) {
     ui->setupUi(this);
@@ -116,14 +116,14 @@ void WidgetCheatSheet::updateCheatSheet() {
         metaEnum= QMetaEnum::fromType<Fa6pro::Glyph>();
     else if(fontFamily.startsWith(Fa6brands::FAMILY))
         metaEnum= QMetaEnum::fromType<Fa6brands::Glyph>();
-    // Font Awesome 5
+    // Font Awesome 5.15.4
     else if(fontFamily.startsWith(Fa5::FAMILY))
         metaEnum= QMetaEnum::fromType<Fa5::Glyph>();
     else if(fontFamily.startsWith(Fa5pro::FAMILY))
         metaEnum= QMetaEnum::fromType<Fa5pro::Glyph>();
     else if(fontFamily.startsWith(Fa5brands::FAMILY))
         metaEnum= QMetaEnum::fromType<Fa5brands::Glyph>();
-    // Font Awesome 4
+    // Font Awesome 4.7
     else if(fontFamily.startsWith(Fa4::FAMILY))
         metaEnum= QMetaEnum::fromType<Fa4::Glyph>();
     // Bootstrap Icons
@@ -135,9 +135,9 @@ void WidgetCheatSheet::updateCheatSheet() {
     // Material Design Icons
     else if(fontFamily.startsWith(Mdi6::FAMILY))
         metaEnum= QMetaEnum::fromType<Mdi6::Glyph>();
-    // Phosphor Icons
-    else if(fontFamily.startsWith(Ph1::FAMILY))
-        metaEnum= QMetaEnum::fromType<Ph1::Glyph>();
+    // Phosphor Icons 2.x
+    else if(fontFamily.startsWith(Ph2::FAMILY_REGULAR))
+        metaEnum= QMetaEnum::fromType<Ph2::Glyph>();
     else {
         qDebug() << "WidgetCheatSheet::updateCheatSheet() -> Enum not found";
         return;

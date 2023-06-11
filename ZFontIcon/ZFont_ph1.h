@@ -22,8 +22,8 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 */
 
-#ifndef PHOSPHOR_ICON_H
-#define PHOSPHOR_ICON_H
+#ifndef PHOSPHOR_ICON_1_H
+#define PHOSPHOR_ICON_1_H
 #include <QObject>
 #include <QString>
 
@@ -36,7 +36,7 @@ namespace Ph1 {
     Q_NAMESPACE
 
     // Font files
-    static const QString PH1_WOFF_FILE_REGULAR = QLatin1String("Phosphor_v1.4.ttf");
+    static const QString PH1_TTF_FILE_REGULAR = QLatin1String("Phosphor_v1.4.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Phosphor");
     // Styles
@@ -5282,4 +5282,4 @@ namespace Ph1 {
     Q_ENUM_NS(Glyph);
 }
 
-#endif // PHOSPHOR_ICON_H
+#endif // PHOSPHOR_ICON_1_H

@@ -27,10 +27,10 @@ SOFTWARE.
 #include <QObject>
 #include <QString>
 
-// Font Awesome 6.3.0 compatibility
+// Font Awesome 6.4.0 compatibility
 // ----------------------------------------
 // | FA Font       | Free | Pro  | Brands |
-// | Unique glyphs | 1389 | 3165 | 467    |
+// | Unique glyphs | 1389 | 3202 | 467    |
 // ----------------------------------------
 // Glyph ratio: Width = 1.25 * Height, apply a scale factor
 // of 0.80 to fully display all glyphs in square drawing area
@@ -43,13 +43,11 @@ namespace Fa6 {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA6_TTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v6.3.0_Free_Solid900.ttf");
-    static const QString FA6_TTF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v6.3.0_Free_Regular400.ttf");
+    static const QString FA6_TTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v6.4.0_Free_Solid900.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 6 Free");
     // Styles
     static const QString SOLID   = QLatin1String("Solid");
-    static const QString REGULAR = QLatin1String("Regular");
 
     enum Glyph {
         fa_0                                         = 0x0030,
@@ -2013,10 +2011,10 @@ namespace Fa6pro {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA6_TTF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v6.3.0_Pro_Solid900.ttf");
-    static const QString FA6_TTF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v6.3.0_Pro_Regular400.ttf");
-    static const QString FA6_TTF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v6.3.0_Pro_Light300.ttf");
-    static const QString FA6_TTF_FILE_PRO_THIN    = QLatin1String("FontAwesome_v6.3.0_Pro_Thin100.ttf");
+    static const QString FA6_TTF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v6.4.0_Pro_Solid900.ttf");
+    static const QString FA6_TTF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v6.4.0_Pro_Regular400.ttf");
+    static const QString FA6_TTF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v6.4.0_Pro_Light300.ttf");
+    static const QString FA6_TTF_FILE_PRO_THIN    = QLatin1String("FontAwesome_v6.4.0_Pro_Thin100.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 6 Pro");
     // Styles
@@ -2169,6 +2167,7 @@ namespace Fa6pro {
         fa_arrow_left_rotate                              = 0xF0E2,
         fa_arrow_left_to_line                             = 0xF33E,
         fa_arrow_pointer                                  = 0xF245,
+        fa_arrow_progress                                 = 0xE5DF,
         fa_arrow_right                                    = 0xF061,
         fa_arrow_right_arrow_left                         = 0xF0EC,
         fa_arrow_right_from_arc                           = 0xE4B1,
@@ -2297,6 +2296,7 @@ namespace Fa6pro {
         fa_badge_sheriff                                  = 0xF8A2,
         fa_badger_honey                                   = 0xF6B4,
         fa_badminton                                      = 0xE33A,
+        fa_bag_seedling                                   = 0xE5F2,
         fa_bag_shopping                                   = 0xF290,
         fa_bagel                                          = 0xE3D7,
         fa_bags_shopping                                  = 0xF847,
@@ -2388,6 +2388,9 @@ namespace Fa6pro {
         fa_biking                                         = 0xF84A,
         fa_biking_mountain                                = 0xF84B,
         fa_billboard                                      = 0xE5CD,
+        fa_bin_bottles                                    = 0xE5F5,
+        fa_bin_bottles_recycle                            = 0xE5F6,
+        fa_bin_recycle                                    = 0xE5F7,
         fa_binary                                         = 0xE33B,
         fa_binary_circle_check                            = 0xE33C,
         fa_binary_lock                                    = 0xE33D,
@@ -2641,6 +2644,7 @@ namespace Fa6pro {
         fa_calendar_time                                  = 0xE0D2,
         fa_calendar_times                                 = 0xF273,
         fa_calendar_upload                                = 0xE0D1,
+        fa_calendar_users                                 = 0xE5E2,
         fa_calendar_week                                  = 0xF784,
         fa_calendar_xmark                                 = 0xF273,
         fa_calendars                                      = 0xE0D7,
@@ -2766,11 +2770,16 @@ namespace Fa6pro {
         fa_chart_line                                     = 0xF201,
         fa_chart_line_down                                = 0xF64D,
         fa_chart_line_up                                  = 0xE0E5,
+        fa_chart_line_up_down                             = 0xE5D7,
         fa_chart_mixed                                    = 0xF643,
+        fa_chart_mixed_up_circle_currency                 = 0xE5D8,
+        fa_chart_mixed_up_circle_dollar                   = 0xE5D9,
         fa_chart_network                                  = 0xF78A,
         fa_chart_pie                                      = 0xF200,
         fa_chart_pie_alt                                  = 0xF64E,
         fa_chart_pie_simple                               = 0xF64E,
+        fa_chart_pie_simple_circle_currency               = 0xE604,
+        fa_chart_pie_simple_circle_dollar                 = 0xE605,
         fa_chart_pyramid                                  = 0xE0E6,
         fa_chart_radar                                    = 0xE0E7,
         fa_chart_scatter                                  = 0xF7EE,
@@ -2834,6 +2843,7 @@ namespace Fa6pro {
         fa_chevrons_left                                  = 0xF323,
         fa_chevrons_right                                 = 0xF324,
         fa_chevrons_up                                    = 0xF325,
+        fa_chf_sign                                       = 0xE602,
         fa_child                                          = 0xF1AE,
         fa_child_combatant                                = 0xE4E0,
         fa_child_dress                                    = 0xE59C,
@@ -2960,6 +2970,7 @@ namespace Fa6pro {
         fa_circle_y                                       = 0xE12F,
         fa_circle_yen                                     = 0xE5D0,
         fa_circle_z                                       = 0xE130,
+        fa_circles_overlap                                = 0xE600,
         fa_citrus                                         = 0xE2F4,
         fa_citrus_slice                                   = 0xE2F5,
         fa_city                                           = 0xF64F,
@@ -3011,6 +3022,7 @@ namespace Fa6pro {
         fa_cloud                                          = 0xF0C2,
         fa_cloud_arrow_down                               = 0xF0ED,
         fa_cloud_arrow_up                                 = 0xF0EE,
+        fa_cloud_binary                                   = 0xE601,
         fa_cloud_bolt                                     = 0xF76C,
         fa_cloud_bolt_moon                                = 0xF76D,
         fa_cloud_bolt_sun                                 = 0xF76E,
@@ -3161,6 +3173,7 @@ namespace Fa6pro {
         fa_container_storage                              = 0xF4B7,
         fa_conveyor_belt                                  = 0xF46E,
         fa_conveyor_belt_alt                              = 0xF46F,
+        fa_conveyor_belt_arm                              = 0xE5F8,
         fa_conveyor_belt_boxes                            = 0xF46F,
         fa_conveyor_belt_empty                            = 0xE150,
         fa_cookie                                         = 0xF563,
@@ -3274,12 +3287,16 @@ namespace Fa6pro {
         fa_dice_two                                       = 0xF528,
         fa_digging                                        = 0xF85E,
         fa_digital_tachograph                             = 0xF566,
+        fa_dinosaur                                       = 0xE5FE,
         fa_diploma                                        = 0xF5EA,
         fa_directions                                     = 0xF5EB,
         fa_disc_drive                                     = 0xF8B5,
         fa_disease                                        = 0xF7FA,
         fa_display                                        = 0xE163,
         fa_display_arrow_down                             = 0xE164,
+        fa_display_chart_up                               = 0xE5E3,
+        fa_display_chart_up_circle_currency               = 0xE5E5,
+        fa_display_chart_up_circle_dollar                 = 0xE5E6,
         fa_display_code                                   = 0xE165,
         fa_display_medical                                = 0xE166,
         fa_display_slash                                  = 0xE2FA,
@@ -3589,6 +3606,7 @@ namespace Fa6pro {
         fa_file_contract                                  = 0xF56C,
         fa_file_csv                                       = 0xF6DD,
         fa_file_dashed_line                               = 0xF877,
+        fa_file_doc                                       = 0xE5ED,
         fa_file_download                                  = 0xF56D,
         fa_file_edit                                      = 0xF31C,
         fa_file_excel                                     = 0xF1C3,
@@ -3625,6 +3643,7 @@ namespace Fa6pro {
         fa_file_waveform                                  = 0xF478,
         fa_file_word                                      = 0xF1C2,
         fa_file_xmark                                     = 0xF317,
+        fa_file_zip                                       = 0xE5EE,
         fa_file_zipper                                    = 0xF1C6,
         fa_files                                          = 0xE178,
         fa_files_medical                                  = 0xF7FD,
@@ -3671,6 +3690,7 @@ namespace Fa6pro {
         fa_flame                                          = 0xF6DF,
         fa_flashlight                                     = 0xF8B8,
         fa_flask                                          = 0xF0C3,
+        fa_flask_gear                                     = 0xE5F1,
         fa_flask_poison                                   = 0xF6E0,
         fa_flask_potion                                   = 0xF6E1,
         fa_flask_round_poison                             = 0xF6E0,
@@ -3779,6 +3799,9 @@ namespace Fa6pro {
         fa_gavel                                          = 0xF0E3,
         fa_gbp                                            = 0xF154,
         fa_gear                                           = 0xF013,
+        fa_gear_code                                      = 0xE5E8,
+        fa_gear_complex                                   = 0xE5E9,
+        fa_gear_complex_code                              = 0xE5EB,
         fa_gears                                          = 0xF085,
         fa_gem                                            = 0xF3A5,
         fa_genderless                                     = 0xF22D,
@@ -3835,6 +3858,11 @@ namespace Fa6pro {
         fa_grid_5                                         = 0xE199,
         fa_grid_dividers                                  = 0xE3AD,
         fa_grid_horizontal                                = 0xE307,
+        fa_grid_round                                     = 0xE5DA,
+        fa_grid_round_2                                   = 0xE5DB,
+        fa_grid_round_2_plus                              = 0xE5DC,
+        fa_grid_round_4                                   = 0xE5DD,
+        fa_grid_round_5                                   = 0xE5DE,
         fa_grill                                          = 0xE5A3,
         fa_grill_fire                                     = 0xE5A4,
         fa_grill_hot                                      = 0xE5A5,
@@ -3952,6 +3980,7 @@ namespace Fa6pro {
         fa_hard_of_hearing                                = 0xF2A4,
         fa_hashtag                                        = 0x0023,
         fa_hashtag_lock                                   = 0xE415,
+        fa_hat_beach                                      = 0xE606,
         fa_hat_chef                                       = 0xF86B,
         fa_hat_cowboy                                     = 0xF8C0,
         fa_hat_cowboy_side                                = 0xF8C1,
@@ -4173,6 +4202,7 @@ namespace Fa6pro {
         fa_joystick                                       = 0xF8C5,
         fa_jpy                                            = 0xF157,
         fa_jug                                            = 0xF8C6,
+        fa_jug_bottle                                     = 0xE5FB,
         fa_jug_detergent                                  = 0xE519,
         fa_k                                              = 0x004B,
         fa_kaaba                                          = 0xF66B,
@@ -4219,6 +4249,7 @@ namespace Fa6pro {
         fa_language                                       = 0xF1AB,
         fa_laptop                                         = 0xF109,
         fa_laptop_arrow_down                              = 0xE1C6,
+        fa_laptop_binary                                  = 0xE5E7,
         fa_laptop_code                                    = 0xF5FC,
         fa_laptop_file                                    = 0xE51D,
         fa_laptop_house                                   = 0xE066,
@@ -4269,6 +4300,7 @@ namespace Fa6pro {
         fa_lightbulb_dollar                               = 0xF670,
         fa_lightbulb_exclamation                          = 0xF671,
         fa_lightbulb_exclamation_on                       = 0xE1CA,
+        fa_lightbulb_gear                                 = 0xE5FD,
         fa_lightbulb_on                                   = 0xF672,
         fa_lightbulb_slash                                = 0xF673,
         fa_lights_holiday                                 = 0xF7B2,
@@ -4780,6 +4812,7 @@ namespace Fa6pro {
         fa_person_rays                                    = 0xE54D,
         fa_person_rifle                                   = 0xE54E,
         fa_person_running                                 = 0xF70C,
+        fa_person_running_fast                            = 0xE5FF,
         fa_person_seat                                    = 0xE21E,
         fa_person_seat_reclined                           = 0xE21F,
         fa_person_shelter                                 = 0xE54F,
@@ -5023,6 +5056,7 @@ namespace Fa6pro {
         fa_right_from_bracket                             = 0xF2F5,
         fa_right_from_line                                = 0xF347,
         fa_right_left                                     = 0xF362,
+        fa_right_left_large                               = 0xE5E1,
         fa_right_long                                     = 0xF30B,
         fa_right_long_to_line                             = 0xE444,
         fa_right_to_bracket                               = 0xF2F6,
@@ -5945,6 +5979,7 @@ namespace Fa6pro {
         fa_user_graduate                                  = 0xF501,
         fa_user_group                                     = 0xF500,
         fa_user_group_crown                               = 0xF6A5,
+        fa_user_group_simple                              = 0xE603,
         fa_user_hair                                      = 0xE45A,
         fa_user_hair_buns                                 = 0xE3D3,
         fa_user_hair_long                                 = 0xE45B,
@@ -6182,13 +6217,15 @@ namespace Fa6sharp {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA6_TTF_FILE_SHARP_REGULAR = QLatin1String("FontAwesome_v6.3.0_Sharp_Regular400.ttf");
-    static const QString FA6_TTF_FILE_SHARP_SOLID   = QLatin1String("FontAwesome_v6.3.0_Sharp_Solid900.ttf");
+    static const QString FA6_TTF_FILE_SHARP_SOLID   = QLatin1String("FontAwesome_v6.4.0_Sharp_Solid900.ttf");
+    static const QString FA6_TTF_FILE_SHARP_REGULAR = QLatin1String("FontAwesome_v6.4.0_Sharp_Regular400.ttf");
+    static const QString FA6_TTF_FILE_SHARP_LIGHT   = QLatin1String("FontAwesome_v6.4.0_Sharp_Light300.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 6 Sharp");
     // Styles
     static const QString SOLID   = QLatin1String("Solid");
     static const QString REGULAR = QLatin1String("Regular");
+    static const QString LIGHT   = QLatin1String("Light");
 
     // Important notes:
     //   Use the glyphs defined in fa5pro namespace because they are identical to Fa6sharp glyphs
@@ -6200,7 +6237,7 @@ namespace Fa6brands {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA6_TTF_FILE_BRANDS = QLatin1String("FontAwesome_v6.3.0_Brands_Regular400.ttf");
+    static const QString FA6_TTF_FILE_BRANDS = QLatin1String("FontAwesome_v6.4.0_Brands_Regular400.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 6 Brands");
     // Styles

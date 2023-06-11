@@ -43,13 +43,11 @@ namespace Fa5 {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA5_WOFF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v5.15.4_Free_Solid900.otf");
-    static const QString FA5_WOFF_FILE_FREE_REGULAR = QLatin1String("FontAwesome_v5.15.4_Free_Regular400.otf");
+    static const QString FA5_OTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v5.15.4_Free_Solid900.otf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 5 Free");
     // Styles
     static const QString SOLID   = QLatin1String("Solid");
-    static const QString REGULAR = QLatin1String("Regular");
 
     enum Glyph {
     //--------------------------------------------------------------------------

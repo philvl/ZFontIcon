@@ -37,7 +37,7 @@ namespace Fa4 {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA4_WOFF_FILE_REGULAR = QLatin1String("FontAwesome_v4.7.0_Free.ttf");
+    static const QString FA4_TTF_FILE_REGULAR = QLatin1String("FontAwesome_v4.7.0_Free.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("FontAwesome");
     // Styles

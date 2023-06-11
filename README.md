@@ -6,12 +6,13 @@ ZFontIcon is released under the MIT License
 ZFontIcon provides a simple way to use any glyph/icon font as QIcon in your Qt5/Qt6 applications.
 
 Some helpers are included to use the following icon fonts with no effort:
-- Font Awesome 6.3.0  (Free, Brands and Pro + Sharp)
+- Font Awesome 6.4.0  (Free, Brands and Pro + Sharp)
 - Font Awesome 5.15.4 (Free, Brands and Pro)
 - Font Awesome 4.7.0
-- Bootstrap Icons 1.10.3
-- Google Material Design Icons 4 (v2023-01-07, github master 511eea5)
-- Material Design Icons 7.1.96
+- Bootstrap Icons 1.10.5
+- Google Material Design Icons 4 (github master 511eea5 - 2023-01-07)
+- Material Design Icons 7.2.96
+- Phosphor 2.0
 - Phosphor 1.4
 
 You can use any other icon fonts using Unicode character codes. For convenience, I suggest you create your own font helper: simply create an enumeration listing all the Unicode characters of the font icons. Have a look at the code, it's very easy!
@@ -19,10 +20,11 @@ You can use any other icon fonts using Unicode character codes. For convenience,
 
 ## Qt Compatibility
 ZFontIcon is tested under Windows, and Linux with:
-- Qt 5.15
-- Qt 6.0
-- Qt 6.2
+- Qt 6.5
 - Qt 6.4
+- Qt 6.2
+- Qt 6.0
+- Qt 5.15
 
 
 ## Installation
@@ -55,6 +57,7 @@ ZFontIcon::addFont(":/fa6/" + Fa6pro::FA6_TTF_FILE_PRO_THIN);
 // FA6 Pro Sharp (if you have a license)
 ZFontIcon::addFont(":/fa6/" + Fa6sharp::FA6_TTF_FILE_SHARP_SOLID);
 ZFontIcon::addFont(":/fa6/" + Fa6sharp::FA6_TTF_FILE_SHARP_REGULAR);
+ZFontIcon::addFont(":/fa6/" + Fa6sharp::FA6_TTF_FILE_SHARP_LIGHT);
 
 // FA6 Brands
 ZFontIcon::addFont(":/fa6/" + Fa6brands::FA6_TTF_FILE_BRANDS);
@@ -80,6 +83,7 @@ ZFontIcon::icon(Fa6pro::FAMILY,    Fa6pro::THIN,    Fa6pro::fa_flag, QColor(195,
 //   Use the glyphs defined in fa5pro namespace because they are identical to Fa6sharp glyphs
 ZFontIcon::icon(Fa6sharp::FAMILY,  Fa6sharp::SOLID,   Fa6pro::fa_flag, QColor(195,  65,  65));
 ZFontIcon::icon(Fa6sharp::FAMILY,  Fa6sharp::REGULAR, Fa6pro::fa_flag, QColor(195,  65,  65));
+ZFontIcon::icon(Fa6sharp::FAMILY,  Fa6sharp::LIGHT,   Fa6pro::fa_flag, QColor(195,  65,  65));
 
 // FA6 Brands (note that FA6 Brands has no font style)
 ZFontIcon::icon(Fa6brands::FAMILY, Fa6brands::fa_github, QColor(128, 0, 0));
