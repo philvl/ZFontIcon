@@ -2,18 +2,18 @@
     <qresource prefix="/">
     <!-- FontAwesome 6.x [FREE] -->
         <!-- -->
-        <file>fa6/FontAwesome_v6.4.0_Free_Solid900.ttf</file>
-        <file>fa6/FontAwesome_v6.4.0_Brands_Regular400.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Free_Solid900.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Brands_Regular400.ttf</file>
         <!-- -->
     <!-- FontAwesome 6.x [PRO] -->
         <!--
-        <file>fa6/FontAwesome_v6.4.0_Pro_Solid900.ttf</file>
-        <file>fa6/FontAwesome_v6.4.0_Pro_Regular400.ttf</file>
-        <file>fa6/FontAwesome_v6.4.0_Pro_Light300.ttf</file>
-        <file>fa6/FontAwesome_v6.4.0_Pro_Thin100.ttf</file>
-        <file>fa6/FontAwesome_v6.4.0_Sharp_Solid900.ttf</file>
-        <file>fa6/FontAwesome_v6.4.0_Sharp_Regular400.ttf</file>
-        <file>fa6/FontAwesome_v6.4.0_Sharp_Light300.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Pro_Solid900.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Pro_Regular400.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Pro_Light300.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Pro_Thin100.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Sharp_Solid900.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Sharp_Regular400.ttf</file>
+        <file>fa6/FontAwesome_v6.4.2_Sharp_Light300.ttf</file>
         -->
 
 

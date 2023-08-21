@@ -1,6 +1,10 @@
+### Release v2.2.3 - 2023-08-21
+- Helpers
+  - Update helper for Font Awesome 6.4.2
+
 ### Release v2.2.2 - 2023-06-11
 - Helpers
-  - Add helper for Phosphor Icons 2.0 TODO FINALIZE TO SUPPORT OLD AND NEW VERSIONS
+  - Add helper for Phosphor Icons 2.0
   - Update helper for Bootstrap Icons 1.10.5
   - Update helper for Font Awesome 6.4.0 (Add Sharp Light)
   - Update helper for Material Design Icons 7.2.96

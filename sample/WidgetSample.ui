@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1024</width>
-    <height>668</height>
+    <height>690</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -76,7 +76,7 @@
               </font>
              </property>
              <property name="text">
-              <string>FONT AWESOME 6.4.0 [FREE]</string>
+              <string>FONT AWESOME 6.4.2 [FREE]</string>
              </property>
             </widget>
            </item>
@@ -335,7 +335,7 @@ Checkable</string>
                 </font>
                </property>
                <property name="text">
-                <string>FONT AWESOME 6.4.0 [BRANDS]</string>
+                <string>FONT AWESOME 6.4.2 [BRANDS]</string>
                </property>
               </widget>
              </item>
@@ -764,7 +764,7 @@ Checkable</string>
               </font>
              </property>
              <property name="text">
-              <string>FONT AWESOME 6.4.0 [PRO]</string>
+              <string>FONT AWESOME 6.4.2 [PRO]</string>
              </property>
             </widget>
            </item>
@@ -1655,7 +1655,7 @@ Checkable</string>
                 </font>
                </property>
                <property name="text">
-                <string>FONT AWESOME 6.4.0 [SHARP]</string>
+                <string>FONT AWESOME 6.4.2 [SHARP]</string>
                </property>
               </widget>
              </item>

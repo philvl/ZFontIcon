@@ -27,10 +27,10 @@ SOFTWARE.
 #include <QObject>
 #include <QString>
 
-// Font Awesome 6.4.0 compatibility
+// Font Awesome 6.4.2 compatibility
 // ----------------------------------------
 // | FA Font       | Free | Pro  | Brands |
-// | Unique glyphs | 1389 | 3202 | 467    |
+// | Unique glyphs | 1389 | 3217 | 472    |
 // ----------------------------------------
 // Glyph ratio: Width = 1.25 * Height, apply a scale factor
 // of 0.80 to fully display all glyphs in square drawing area
@@ -43,7 +43,7 @@ namespace Fa6 {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA6_TTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v6.4.0_Free_Solid900.ttf");
+    static const QString FA6_TTF_FILE_FREE_SOLID   = QLatin1String("FontAwesome_v6.4.2_Free_Solid900.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 6 Free");
     // Styles
@@ -2011,10 +2011,10 @@ namespace Fa6pro {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA6_TTF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v6.4.0_Pro_Solid900.ttf");
-    static const QString FA6_TTF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v6.4.0_Pro_Regular400.ttf");
-    static const QString FA6_TTF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v6.4.0_Pro_Light300.ttf");
-    static const QString FA6_TTF_FILE_PRO_THIN    = QLatin1String("FontAwesome_v6.4.0_Pro_Thin100.ttf");
+    static const QString FA6_TTF_FILE_PRO_SOLID   = QLatin1String("FontAwesome_v6.4.2_Pro_Solid900.ttf");
+    static const QString FA6_TTF_FILE_PRO_REGULAR = QLatin1String("FontAwesome_v6.4.2_Pro_Regular400.ttf");
+    static const QString FA6_TTF_FILE_PRO_LIGHT   = QLatin1String("FontAwesome_v6.4.2_Pro_Light300.ttf");
+    static const QString FA6_TTF_FILE_PRO_THIN    = QLatin1String("FontAwesome_v6.4.2_Pro_Thin100.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 6 Pro");
     // Styles
@@ -2095,6 +2095,7 @@ namespace Fa6pro {
         fa_angles_left                                    = 0xF100,
         fa_angles_right                                   = 0xF101,
         fa_angles_up                                      = 0xF102,
+        fa_angles_up_down                                 = 0xE60D,
         fa_angry                                          = 0xF556,
         fa_ankh                                           = 0xF644,
         fa_apartment                                      = 0xE468,
@@ -2137,6 +2138,7 @@ namespace Fa6pro {
         fa_arrow_down_a_z                                 = 0xF15D,
         fa_arrow_down_arrow_up                            = 0xF883,
         fa_arrow_down_big_small                           = 0xF88C,
+        fa_arrow_down_from_arc                            = 0xE614,
         fa_arrow_down_from_dotted_line                    = 0xE090,
         fa_arrow_down_from_line                           = 0xF345,
         fa_arrow_down_left                                = 0xE091,
@@ -2161,10 +2163,12 @@ namespace Fa6pro {
         fa_arrow_from_right                               = 0xF344,
         fa_arrow_from_top                                 = 0xF345,
         fa_arrow_left                                     = 0xF060,
+        fa_arrow_left_from_arc                            = 0xE615,
         fa_arrow_left_from_line                           = 0xF344,
         fa_arrow_left_long                                = 0xF177,
         fa_arrow_left_long_to_line                        = 0xE3D4,
         fa_arrow_left_rotate                              = 0xF0E2,
+        fa_arrow_left_to_arc                              = 0xE616,
         fa_arrow_left_to_line                             = 0xF33E,
         fa_arrow_pointer                                  = 0xF245,
         fa_arrow_progress                                 = 0xE5DF,
@@ -2225,6 +2229,7 @@ namespace Fa6pro {
         fa_arrow_up_short_wide                            = 0xF885,
         fa_arrow_up_small_big                             = 0xF88F,
         fa_arrow_up_square_triangle                       = 0xF88B,
+        fa_arrow_up_to_arc                                = 0xE617,
         fa_arrow_up_to_dotted_line                        = 0xE0A1,
         fa_arrow_up_to_line                               = 0xF341,
         fa_arrow_up_triangle_square                       = 0xF88A,
@@ -3834,6 +3839,7 @@ namespace Fa6pro {
         fa_globe_asia                                     = 0xF57E,
         fa_globe_europe                                   = 0xF7A2,
         fa_globe_oceania                                  = 0xE47B,
+        fa_globe_pointer                                  = 0xE60E,
         fa_globe_snow                                     = 0xF7A3,
         fa_globe_stand                                    = 0xF5F6,
         fa_glove_boxing                                   = 0xF438,
@@ -3995,6 +4001,7 @@ namespace Fa6pro {
         fa_head_side_brain                                = 0xF808,
         fa_head_side_cough                                = 0xE061,
         fa_head_side_cough_slash                          = 0xE062,
+        fa_head_side_gear                                 = 0xE611,
         fa_head_side_goggles                              = 0xF6EA,
         fa_head_side_headphones                           = 0xF8C2,
         fa_head_side_heart                                = 0xE1AA,
@@ -4303,6 +4310,7 @@ namespace Fa6pro {
         fa_lightbulb_gear                                 = 0xE5FD,
         fa_lightbulb_on                                   = 0xF672,
         fa_lightbulb_slash                                = 0xF673,
+        fa_lighthouse                                     = 0xE612,
         fa_lights_holiday                                 = 0xF7B2,
         fa_line_chart                                     = 0xF201,
         fa_line_columns                                   = 0xF870,
@@ -4795,8 +4803,10 @@ namespace Fa6pro {
         fa_person_dots_from_line                          = 0xF470,
         fa_person_dress                                   = 0xF182,
         fa_person_dress_burst                             = 0xE544,
+        fa_person_dress_fairy                             = 0xE607,
         fa_person_dress_simple                            = 0xE21C,
         fa_person_drowning                                = 0xE545,
+        fa_person_fairy                                   = 0xE608,
         fa_person_falling                                 = 0xE546,
         fa_person_falling_burst                           = 0xE547,
         fa_person_from_portal                             = 0xE023,
@@ -4991,6 +5001,7 @@ namespace Fa6pro {
         fa_rabbit                                         = 0xF708,
         fa_rabbit_fast                                    = 0xF709,
         fa_rabbit_running                                 = 0xF709,
+        fa_raccoon                                        = 0xE613,
         fa_racquet                                        = 0xF45A,
         fa_radar                                          = 0xE024,
         fa_radiation                                      = 0xF7B9,
@@ -5581,6 +5592,8 @@ namespace Fa6pro {
         fa_strikethrough                                  = 0xF0CC,
         fa_stroopwafel                                    = 0xF551,
         fa_subscript                                      = 0xF12C,
+        fa_subtitles                                      = 0xE60F,
+        fa_subtitles_slash                                = 0xE610,
         fa_subtract                                       = 0xF068,
         fa_subway                                         = 0xF239,
         fa_subway_tunnel                                  = 0xE2A3,
@@ -5601,6 +5614,8 @@ namespace Fa6pro {
         fa_surprise                                       = 0xF5C2,
         fa_sushi                                          = 0xE48A,
         fa_sushi_roll                                     = 0xE48B,
+        fa_swap                                           = 0xE609,
+        fa_swap_arrows                                    = 0xE60A,
         fa_swatchbook                                     = 0xF5C3,
         fa_swimmer                                        = 0xF5C4,
         fa_swimming_pool                                  = 0xF5C5,
@@ -6217,9 +6232,9 @@ namespace Fa6sharp {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA6_TTF_FILE_SHARP_SOLID   = QLatin1String("FontAwesome_v6.4.0_Sharp_Solid900.ttf");
-    static const QString FA6_TTF_FILE_SHARP_REGULAR = QLatin1String("FontAwesome_v6.4.0_Sharp_Regular400.ttf");
-    static const QString FA6_TTF_FILE_SHARP_LIGHT   = QLatin1String("FontAwesome_v6.4.0_Sharp_Light300.ttf");
+    static const QString FA6_TTF_FILE_SHARP_SOLID   = QLatin1String("FontAwesome_v6.4.2_Sharp_Solid900.ttf");
+    static const QString FA6_TTF_FILE_SHARP_REGULAR = QLatin1String("FontAwesome_v6.4.2_Sharp_Regular400.ttf");
+    static const QString FA6_TTF_FILE_SHARP_LIGHT   = QLatin1String("FontAwesome_v6.4.2_Sharp_Light300.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 6 Sharp");
     // Styles
@@ -6237,7 +6252,7 @@ namespace Fa6brands {
     Q_NAMESPACE
 
     // Font files
-    static const QString FA6_TTF_FILE_BRANDS = QLatin1String("FontAwesome_v6.4.0_Brands_Regular400.ttf");
+    static const QString FA6_TTF_FILE_BRANDS = QLatin1String("FontAwesome_v6.4.2_Brands_Regular400.ttf");
     // Families
     static const QString FAMILY  = QLatin1String("Font Awesome 6 Brands");
     // Styles
@@ -6345,6 +6360,7 @@ namespace Fa6brands {
         fa_d_and_d_beyond                 = 0xF6CA,
         fa_dailymotion                    = 0xE052,
         fa_dashcube                       = 0xF210,
+        fa_debian                         = 0xE60B,
         fa_deezer                         = 0xE077,
         fa_delicious                      = 0xF1A5,
         fa_deploydog                      = 0xF38E,
@@ -6639,11 +6655,13 @@ namespace Fa6brands {
         fa_square_reddit                  = 0xF1A2,
         fa_square_snapchat                = 0xF2AD,
         fa_square_steam                   = 0xF1B7,
+        fa_square_threads                 = 0xE619,
         fa_square_tumblr                  = 0xF174,
         fa_square_twitter                 = 0xF081,
         fa_square_viadeo                  = 0xF2AA,
         fa_square_vimeo                   = 0xF194,
         fa_square_whatsapp                = 0xF40C,
+        fa_square_x_twitter               = 0xE61A,
         fa_square_xing                    = 0xF169,
         fa_square_youtube                 = 0xF431,
         fa_squarespace                    = 0xF5BE,
@@ -6675,6 +6693,7 @@ namespace Fa6brands {
         fa_themeco                        = 0xF5C6,
         fa_themeisle                      = 0xF2B2,
         fa_think_peaks                    = 0xF731,
+        fa_threads                        = 0xE618,
         fa_tiktok                         = 0xE07B,
         fa_trade_federation               = 0xF513,
         fa_trello                         = 0xF181,
@@ -6731,6 +6750,7 @@ namespace Fa6brands {
         fa_wpforms                        = 0xF298,
         fa_wpressr                        = 0xF3E4,
         fa_wsh                            = 0xE2D0,
+        fa_x_twitter                      = 0xE61B,
         fa_xbox                           = 0xF412,
         fa_xing                           = 0xF168,
         fa_xing_square                    = 0xF169,
